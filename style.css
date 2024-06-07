@@ -36,6 +36,7 @@ section h1{
     font-family: 'blackFuture';
 }
 
+
 /* navigation */
 nav .navbar-collapse ul li {
     margin: 10px 20px;
@@ -118,7 +119,6 @@ padding: 5px 20px;
 .button{
     margin-top: 20px;
     width: 80%;
-    
 }
 
 .button button{
@@ -208,6 +208,11 @@ padding: 5px 20px;
     margin: 8px; 
 }
 
+.contact{
+padding-top: 8em;
+padding-bottom: 8em;
+}
+
 .formulaire{
     display: flex;
     flex-direction: column;
@@ -278,6 +283,12 @@ padding: 5px 20px;
     padding-bottom: 20px;
 }
 
+.paragraphe h1 span{
+    background-image: linear-gradient(to right top, #bc2abc, #902c9f, #692980, #582977, #4a2970);   
+ background-clip: text;   
+ color: transparent; 
+}
+
 /* A propos */
 #Apropos{
     background: radial-gradient(circle, rgb(26, 10, 27) 0%, rgba(1,9,20,1) 100%); 
@@ -302,6 +313,10 @@ padding: 5px 20px;
 #Apropos .education{
     padding-bottom: 2rem;
     padding-top: 75px;
+    background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+    background-clip: text;
+    color: transparent;
+
 }
 
 #Apropos .main-timeline{
@@ -730,7 +745,7 @@ article{
 }
 
 .card:hover{
-    background-color: #110f0f; 
+    background-color: rgb(10, 10, 10); 
 }
 .card-img-top {
     height: 200px;
@@ -741,9 +756,17 @@ article{
 .card-body {
     border-top: 1px solid rgba(255, 255, 255, 0.1); 
 }
-.card-title, .card-text {
+.card-text {
     color: #ddd; 
+
 }
+.card-title{
+    font-size: 25px;
+    background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+    background-clip: text;
+    color: transparent;
+}
+
 .card:hover {
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
 }
@@ -761,6 +784,17 @@ article{
 .card ul li {
     list-style-type: none;
     padding-left: 10px;
+}
+
+.duree{
+    background-image: linear-gradient(to right top, #bc2abc, #902c9f, #692980, #582977, #4a2970);   
+    background-clip: text;   
+    color: transparent;
+    margin-bottom: 12px;
+}
+
+.duree span{
+    color: #fff;
 }
 
 .projects__subtitle {
@@ -789,6 +823,8 @@ article{
     column-gap: 0.25rem;
     color: rgb(202, 202, 202);
 }
+
+
 
 .projects__link:hover {
     transition: 0.4 ease-in-out;
@@ -823,6 +859,12 @@ article{
     text-align: center;
 }
 
+.myproject h1 span{
+    background-image: linear-gradient(to right top, #bc2abc, #902c9f, #692980, #582977, #4a2970);   
+    background-clip: text;   
+    color: transparent; 
+}
+
 
 
 
@@ -844,5 +886,26 @@ footer{
 
 /* modal */
 .modal-content{
-    background-color: rgb(48, 46, 46);
+    background-color: #151414;
+    /* background-color: rgb(48, 46, 46); */
+}
+
+.modal-body p{
+    color: #a4a7b1;
+}
+
+.modal-title{
+    font-size: 25px;
+    background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+    background-clip: text;
+    color: transparent;
+}
+
+.modal-body h6{
+    font-size: 25px;
+    color: #fff;
+}
+
+.btn-close{
+   color : white;
 }
