@@ -6,6 +6,8 @@
     src: url('./font/BlackFuture-gx1q3.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-size: larger;
+
 }
 
 /* Common */
@@ -33,7 +35,9 @@ section {
 }
 
 section h1{
-    font-family: 'blackFuture';
+    font-family: 'blackFuture', sans-serif !important;
+    font-weight: bold;
+    font-size: 2.5rem !important;
 }
 
 
@@ -116,29 +120,29 @@ padding: 5px 20px;
 }
 
 
-.button{
-    margin-top: 20px;
-    width: 80%;
-}
+/*.button{*/
+/*    margin-top: 20px;*/
+/*    width: 80%;*/
+/*}*/
 
-.button button{
-    padding: 10px 50px;
-    border: none;
-    border-radius: 25px;
-    background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59); 
- }
+/*.button button{*/
+/*    padding: 10px 50px;*/
+/*    border: none;*/
+/*    border-radius: 25px;*/
+/*    background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59); */
+/* }*/
 
 
-.button button:hover {
-    background: white;
-    opacity: 0.8;
-    transition: 0.5s;
-}
+/*.button button:hover {*/
+/*    background: white;*/
+/*    opacity: 0.8;*/
+/*    transition: 0.5s;*/
+/*}*/
 
-.button button:hover a{
-    color:#000;
-    transition: 0.3s;
-}
+/*.button button:hover a{*/
+/*    color:#000;*/
+/*    transition: 0.3s;*/
+/*}*/
 
 /* Photo de profil */
 .sukuna{
@@ -160,7 +164,7 @@ padding: 5px 20px;
 
 /* contact */
 #contact{
-    background-color: #151718;
+    /*background-color: #151718;*/
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -213,35 +217,7 @@ padding-top: 8em;
 padding-bottom: 8em;
 }
 
-.formulaire{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid;
-    border: none;
-    border-radius: 10px ;
-    padding: 10px 20px ;
-}
 
-
-.formulaire input, textarea{
-    padding: 15px 0;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    background: transparent;
-    background-color: rgb(92, 88, 88);
-    border-radius: 5px;
-    border: none;
-    padding: 10px;
-    margin: 10px;
-    width: 17rem;
-}
-
-.formulaire .button{
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-}
 
 .button a{
     color: #fff;
@@ -612,9 +588,9 @@ article{
 /* Compétences */
 #competences{
     width: 100%;
-    background: rgba(255, 255, 255, 0.05);
-   
-    background-color: rgba(255, 255, 255, 0.05);  
+    /*background: rgba(255, 255, 255, 0.05);*/
+
+    /*background-color: rgba(255, 255, 255, 0.05);  */
 }
 
   #competences h1{
@@ -629,6 +605,26 @@ article{
  background-clip: text;   
  color: transparent; 
  }
+
+/*Ajouter aujourd'hui*/
+#Apropos h1 {
+    color: #fff;
+}
+
+#Apropos h1 span{
+    background-image: linear-gradient(to right top, #bc2abc, #902c9f, #692980, #582977, #4a2970);
+    background-clip: text;
+    color: transparent;
+}
+
+#contact h1 span {
+    background-image: linear-gradient(to right top, #bc2abc, #902c9f, #692980, #582977, #4a2970);
+    background-clip: text;
+    color: transparent;
+}
+
+
+
 
 .listoutil{
     display: flex;
@@ -827,7 +823,7 @@ article{
 
 
 .projects__link:hover {
-    transition: 0.4 ease-in-out;
+    /*transition: 0.4 ease-in-out;*/
     background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59); 
     background-clip: text;   
     color: transparent; 

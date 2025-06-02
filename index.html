@@ -1,56 +1,124 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" xmlns="http://www.w3.org/1999/html">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manohisoa MBELO NDRIAMANAMPY</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
 
-    <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/aa561a90f2.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+
 </head>
 
 <body>
-    <header>
-        <nav id="navigation" class="navbar fixed-top navbar-expand-lg navbar-dark dark ">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">M.N_MANOHISOA</a>
+<!--    <header>-->
+<!--        <nav id="navigation" class="navbar fixed-top navbar-expand-lg navbar-dark dark ">-->
+<!--            <div class="container-fluid">-->
+<!--                <a class="navbar-brand" href="#">M.N_MANOHISOA</a>-->
+<!--                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"-->
+<!--                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"-->
+<!--                    aria-expanded="false" aria-label="Toggle navigation">-->
+<!--                    <span class="navbar-toggler-icon"></span>-->
+<!--                </button>-->
+<!--                <div class="collapse navbar-collapse" id="navbarSupportedContent">-->
+<!--                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">-->
+<!--                        <li class="nav-item">-->
+<!--                            <a class="nav-link " aria-current="page" href="#accueil_general">Accueil</a>-->
+<!--                        </li>-->
+<!--                        <li class="nav-item">-->
+<!--                            <a class="nav-link" href="#Apropos">À propos de moi</a>-->
+<!--                        </li>-->
+<!--                        <li class="nav-item">-->
+<!--                            <a class="nav-link" href="#competences">Compétences</a>-->
+<!--                        </li>-->
+<!--                        <li class="nav-item">-->
+<!--                            <a class="nav-link" href="#projets">Projets</a>-->
+<!--                        </li>-->
+<!--                        <li class="nav-item">-->
+<!--                            <a class="nav-link" href="#contact">Contact</a>-->
+<!--                        </li>-->
+<!--                    </ul>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </nav>-->
+<!--    </header>-->
+
+<header id="navbar" class="fixed w-full top-0 left-0 z-50 transition-all duration-300 py-3 bg-black">
+    <div id="navigation" class="container mx-auto px-4 md:px-8">
+        <div class="flex justify-between items-center">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">M.N_MANOHISOA</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
-                        <li class="nav-item">
-                            <a class="nav-link " aria-current="page" href="#accueil_general">Accueil</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#Apropos">À propos de moi</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#competences">Compétences</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#projets">Projets</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+                    </button>
+
+<!--            <a class="navbar-brand" href="#">M.N_MANOHISOA</a>-->
+<!--                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse">-->
+<!--                          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"-->
+<!--                             aria-expanded="false" aria-label="Toggle navigation">-->
+<!--                          <span class="navbar-toggler-icon"></span>-->
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#accueil_general" class="text-gray-300 hover:text-white transition-colors duration-300">Accueil</a>
+                <a href="#Apropos" class="text-gray-300 hover:text-white transition-colors duration-300">À propos de moi</a>
+                <a href="#competences" class="text-gray-300 hover:text-white transition-colors duration-300">Compétences</a>
+                <a href="#projets" class="text-gray-300 hover:text-white transition-colors duration-300">Expériences</a>
+                <a href="#contact" class="text-gray-300 hover:text-white transition-colors duration-300">Contact</a>
+                <a href="CV_Manohisoa-MBELO-NDRIAMANAMPY-1.pdf" download="CV-Manohisoa MBELO NDRIAMANAMPY" class="bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-6 rounded-full transition-all duration-300 flex items-center gap-2 justify-center">
+                    <i class="ri-download-line"></i> Télécharger mon CV
+                </a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-2xl">
+                <i class="ri-menu-line"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-menu" class="md:hidden bg-black absolute top-full left-0 w-full py-4 px-4 hidden ">
+        <div class="flex flex-col space-y-4">
+            <a href="#accueil_general" class="text-gray-300 hover:text-white transition-colors duration-300 py-2">Accueil</a>
+            <a href="#Apropos" class="text-gray-300 hover:text-white transition-colors duration-300">À propos de moi</a>
+            <a href="#competences" class="text-gray-300 hover:text-white transition-colors duration-300 py-2">Compétences</a>
+            <a href="#projets" class="text-gray-300 hover:text-white transition-colors duration-300 py-2">Expériences</a>
+            <a href="#contact" class="text-gray-300 hover:text-white transition-colors duration-300 py-2">Contact</a>
+            <a href="CV_Manohisoa-MBELO-NDRIAMANAMPY-1.pdf" download="CV-Manohisoa MBELO NDRIAMANAMPY" class="bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-6 rounded-full transition-all duration-300 flex items-center gap-2 justify-center">
+                <i class="ri-download-line"></i> Télécharger mon CV
+            </a>
+        </div>
+    </div>
+</header>
+
+<script>
+    // Récupérer le bouton de menu et le menu mobile
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    // Ajouter un événement pour afficher/cacher le menu mobile
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
+
+
     <main>
         <section id="accueil_general" class="accueil container d-flex onepage ">
             <div class="info d-flex flex-column flex-column-reverse flex-md-row flex-md-row">
                 <div class="information col-lg-8">
-                    <div class="description">
+                    <div class="description pt-5">
                         <h1>Manohisoa</h1>
                         <h1>MBELO NDRIAMANAMPY</h1>
                         <p>Étudiant en informatique</p>
@@ -69,24 +137,22 @@
                             <span>90 avenue Jules Vallès, 38100 Grenoble, France</span>
                         </li>
                     </ul>
-                    <ul class="reseaux">
-                        <li>
-                            <a href="https://github.com/mn-manohisoa/"><i class="fa-brands fa-github"></i>
+                    <div class="mt-2">
+                        <div class="flex gap-4">
+                            <a href="https://github.com/mn-manohisoa/" class="bg-slate-700 hover:bg-indigo-600 transition-colors duration-300 p-3 rounded-lg text-white">
+                                <i class="ri-github-fill text-xl"></i>
                             </a>
-                        </li>
-                        <li>
-                            <a href="https://x.com/mn_manohisoa"><i class="fa-brands fa-x-twitter"></i>
+                            <a href="https://www.linkedin.com/in/manohisoa-mbelo-ndriamanampy-650455309/" class="bg-slate-700 hover:bg-indigo-600 transition-colors duration-300 p-3 rounded-lg text-white">
+                                <i class="ri-linkedin-fill text-xl"></i>
                             </a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/in/manohisoa-mbelo-ndriamanampy-650455309/"> <i
-                                    class="fa-brands fa-linkedin-in"></i>
+                            <a href="https://x.com/mn_manohisoa" class="bg-slate-700 hover:bg-indigo-600 transition-colors duration-300 p-3 rounded-lg text-white">
+                                <i class="ri-twitter-x-fill text-xl"></i>
                             </a>
-                        </li>
-                    </ul>
-                    <div class="button">
-                        <button type="submit" value="Submit">
-                            <a href="#contact"> <span>Contactez moi</span></a>
+                        </div>
+                    </div>
+                    <div class="button mt-4">
+                        <button type="submit" value="Submit" class="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white py-3 px-6 rounded-full transition-all duration-300">
+                            <a href="#contact"> <span>Contactez-moi</span></a>
                         </button>
                     </div>
                 </div>
@@ -96,144 +162,365 @@
             </div>
         </section>
 
-        <section id="Apropos">
-            <div class="principal row container">
-                <div class="col work-together">
-                    <div class="image col">
-                        <img src="image/AnubisDev work.jpg" alt="hacker">
+
+        <section id="Apropos" class="py-24 bg-slate-900">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="flex flex-col items-center mb-16">
+
+                    <h1 class="text-3xl md:text-4xl font-bold text-center">
+                        Qui <span>suis-je ?</span>
+                    </h1>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <!-- About Image -->
+                    <div class="relative max-w-md mx-auto md:mx-0">
+                        <!-- Background Gradient Blob -->
+                        <div class="absolute -z-10 w-full h-full rounded-2xl bg-indigo-600/20 blur-3xl"></div>
+
+                        <!-- Image Container -->
+                        <div class="relative z-10 border-2 border-indigo-500/20 p-4 rounded-2xl bg-slate-800/50 backdrop-blur-sm transform hover:scale-[1.02] transition-transform duration-500">
+                            <img src="image/AnubisDev work.jpg" alt="Professional Photo" class="w-full h-auto rounded-xl">
+
+                            <!-- Experience Badge -->
+                            <div class="absolute -bottom-6 -right-6 bg-slate-800 rounded-2xl p-4 shadow-lg border border-indigo-500/30">
+                                <div class="text-center">
+                                    <span class="text-3xl font-bold text-indigo-400">Bac +2</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="space-y-6 mt-5 mb-4" >
+                            <h3 class="text-2xl font-semibold">Étudiant en réseaux et cybérsécurité</h3>
+
+                            <p class="text-gray-300">
+                                Je suis Manohisoa MBELO NDRIAMANAMPY, un passionné d'informatique avec un intérêt
+                                particulier par le
+                                monde des réseaux et la cybersécurité. Depuis que j'ai plongé dans l'univers de
+                                l'informatique, j'ai été
+                                captivé par la complexité et la dynamique des réseaux, ainsi que par les défis passionnants
+                                qu'ils
+                                présentent. Mon objectif professionnel est de contribuer à garantir la sécurité numérique en
+                                travaillant
+                                dans le domaine de la cybersécurité.                            </p>
+
+                            <p class="text-gray-300">
+                                En dehors de ma passion pour la technologie, je suis également un grand amateur de
+                                basket-ball. Jouer
+                                sur le terrain m'apporte non seulement de la joie et de l'adrénaline, mais aussi des leçons
+                                précieuses
+                                sur le travail d'équipe, la persévérance et le dépassement de soi.                            </p>
+
+                        <div class="pt-6">
+                            <a href="CV_Manohisoa-MBELO-NDRIAMANAMPY-1.pdf" download="CV-Manohisoa MBELO NDRIAMANAMPY" class="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white py-3 px-6 rounded-full transition-all duration-300">
+                                <i class="ri-file-download-line"></i>
+                                    Télécharger mon CV
+                            </a>
+                        </div>
+
                     </div>
                 </div>
-                <div class="paragraphe col">
-                    <h1 class="mb-4">Qui suis-je ?</h1>
-                    <p>
-                        Je suis Manohisoa MBELO NDRIAMANAMPY , un passionné d'informatique avec un intérêt
-                        particulier par le
-                        monde des réseaux et la cybersécurité. Depuis que j'ai plongé dans l'univers de
-                        l'informatique, j'ai été
-                        captivé par la complexité et la dynamique des réseaux, ainsi que par les défis passionnants
-                        qu'ils
-                        présentent. Mon objectif professionnel est de contribuer à garantir la sécurité numérique en
-                        travaillant
-                        dans le domaine de la cybersécurité.
-                    </p>
-                    <p>
-                        En dehors de ma passion pour la technologie, je suis également un grand amateur de
-                        basket-ball. Jouer
-                        sur le terrain m'apporte non seulement de la joie et de l'adrénaline, mais aussi des leçons
-                        précieuses
-                        sur le travail d'équipe, la persévérance et le dépassement de soi.
-                    </p>
-                </div>
-            </div>
 
-            <article class="Apropos-Formation mt-5">
-                <div class="container">
-                    <h1 class="education ">Formations</h1>
-                    <div class="main-timeline">
-                        <!-- start experience section-->
-                        <div class="timeline">
-                            <div class="icon"></div>
-                            <div class="date-content">
-                                <div class="date-outer">
+                <article class="Apropos-Formation mt-5">
+                    <div class="container pt-10 pb-20">
+                        <h1 class="education ">Formations</h1>
+                        <div class="main-timeline">
+                            <!-- start experience section-->
+                            <div class="timeline">
+                                <div class="icon"></div>
+                                <div class="date-content">
+                                    <div class="date-outer">
                                     <span class="date">
                                         <span class="month">Maintenant</span>
                                         <span class="year">2025</span>
                                     </span>
+                                    </div>
+                                </div>
+                                <div class="timeline-content" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                                    <h5 class="title">BUT Informatique</h5>
+                                    <p class="description">
+                                        Je suis actuellement inscrit au sein du BUT Informatique à
+                                        Grenoble. Ce cursus représente une opportunité exceptionnelle pour moi, car il me permettra d'acquérir un large éventail de compétences dans le domaine de l'informatique, avec une attention particulière portée aux réseaux et à la cybersécurité. Ces compétences, une fois acquises, seront un atout précieux que je pourrai mettre à profit dans ma future carrière professionnelle.
+                                    </p>
                                 </div>
                             </div>
-                            <div class="timeline-content" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                                <h5 class="title">BUT Informatique</h5>
-                                <p class="description">
-                                    Je suis actuellement inscrit au sein du BUT Informatique à 
-                                    Grenoble. Ce cursus représente une opportunité exceptionnelle pour moi, car il me permettra d'acquérir un large éventail de compétences dans le domaine de l'informatique, avec une attention particulière portée aux réseaux et à la cybersécurité. Ces compétences, une fois acquises, seront un atout précieux que je pourrai mettre à profit dans ma future carrière professionnelle.
-                                </p>
-                            </div>
-                        </div>
-                        <!-- end experience section-->
+                            <!-- end experience section-->
 
-                        <!-- start experience section-->
-                        <div class="timeline">
-                            <div class="icon"></div>
-                            <div class="date-content">
-                                <div class="date-outer">
+                            <!-- start experience section-->
+                            <div class="timeline">
+                                <div class="icon"></div>
+                                <div class="date-content">
+                                    <div class="date-outer">
                                     <span class="date">
                                         <span class="month">3 ans</span>
                                         <span class="year">2023</span>
                                     </span>
+                                    </div>
+                                </div>
+                                <div class="timeline-content" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                                    <h5 class="title">Baccalauréat</h5>
+                                    <p class="description">
+                                        À La Clairefontaine Ambodivoanjo, à Madagascar, j'ai obtenu mon Baccalauréat STMG (Sciences et Technologies du Management et de la Gestion), spécialité Gestion et Finance, avec mention Bien.
+                                        Ce parcours m'a offert une opportunité d'approfondir mes connaissances dans les domaines économiques et financiers, me préparant ainsi à relever les défis  professionnels qui m'attendent.
+                                    </p>
                                 </div>
                             </div>
-                            <div class="timeline-content" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                                <h5 class="title">Baccalauréat</h5>
-                                <p class="description">
-                                    À La Clairefontaine Ambodivoanjo, à Madagascar, j'ai obtenu mon Baccalauréat STMG (Sciences et Technologies du Management et de la Gestion), spécialité Gestion et Finance, avec mention Bien. 
-                                    Ce parcours m'a offert une opportunité d'approfondir mes connaissances dans les domaines économiques et financiers, me préparant ainsi à relever les défis  professionnels qui m'attendent.
-                                </p>
-                            </div>
-                        </div>
-                        <!-- end experience section-->
+                            <!-- end experience section-->
 
-                        <!-- start experience section-->
-                        <div class="timeline">
-                            <div class="icon"></div>
-                            <div class="date-content">
-                                <div class="date-outer">
-                                    <span class="date">
-                                        <span class="month">6 mois</span>
-                                        <span class="year">2022</span>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="timeline-content" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                                <h5 class="title">Stage en Informatique</h5>
-                                <p class="description">
-                                    Mon stage d'initiation à la programmation en JAVA, effectué au sein de la société KARINA SA à Madagascar, a été une immersion enrichissante dans le monde de la technologie. Cette expérience m'a non seulement permis d'acquérir des compétences pratiques en programmation, mais elle m'a également aidé à clarifier mes aspirations académiques et professionnelles. Grâce à ce stage, j'ai pu confirmer ma passion pour l'informatique et définir clairement ma voie dans mes études futures. </p>
-                            </div>
-                        </div>
-                        <!-- end experience section-->
+                            <!-- start experience section-->
+<!--                            <div class="timeline">-->
+<!--                                <div class="icon"></div>-->
+<!--                                <div class="date-content">-->
+<!--                                    <div class="date-outer">-->
+<!--                                    <span class="date">-->
+<!--                                        <span class="month">6 mois</span>-->
+<!--                                        <span class="year">2022</span>-->
+<!--                                    </span>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="timeline-content" data-aos="fade-up" data-aos-anchor-placement="top-bottom">-->
+<!--                                    <h5 class="title">Stage en Informatique</h5>-->
+<!--                                    <p class="description">-->
+<!--                                        Mon stage d'initiation à la programmation en JAVA, effectué au sein de la société KARINA SA à Madagascar, a été une immersion enrichissante dans le monde de la technologie. Cette expérience m'a non seulement permis d'acquérir des compétences pratiques en programmation, mais elle m'a également aidé à clarifier mes aspirations académiques et professionnelles. Grâce à ce stage, j'ai pu confirmer ma passion pour l'informatique et définir clairement ma voie dans mes études futures. </p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+                            <!-- end experience section-->
 
-                        <!-- start experience section-->
-                        <div class="timeline">
-                            <div class="icon"></div>
-                            <div class="date-content">
-                                <div class="date-outer">
-                                    <span class="date">
-                                        <span class="month">1 semaine</span>
-                                        <span class="year">2022</span>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="timeline-content" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                                <h5 class="title">Stage en Gestion Finance</h5>
-                                <p class="description">
-                                    Pendant mon stage d'initiation au processus d'établissement des états financiers au sein du cabinet Hasina RAMANANDRIANA à Madagascar, j'ai eu l'opportunité précieuse de plonger dans le monde de la gestion financière. Cette expérience m'a permis de découvrir et de comprendre le fonctionnement d'une entreprise, offrant ainsi une perspective enrichissante de mon domaine d'étude. Ce stage a été une première pour moi et j'ai été ravi de pouvoir appliquer mes connaissances théoriques dans un environnement professionnel.
-                                 </p>
-                            </div>
-                        </div>
+                            <!-- start experience section-->
+<!--                            <div class="timeline">-->
+<!--                                <div class="icon"></div>-->
+<!--                                <div class="date-content">-->
+<!--                                    <div class="date-outer">-->
+<!--                                    <span class="date">-->
+<!--                                        <span class="month">1 semaine</span>-->
+<!--                                        <span class="year">2022</span>-->
+<!--                                    </span>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="timeline-content" data-aos="fade-up" data-aos-anchor-placement="top-bottom">-->
+<!--                                    <h5 class="title">Stage en Gestion Finance</h5>-->
+<!--                                    <p class="description">-->
+<!--                                        Pendant mon stage d'initiation au processus d'établissement des états financiers au sein du cabinet Hasina RAMANANDRIANA à Madagascar, j'ai eu l'opportunité précieuse de plonger dans le monde de la gestion financière. Cette expérience m'a permis de découvrir et de comprendre le fonctionnement d'une entreprise, offrant ainsi une perspective enrichissante de mon domaine d'étude. Ce stage a été une première pour moi et j'ai été ravi de pouvoir appliquer mes connaissances théoriques dans un environnement professionnel.-->
+<!--                                    </p>-->
+<!--                                </div>-->
+<!--                            </div>-->
 
-                        <div class="timeline">
-                            <div class="icon"></div>
-                            <div class="date-content">
-                                <div class="date-outer">
+                            <div class="timeline">
+                                <div class="icon"></div>
+                                <div class="date-content">
+                                    <div class="date-outer">
                                     <span class="date">
                                         <span class="month">4 ans</span>
                                         <span class="year">2020</span>
                                     </span>
+                                    </div>
+                                </div>
+                                <div class="timeline-content" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                                    <h5 class="title">Brevet d'Etude du Premier Cycle</h5>
+                                    <p class="description">
+                                        En dépit des défis imposés par la pandémie de Covid-19 et les périodes de confinement qui ont suivi, j'ai réussi à obtenir mon Brevet d'Études du Premier Cycle à la Lycée Saint Antoine Ankadifotsy,
+                                        située à Madagascar. Cette réalisation a posé les fondations de mon parcours éducatif, me fournissant une base solide dans divers domaines académiques et en me préparant efficacement pour mes futures études.
+
+                                    </p>
                                 </div>
                             </div>
-                            <div class="timeline-content" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                                <h5 class="title">Brevet d'Etude du Premier Cycle</h5>
-                                <p class="description">
-                                    En dépit des défis imposés par la pandémie de Covid-19 et les périodes de confinement qui ont suivi, j'ai réussi à obtenir mon Brevet d'Études du Premier Cycle à la Lycée Saint Antoine Ankadifotsy,
-                                     située à Madagascar. Cette réalisation a posé les fondations de mon parcours éducatif, me fournissant une base solide dans divers domaines académiques et en me préparant efficacement pour mes futures études.
-                                   
-                                </p>
-                            </div>
-                        </div>
 
+                        </div>
                     </div>
-                </div>
-            </article>
+                </article>
+
+            </div>
+
+
         </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--        <section id="Apropos">-->
+<!--            <div class="principal row container">-->
+<!--                <div class="col work-together">-->
+<!--                    <div class="image col">-->
+<!--                        <img src="image/AnubisDev work.jpg" alt="hacker">-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="paragraphe col">-->
+<!--                    <h1 class="mb-4">Qui suis-je ?</h1>-->
+<!--                    <p>-->
+<!--                        Je suis Manohisoa MBELO NDRIAMANAMPY , un passionné d'informatique avec un intérêt-->
+<!--                        particulier par le-->
+<!--                        monde des réseaux et la cybersécurité. Depuis que j'ai plongé dans l'univers de-->
+<!--                        l'informatique, j'ai été-->
+<!--                        captivé par la complexité et la dynamique des réseaux, ainsi que par les défis passionnants-->
+<!--                        qu'ils-->
+<!--                        présentent. Mon objectif professionnel est de contribuer à garantir la sécurité numérique en-->
+<!--                        travaillant-->
+<!--                        dans le domaine de la cybersécurité.-->
+<!--                    </p>-->
+<!--                    <p>-->
+<!--                        En dehors de ma passion pour la technologie, je suis également un grand amateur de-->
+<!--                        basket-ball. Jouer-->
+<!--                        sur le terrain m'apporte non seulement de la joie et de l'adrénaline, mais aussi des leçons-->
+<!--                        précieuses-->
+<!--                        sur le travail d'équipe, la persévérance et le dépassement de soi.-->
+<!--                    </p>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <article class="Apropos-Formation mt-5">-->
+<!--                <div class="container">-->
+<!--                    <h1 class="education ">Formations</h1>-->
+<!--                    <div class="main-timeline">-->
+<!--                        &lt;!&ndash; start experience section&ndash;&gt;-->
+<!--                        <div class="timeline">-->
+<!--                            <div class="icon"></div>-->
+<!--                            <div class="date-content">-->
+<!--                                <div class="date-outer">-->
+<!--                                    <span class="date">-->
+<!--                                        <span class="month">Maintenant</span>-->
+<!--                                        <span class="year">2025</span>-->
+<!--                                    </span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="timeline-content" data-aos="fade-up" data-aos-anchor-placement="top-bottom">-->
+<!--                                <h5 class="title">BUT Informatique</h5>-->
+<!--                                <p class="description">-->
+<!--                                    Je suis actuellement inscrit au sein du BUT Informatique à-->
+<!--                                    Grenoble. Ce cursus représente une opportunité exceptionnelle pour moi, car il me permettra d'acquérir un large éventail de compétences dans le domaine de l'informatique, avec une attention particulière portée aux réseaux et à la cybersécurité. Ces compétences, une fois acquises, seront un atout précieux que je pourrai mettre à profit dans ma future carrière professionnelle.-->
+<!--                                </p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        &lt;!&ndash; end experience section&ndash;&gt;-->
+
+<!--                        &lt;!&ndash; start experience section&ndash;&gt;-->
+<!--                        <div class="timeline">-->
+<!--                            <div class="icon"></div>-->
+<!--                            <div class="date-content">-->
+<!--                                <div class="date-outer">-->
+<!--                                    <span class="date">-->
+<!--                                        <span class="month">3 ans</span>-->
+<!--                                        <span class="year">2023</span>-->
+<!--                                    </span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="timeline-content" data-aos="fade-up" data-aos-anchor-placement="top-bottom">-->
+<!--                                <h5 class="title">Baccalauréat</h5>-->
+<!--                                <p class="description">-->
+<!--                                    À La Clairefontaine Ambodivoanjo, à Madagascar, j'ai obtenu mon Baccalauréat STMG (Sciences et Technologies du Management et de la Gestion), spécialité Gestion et Finance, avec mention Bien.-->
+<!--                                    Ce parcours m'a offert une opportunité d'approfondir mes connaissances dans les domaines économiques et financiers, me préparant ainsi à relever les défis  professionnels qui m'attendent.-->
+<!--                                </p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        &lt;!&ndash; end experience section&ndash;&gt;-->
+
+<!--                        &lt;!&ndash; start experience section&ndash;&gt;-->
+<!--                        <div class="timeline">-->
+<!--                            <div class="icon"></div>-->
+<!--                            <div class="date-content">-->
+<!--                                <div class="date-outer">-->
+<!--                                    <span class="date">-->
+<!--                                        <span class="month">6 mois</span>-->
+<!--                                        <span class="year">2022</span>-->
+<!--                                    </span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="timeline-content" data-aos="fade-up" data-aos-anchor-placement="top-bottom">-->
+<!--                                <h5 class="title">Stage en Informatique</h5>-->
+<!--                                <p class="description">-->
+<!--                                    Mon stage d'initiation à la programmation en JAVA, effectué au sein de la société KARINA SA à Madagascar, a été une immersion enrichissante dans le monde de la technologie. Cette expérience m'a non seulement permis d'acquérir des compétences pratiques en programmation, mais elle m'a également aidé à clarifier mes aspirations académiques et professionnelles. Grâce à ce stage, j'ai pu confirmer ma passion pour l'informatique et définir clairement ma voie dans mes études futures. </p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        &lt;!&ndash; end experience section&ndash;&gt;-->
+
+<!--                        &lt;!&ndash; start experience section&ndash;&gt;-->
+<!--                        <div class="timeline">-->
+<!--                            <div class="icon"></div>-->
+<!--                            <div class="date-content">-->
+<!--                                <div class="date-outer">-->
+<!--                                    <span class="date">-->
+<!--                                        <span class="month">1 semaine</span>-->
+<!--                                        <span class="year">2022</span>-->
+<!--                                    </span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="timeline-content" data-aos="fade-up" data-aos-anchor-placement="top-bottom">-->
+<!--                                <h5 class="title">Stage en Gestion Finance</h5>-->
+<!--                                <p class="description">-->
+<!--                                    Pendant mon stage d'initiation au processus d'établissement des états financiers au sein du cabinet Hasina RAMANANDRIANA à Madagascar, j'ai eu l'opportunité précieuse de plonger dans le monde de la gestion financière. Cette expérience m'a permis de découvrir et de comprendre le fonctionnement d'une entreprise, offrant ainsi une perspective enrichissante de mon domaine d'étude. Ce stage a été une première pour moi et j'ai été ravi de pouvoir appliquer mes connaissances théoriques dans un environnement professionnel.-->
+<!--                                 </p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+
+<!--                        <div class="timeline">-->
+<!--                            <div class="icon"></div>-->
+<!--                            <div class="date-content">-->
+<!--                                <div class="date-outer">-->
+<!--                                    <span class="date">-->
+<!--                                        <span class="month">4 ans</span>-->
+<!--                                        <span class="year">2020</span>-->
+<!--                                    </span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="timeline-content" data-aos="fade-up" data-aos-anchor-placement="top-bottom">-->
+<!--                                <h5 class="title">Brevet d'Etude du Premier Cycle</h5>-->
+<!--                                <p class="description">-->
+<!--                                    En dépit des défis imposés par la pandémie de Covid-19 et les périodes de confinement qui ont suivi, j'ai réussi à obtenir mon Brevet d'Études du Premier Cycle à la Lycée Saint Antoine Ankadifotsy,-->
+<!--                                     située à Madagascar. Cette réalisation a posé les fondations de mon parcours éducatif, me fournissant une base solide dans divers domaines académiques et en me préparant efficacement pour mes futures études.-->
+
+<!--                                </p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </article>-->
+<!--        </section>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <section id="competences" class="d-flex flex-column">
             <div class="container d-flex flex-column">
@@ -305,13 +592,13 @@
                     <div class="clash autonome">
                         <img src="image/combattant3.png" alt="hammer">
                         <blockquote><strong>Autonome</strong></blockquote>
-                       
+
                     </div>
 
                     <div class="clash adaptabilite">
                         <img src="image/Hammer.png" alt="combattant">
                         <blockquote><strong>Adaptabilité</strong></blockquote>
-                        
+
                     </div>
 
 
@@ -319,14 +606,14 @@
                     <div class="clash">
                         <img src="image/pngaaa.com-189481.png" alt="">
                         <blockquote><strong>Discipliné</strong></blockquote>
-                        
+
                     </div>
 
 
                     <div class="clash">
                         <img src="image/champion suprême.png" alt="champion">
                         <blockquote><strong> Persévérant</strong></blockquote>
-                      
+
                     </div>
 
 
@@ -422,9 +709,9 @@
                             <img src="image/linux.jpg" class="card-img-top" alt="Image du Projet 1">
                             <div class="card-body">
                                 <h5 class="projects__subtitle">Admin Système</h5>
-                                <h5 class="card-title">Installation d’un poste pour le développement:	
+                                <h5 class="card-title">Installation d’un poste pour le développement:
                                 </h5>
-                                <p class="card-text">  Administrer des systèmes informatiques communicants complexes 
+                                <p class="card-text">  Administrer des systèmes informatiques communicants complexes
                                 </p>
                                 <div class="description">
                                     <h6>Compétences</h6>
@@ -455,7 +742,7 @@
                             <div class="card-body">
                                 <h5 class="projects__subtitle">Administration de base de données</h5>
                                 <h5 class="card-title"> Création d’une base de données </h5>
-                                <p class="card-text"> Gérer des données de l’information 
+                                <p class="card-text"> Gérer des données de l’information
                                 </p>
                                 <div class="description">
                                     <h6>Compétences</h6>
@@ -466,7 +753,7 @@
                                         </li>
                                         <li>Concevoir une base de données relationnelle à  partir d’ un cahier des charges
                                         </li>
-                                       
+
                                     </ul>
                                 </div>
 
@@ -494,72 +781,287 @@
 
 
 
-        
-        <section id="contact" class="contact">
-            <div class="link row container">
-                <div class="col work-together">
-                    <div class="paragraphe">
-                        <h1 class="mb-4">Travaillons <span>ensemble</span></h1>
-                        <p>Pour discuter de vos projets et de la manière dont je peux vous aider, n'hésitez pas à me
-                            contacter
-                            directement. Je suis toujours ouvert aux nouvelles opportunités de collaboration.</p>
-                    </div>
-                    <ul class="professionnel">
-                        <li>
-                            <i class="fa-solid fa-user"></i>
-                            <a href="#Apropos">Manohisoa MBELO NDRIAMANAMPY</a>
-                        </li>
 
-                        <li>
-                            <i class="fa-solid fa-envelope"></i>
-                            <a href="mailto:mn.manohisoa@gmail.com">mn.manohisoa@gmail.com</a>
-                        </li>
+        <section id="contact" class="py-20 relative overflow-hidden">
+            <div id="contact-particles" class="absolute inset-0"></div>
 
-                        <li>
-                            <i class="fa-solid fa-phone"></i>
-                            <a href="tel:+33675950812"> 06 75 95 08 12</a>
-                        </li>
-                    </ul>
-                    <ul class="media">
-                        <li>
-                            <a href="https://github.com/mn-manohisoa/"><i class="fa-brands fa-github"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://x.com/mn_manohisoa"><i class="fa-brands fa-x-twitter"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/in/manohisoa-mbelo-ndriamanampy-650455309/"> <i
-                                    class="fa-brands fa-linkedin-in"></i>
-                            </a>
-                        </li>
-                    </ul>
+            <!-- Background Elements -->
+            <div class="absolute top-20 left-10 w-64 h-64 bg-indigo-600/20 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 right-10 w-80 h-80 bg-purple-600/10 rounded-full blur-3xl"></div>
+
+            <div class="container mx-auto px-4 md:px-8 relative z-10">
+                <!-- Section Header -->
+                <div class="text-center mb-12">
+                    <h1 class="text-3xl md:text-4xl font-bold mb-4">Travaillons
+                        <span>ensemble</span></h1>
+                    <p class="text-gray-300 max-w-2xl mx-auto">Pour discuter de vos projets et de la manière dont je peux vous aider, n'hésitez pas à me contacter directement. Je suis toujours ouvert aux nouvelles opportunités de collaboration.
+                    </p>
                 </div>
-                <div class="formulaire col">
-                    <div>
-                        <input type="text" id="name" name="name" placeholder="Nom.." required>
+
+                <div class="grid md:grid-cols-5 gap-8 max-w-5xl mx-auto">
+                    <!-- Contact Info Sidebar -->
+                    <div class="md:col-span-2 bg-slate-800/50 backdrop-blur-sm p-6 rounded-2xl border border-indigo-500/20">
+                        <h3 class="text-xl font-semibold mb-6 flex items-center gap-2">
+                            <i class="ri-contacts-book-line text-indigo-400"></i> Information de contact
+                        </h3>
+
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="bg-indigo-600/20 p-3 rounded-lg">
+                                    <i class="ri-mail-line text-xl text-indigo-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-medium text-white">Email</h4>
+                                    <a href="mailto:mn.manohisoa@gmail.com" class="text-gray-300 hover:text-indigo-400 transition-colors">mn.manohisoa@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="bg-indigo-600/20 p-3 rounded-lg">
+                                    <i class="ri-map-pin-line text-xl text-indigo-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-medium text-white">Localisation</h4>
+                                    <p class="text-gray-300">Grenoble, France</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="bg-indigo-600/20 p-3 rounded-lg">
+                                    <i class="ri-phone-line text-xl text-indigo-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-medium text-white">Contact</h4>
+                                    <p class="text-gray-300">06 75 95 08 12</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Media Links -->
+                        <div class="mt-8">
+                            <h4 class="text-lg font-medium mb-4">Se connecter</h4>
+                            <div class="flex gap-4">
+                                <a href="https://github.com/mn-manohisoa/" class="bg-slate-700 hover:bg-indigo-600 transition-colors duration-300 p-3 rounded-lg text-white">
+                                    <i class="ri-github-fill text-xl"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/manohisoa-mbelo-ndriamanampy-650455309/" class="bg-slate-700 hover:bg-indigo-600 transition-colors duration-300 p-3 rounded-lg text-white">
+                                    <i class="ri-linkedin-fill text-xl"></i>
+                                </a>
+                                <a href="https://x.com/mn_manohisoa" class="bg-slate-700 hover:bg-indigo-600 transition-colors duration-300 p-3 rounded-lg text-white">
+                                    <i class="ri-twitter-x-fill text-xl"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <input type="text" id="name" name="name" placeholder="Prénom.." required>
-                    </div>
-                    <div>
-                        <input type="text" id="email" name="email" placeholder="Email.." required>
-                    </div>
-                    <div>
-                        <textarea id="message" name="message" placeholder="Messages.." rows="4" required></textarea>
-                    </div>
-                    <div class="button">
-                        <button type="submit" value="Submit">
-                            <a href=""> <span>Envoyer un message</span></a>
-                        </button>
+
+                    <!-- Contact Form -->
+
+                    <div class="md:col-span-3 bg-slate-800/50 backdrop-blur-sm p-6 rounded-2xl border border-indigo-500/20">
+                        <h3 class="text-xl font-semibold mb-6 flex items-center gap-2">
+                            <i class="ri-send-plane-line text-indigo-400"></i> Contactez-moi
+                        </h3>
+
+                        <form id="contact-form" class="space-y-6" method="post" action="form.php">
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div class="form-group">
+                                    <label for="name" class="block text-gray-300 mb-2">Name</label>
+                                    <div class="relative">
+                                        <i class="ri-user-line absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                                        <input
+                                                type="text"
+                                                id="name"
+                                                name="name"
+                                                class="w-full bg-slate-900/70 border border-slate-700 rounded-lg py-3 px-10 text-white focus:outline-none focus:border-indigo-500 transition-colors"
+                                                placeholder="Nom"
+                                        >
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email" class="block text-gray-300 mb-2">Email</label>
+                                    <div class="relative">
+                                        <i class="ri-mail-line absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                                        <input
+                                                type="email"
+                                                required
+                                                id="email"
+                                                name="email"
+                                                class="w-full bg-slate-900/70 border border-slate-700 rounded-lg py-3 px-10 text-white focus:outline-none focus:border-indigo-500 transition-colors"
+                                                placeholder="Email"
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject" class="block text-gray-300 mb-2">Subject</label>
+                                <div class="relative">
+                                    <i class="ri-bookmark-line absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                                    <input
+                                            type="text"
+                                            id="subject"
+                                            name="subject"
+                                            class="w-full bg-slate-900/70 border border-slate-700 rounded-lg py-3 px-10 text-white focus:outline-none focus:border-indigo-500 transition-colors"
+                                            placeholder="Objet"
+                                    >
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message" class="block text-gray-300 mb-2">Message</label>
+                                <div class="relative">
+                                    <i class="ri-chat-1-line absolute left-3 top-3 text-gray-400"></i>
+                                    <textarea
+                                            id="message"
+                                            name="message"
+                                            required
+                                            rows="5"
+                                            class="w-full bg-slate-900/70 border border-slate-700 rounded-lg py-3 px-10 text-white focus:outline-none focus:border-indigo-500 transition-colors"
+                                            placeholder="Votre message"
+                                    ></textarea>
+                                </div>
+                            </div>
+
+
+                            <button
+                                    type="submit"
+                                    class="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 font-medium"
+                            >
+                                <i class="ri-send-plane-fill"></i>
+                               Envoyer le message
+                                <span class="send-icon-wrapper"></span>
+                            </button>
+                        </form>
+
+                        <!-- Form Success Message (hidden by default) -->
+                        <div id="form-success" class="hidden bg-green-600/20 border border-green-500/30 text-green-400 p-4 rounded-lg mt-6 flex items-center gap-3">
+                            <i class="ri-checkbox-circle-line text-xl"></i>
+                            <p>Your message has been sent successfully! I'll get back to you soon.</p>
+                        </div>
                     </div>
                 </div>
             </div>
+
+<!--            <script>-->
+<!--                // Contact Form Submission-->
+<!--                const contactForm = document.getElementById('contact-form');-->
+<!--                const formSuccess = document.getElementById('form-success');-->
+
+<!--                contactForm.addEventListener('submit', function(e) {-->
+<!--                    e.preventDefault();-->
+
+<!--                    // Simulate form submission-->
+<!--                    const submitButton = contactForm.querySelector('button[type="submit"]');-->
+<!--                    const originalText = submitButton.innerHTML;-->
+
+<!--                    // Change button text and disable-->
+<!--                    submitButton.innerHTML = '<i class="ri-loader-4-line animate-spin"></i> Sending...';-->
+<!--                    submitButton.disabled = true;-->
+
+<!--                    // Simulate API call-->
+<!--                    setTimeout(() => {-->
+<!--                        // Reset form-->
+<!--                        contactForm.reset();-->
+
+<!--                        // Show success message-->
+<!--                        formSuccess.classList.remove('hidden');-->
+
+<!--                        // Reset button-->
+<!--                        submitButton.innerHTML = originalText;-->
+<!--                        submitButton.disabled = false;-->
+
+<!--                        // Hide success message after 5 seconds-->
+<!--                        setTimeout(() => {-->
+<!--                            formSuccess.classList.add('hidden');-->
+<!--                        }, 5000);-->
+<!--                    }, 1500);-->
+<!--                });-->
+
+<!--                // Input Focus Animation-->
+<!--                const formInputs = document.querySelectorAll('input, textarea');-->
+
+<!--                formInputs.forEach(input => {-->
+<!--                    // Add focus effect-->
+<!--                    input.addEventListener('focus', () => {-->
+<!--                        input.parentElement.classList.add('ring-2', 'ring-indigo-500/50');-->
+<!--                    });-->
+
+<!--                    // Remove focus effect-->
+<!--                    input.addEventListener('blur', () => {-->
+<!--                        input.parentElement.classList.remove('ring-2', 'ring-indigo-500/50');-->
+<!--                    });-->
+<!--                });-->
+
+<!--                // Contact Section Particles-->
+<!--                function createContactParticles() {-->
+<!--                    const container = document.getElementById('contact-particles');-->
+<!--                    const particleCount = window.innerWidth > 768 ? 10 : 5;-->
+
+<!--                    for (let i = 0; i < particleCount; i++) {-->
+<!--                        const particle = document.createElement('div');-->
+<!--                        particle.classList.add('particle');-->
+
+<!--                        const size = Math.random() * 8 + 3;-->
+<!--                        const posX = Math.random() * 100;-->
+<!--                        const posY = Math.random() * 100;-->
+<!--                        const opacity = Math.random() * 0.3 + 0.05;-->
+<!--                        const duration = Math.random() * 15 + 10;-->
+<!--                        const delay = Math.random() * 5;-->
+
+<!--                        particle.style.width = `${size}px`;-->
+<!--                        particle.style.height = `${size}px`;-->
+<!--                        particle.style.left = `${posX}%`;-->
+<!--                        particle.style.top = `${posY}%`;-->
+<!--                        particle.style.opacity = opacity;-->
+<!--                        particle.style.animation = `floatContact ${duration}s ease-in-out ${delay}s infinite alternate`;-->
+
+<!--                        container.appendChild(particle);-->
+<!--                    }-->
+<!--                }-->
+
+<!--                // Add CSS animation for contact particles-->
+<!--                const contactStyleElement = document.createElement('style');-->
+<!--                contactStyleElement.textContent = `-->
+<!--            @keyframes floatContact {-->
+<!--                0% {-->
+<!--                    transform: translate(0, 0) rotate(0deg);-->
+<!--                }-->
+<!--                100% {-->
+<!--                    transform: translate(30px, 30px) rotate(180deg);-->
+<!--                }-->
+<!--            }-->
+<!--        `;-->
+<!--                document.head.appendChild(contactStyleElement);-->
+
+<!--                // Create particles on load-->
+<!--                if (document.readyState === 'complete') {-->
+<!--                    createContactParticles();-->
+<!--                } else {-->
+<!--                    window.addEventListener('load', createContactParticles);-->
+<!--                }-->
+
+
+<!--                // Observe contact section elements-->
+<!--                const contactElements = document.querySelectorAll('#contact .form-group, #contact h3, #contact .flex');-->
+<!--                contactElements.forEach(element => {-->
+<!--                    observer.observe(element);-->
+<!--                });-->
+<!--            </script>-->
         </section>
 
+                <!-- Bottom Footer -->
+                <div class="flex flex-col md:flex-row justify-center items-center gap-4 m-6">
+                    <p class="text-gray-400 text-sl">
+                        © <strong>Manohisoa MBELO NDRIAMANAMPY - Portfolio</strong>. Tous droits résérvés - <span id="current-year">2025</span>
+                    </p>
+
+                    <a href="#accueil_general" class="bg-indigo-600/20 hover:bg-indigo-600/40 text-white p-2 rounded-full transition-all duration-300">
+                        <i class="ri-arrow-up-line"></i>
+                    </a>
+                </div>
+
         <!-- modal projet  -->
-        <div class="modal fade" id="algo" tabindex="-1" aria-labelledby="algo" aria-hidden="true">
+        <div class="modal fade" id="algorithme" tabindex="-1" aria-labelledby="algo" aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
@@ -570,14 +1072,14 @@
                         <h6>Description du projet</h6>
                         <p>
                             Nous avons réalisé un projet de classification automatique des dépêches qui vise à créer un programme efficace et rapide capable d’attribuer automatiquement une catégorie à chaque dépêche journalistique en fonction des scores attribués aux mots. En effet, chaque dépêche est associée à l’une des cinq catégories suivantes : ENVIRONNEMENT-SCIENCE, CULTURE, ÉCONOMIE, POLITIQUE et SPORTS.L'objectif principal est de développer un système de classification basé sur des lexiques spécifiques pour chaque catégorie, composé de mots-clés et de poids associés.
-         
+
                         </p>
 
                         <h6>Travail que j'ai effectué</h6>
 
                         <p>
-                             Dans ce projet, ma contribution principale a résidé dans le développement de la classe `PaireChaineEntier.java`, impliquant spécifiquement la création des méthodes suivantes : `initLexique`, `entierPourChaine`, calcul du score des dépêches, détermination de la chaîne maximale (`chaineMax`), établissement de l'indice pour une chaîne donnée (`indicePourChaine`), calcul de la moyenne, et enfin, la mise à niveau des résultats obtenus. 
-                            
+                             Dans ce projet, ma contribution principale a résidé dans le développement de la classe `PaireChaineEntier.java`, impliquant spécifiquement la création des méthodes suivantes : `initLexique`, `entierPourChaine`, calcul du score des dépêches, détermination de la chaîne maximale (`chaineMax`), établissement de l'indice pour une chaîne donnée (`indicePourChaine`), calcul de la moyenne, et enfin, la mise à niveau des résultats obtenus.
+
                             Dans le cadre de ce projet, j'ai conçu et développé un système de classification automatique de dépêches en utilisant des techniques d'apprentissage automatique. J'ai implémenté une méthode pour calculer la moyenne des valeurs dans une liste de paires, ainsi qu'une fonctionnalité de classification des dépêches basée sur des scores attribués selon un lexique. La pierre angulaire de ce projet a été la génération automatique de lexiques à partir d'un fichier de dépêches, en employant des calculs de scores basés sur la fréquence et la spécificité des mots, et en attribuant des poids pour affiner la précision de la classification. J'ai optimisé les performances du système en utilisant des vecteurs ordonnés et des méthodes de recherche efficaces, réduisant les temps de traitement. Le processus itératif de tests et d'améliorations basé sur des données réelles a permis d'atteindre une grande précision dans la classification des dépêches, marquant une avancée significative dans l'application de l'apprentissage automatique pour le traitement automatique du langage naturel.
                          </p>
                     </div>
@@ -591,15 +1093,15 @@
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="algoLabel">Installation d’un poste pour le développement</h5>
+                  <h5 class="modal-title" >Installation d’un poste pour le développement</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"  style="filter: invert(1);"></button>
                 </div>
                 <div class="modal-body">
                     <h6>Description du projet</h6>
 
                    <p>
-                    Lors de cette mission, j'avais pour but de préparer une 
-                    présentation sur l'installation d'un poste de développement. Pour ce faire, j'ai téléchargé l'image 
+                    Lors de cette mission, j'avais pour but de préparer une
+                    présentation sur l'installation d'un poste de développement. Pour ce faire, j'ai téléchargé l'image
                     ISO de Debian 12 et vérifié son intégrité en comparant les empreintes SHA-512. Ensuite, j'ai installé Debian 12 sur une machine virtuelle et créé un utilisateur avec mon login UGA. J'ai installé Git et le JDK en utilisant les packages Debian, puis j'ai installé IntelliJ IDEA Community de trois façons différentes : sous forme d'archive, de package snap, et de package flatpak. Après ces installations, j'ai vérifié l'espace de stockage restant pour évaluer l'impact sur le disque. Pour conserver la machine virtuelle après le projet, j'ai déplacé l'image disque sur le serveur Erebus4, en m'assurant que toutes les configurations et installations étaient correctement sauvegardées. Enfin, j'ai créé une carte mentale détaillant les étapes de l'installation du système d'exploitation Debian 12 avec KDE/Plasma et des outils de développement comme le JDK et Git.
 
                  </p>
@@ -612,7 +1114,7 @@
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="algoLabel">Création d’une base de données</h5>
+                  <h5 class="modal-title" >Création d’une base de données</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"  style="filter: invert(1);"></button>
                 </div>
                 <div class="modal-body">
@@ -625,7 +1127,7 @@
                     <p>
                     J’ai exploré la webographie proposée pour comprendre les circonstances du naufrage du Titanic, et j'ai examiné le fichier Data_Titanic_S1_04.ods pour vérifier les informations relatives aux passagers. J'ai écrit les requêtes SQL nécessaires pour vérifier les informations des passagers, telles que leur nom, âge, classe, cabines, et les détails de leur sauvetage, y compris les numéros de leurs canots de sauvetage. Ensuite, j’ai interrogé la base de données pour analyser les facteurs influençant la survie des passagers, en tenant compte de leur classe et de leur catégorie (enfant, femme, homme). J'ai rédigé des requêtes pour déterminer les taux de survie par classe et catégorie, et j'ai analysé les résultats pour comprendre l'influence de ces facteurs sur les taux de survie.
                     </p>
-                
+
                 </div>
               </div>
             </div>
@@ -635,7 +1137,7 @@
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="algoLabel">Recueil de besoins / Découverte de l’environnement économique et écologique
+                  <h5 class="modal-title" >Recueil de besoins / Découverte de l’environnement économique et écologique
                 </h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"  style="filter: invert(1);"></button>
                 </div>
@@ -652,17 +1154,17 @@
                     <p>
                     Durant ce projet, j’ai principalement étudié les concurrents, les clients, et la stratégie de l'entreprise, ainsi que son organisation géographique. Concernant les maquettes, j’ai conçu la page de contact ainsi que le footer.
                      </p>
-                
+
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="modal fade" id="algo" tabindex="-1" aria-labelledby="algo" aria-hidden="true">
+          <div class="modal fade" tabindex="-1" aria-labelledby="algo" aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="algoLabel">Implémentation d’un besoin client / Comparaison d’approches algorithmiques</h5>
+                  <h5 class="modal-title" >Implémentation d’un besoin client / Comparaison d’approches algorithmiques</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -670,21 +1172,21 @@
                    Nous avons réalisé un projet de classification automatique des dépêches qui vise à créer un programme efficace et rapide capable d’attribuer automatiquement une catégorie à chaque dépêche journalistique en fonction des scores attribués aux mots. En effet, chaque dépêche est associée à l’une des cinq catégories suivantes : ENVIRONNEMENT-SCIENCE, CULTURE, ÉCONOMIE, POLITIQUE et SPORTS.L'objectif principal est de développer un système de classification basé sur des lexiques spécifiques pour chaque catégorie, composé de mots-clés et de poids associés.
 
 
-                    Dans ce projet, ma contribution principale a résidé dans le développement de la classe `PaireChaineEntier.java`, impliquant spécifiquement la création des méthodes suivantes : `initLexique`, `entierPourChaine`, calcul du score des dépêches, détermination de la chaîne maximale (`chaineMax`), établissement de l'indice pour une chaîne donnée (`indicePourChaine`), calcul de la moyenne, et enfin, la mise à niveau des résultats obtenus. J’ai aussi 
-                   
+                    Dans ce projet, ma contribution principale a résidé dans le développement de la classe `PaireChaineEntier.java`, impliquant spécifiquement la création des méthodes suivantes : `initLexique`, `entierPourChaine`, calcul du score des dépêches, détermination de la chaîne maximale (`chaineMax`), établissement de l'indice pour une chaîne donnée (`indicePourChaine`), calcul de la moyenne, et enfin, la mise à niveau des résultats obtenus. J’ai aussi
+
                    Dans le cadre de ce projet, j'ai conçu et développé un système de classification automatique de dépêches en utilisant des techniques d'apprentissage automatique. J'ai implémenté une méthode pour calculer la moyenne des valeurs dans une liste de paires, ainsi qu'une fonctionnalité de classification des dépêches basée sur des scores attribués selon un lexique. La pierre angulaire de ce projet a été la génération automatique de lexiques à partir d'un fichier de dépêches, en employant des calculs de scores basés sur la fréquence et la spécificité des mots, et en attribuant des poids pour affiner la précision de la classification. J'ai optimisé les performances du système en utilisant des vecteurs ordonnés et des méthodes de recherche efficaces, réduisant les temps de traitement. Le processus itératif de tests et d'améliorations basé sur des données réelles a permis d'atteindre une grande précision dans la classification des dépêches, marquant une avancée significative dans l'application de l'apprentissage automatique pour le traitement automatique du langage naturel.
                 </p>
-                
+
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="modal fade" id="algo" tabindex="-1" aria-labelledby="algo" aria-hidden="true">
+          <div class="modal fade"tabindex="-1" aria-labelledby="algo" aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="algoLabel">Implémentation d’un besoin client / Comparaison d’approches algorithmiques</h5>
+                  <h5 class="modal-title" >Implémentation d’un besoin client / Comparaison d’approches algorithmiques</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -692,30 +1194,28 @@
                    Nous avons réalisé un projet de classification automatique des dépêches qui vise à créer un programme efficace et rapide capable d’attribuer automatiquement une catégorie à chaque dépêche journalistique en fonction des scores attribués aux mots. En effet, chaque dépêche est associée à l’une des cinq catégories suivantes : ENVIRONNEMENT-SCIENCE, CULTURE, ÉCONOMIE, POLITIQUE et SPORTS.L'objectif principal est de développer un système de classification basé sur des lexiques spécifiques pour chaque catégorie, composé de mots-clés et de poids associés.
 
 
-                    Dans ce projet, ma contribution principale a résidé dans le développement de la classe `PaireChaineEntier.java`, impliquant spécifiquement la création des méthodes suivantes : `initLexique`, `entierPourChaine`, calcul du score des dépêches, détermination de la chaîne maximale (`chaineMax`), établissement de l'indice pour une chaîne donnée (`indicePourChaine`), calcul de la moyenne, et enfin, la mise à niveau des résultats obtenus. J’ai aussi 
-                   
+                    Dans ce projet, ma contribution principale a résidé dans le développement de la classe `PaireChaineEntier.java`, impliquant spécifiquement la création des méthodes suivantes : `initLexique`, `entierPourChaine`, calcul du score des dépêches, détermination de la chaîne maximale (`chaineMax`), établissement de l'indice pour une chaîne donnée (`indicePourChaine`), calcul de la moyenne, et enfin, la mise à niveau des résultats obtenus. J’ai aussi
+
                    Dans le cadre de ce projet, j'ai conçu et développé un système de classification automatique de dépêches en utilisant des techniques d'apprentissage automatique. J'ai implémenté une méthode pour calculer la moyenne des valeurs dans une liste de paires, ainsi qu'une fonctionnalité de classification des dépêches basée sur des scores attribués selon un lexique. La pierre angulaire de ce projet a été la génération automatique de lexiques à partir d'un fichier de dépêches, en employant des calculs de scores basés sur la fréquence et la spécificité des mots, et en attribuant des poids pour affiner la précision de la classification. J'ai optimisé les performances du système en utilisant des vecteurs ordonnés et des méthodes de recherche efficaces, réduisant les temps de traitement. Le processus itératif de tests et d'améliorations basé sur des données réelles a permis d'atteindre une grande précision dans la classification des dépêches, marquant une avancée significative dans l'application de l'apprentissage automatique pour le traitement automatique du langage naturel.
                 </p>
-                
+
                 </div>
               </div>
             </div>
           </div>
+
+
+
     </main>
 
-    <footer>
-        <p>
-            ©
-            <strong>Manohisoa MBELO NDRIAMANAMPY - Portfolio</strong>
-            . Tous droits résérvés - 2024
-        </p>
-    </footer>
 </body>
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 <script>
     AOS.init();
 
@@ -728,5 +1228,11 @@
         }
     });
 </script>
+
+
+
+
+
+
 
 </html>
