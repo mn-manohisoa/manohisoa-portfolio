@@ -19,38 +19,9 @@
 </head>
 
 <body>
-<!--        <nav id="navigation" class="navbar fixed-top navbar-expand-lg navbar-dark dark ">-->
-<!--            <div class="container-fluid">-->
-<!--                <a class="navbar-brand" href="#">M.N_MANOHISOA</a>-->
-<!--                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"-->
-<!--                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"-->
-<!--                    aria-expanded="false" aria-label="Toggle navigation">-->
-<!--                    <span class="navbar-toggler-icon"></span>-->
-<!--                </button>-->
-<!--                <div class="collapse navbar-collapse" id="navbarSupportedContent">-->
-<!--                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">-->
-<!--                        <li class="nav-item">-->
-<!--                            <a class="nav-link " aria-current="page" href="#accueil_general">Accueil</a>-->
-<!--                        </li>-->
-<!--                        <li class="nav-item">-->
-<!--                            <a class="nav-link" href="#Apropos">À propos de moi</a>-->
-<!--                        </li>-->
-<!--                        <li class="nav-item">-->
-<!--                            <a class="nav-link" href="#competences">Compétences</a>-->
-<!--                        </li>-->
-<!--                        <li class="nav-item">-->
-<!--                            <a class="nav-link" href="#projets">Projets</a>-->
-<!--                        </li>-->
-<!--                        <li class="nav-item">-->
-<!--                            <a class="nav-link" href="#contact">Contact</a>-->
-<!--                        </li>-->
-<!--                    </ul>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </nav>-->
-<!--    </header>-->
 
-<header id="navbar" class="fixed w-full top-0 left-0 z-50 transition-all duration-300 py-3 bg-black">
+
+<header id="navbar" class="fixed w-full top-0 left-0 z-50 transition-all duration-300 py-3 ">
     <div id="navigation" class="container mx-auto px-4 md:px-8">
         <div class="flex justify-between items-center">
             <!-- Logo -->
@@ -61,11 +32,6 @@
                     <span class="navbar-toggler-icon"></span>
                     </button>
 
-<!--            <a class="navbar-brand" href="#">M.N_MANOHISOA</a>-->
-<!--                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse">-->
-<!--                          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"-->
-<!--                             aria-expanded="false" aria-label="Toggle navigation">-->
-<!--                          <span class="navbar-toggler-icon"></span>-->
 
             <!-- Desktop Navigation -->
             <nav class="hidden md:flex items-center space-x-8">
@@ -269,45 +235,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <!-- end experience section-->
 
-                            <!-- start experience section-->
-<!--                            <div class="timeline">-->
-<!--                                <div class="icon"></div>-->
-<!--                                <div class="date-content">-->
-<!--                                    <div class="date-outer">-->
-<!--                                    <span class="date">-->
-<!--                                        <span class="month">6 mois</span>-->
-<!--                                        <span class="year">2022</span>-->
-<!--                                    </span>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                                <div class="timeline-content" data-aos="fade-up" data-aos-anchor-placement="top-bottom">-->
-<!--                                    <h5 class="title">Stage en Informatique</h5>-->
-<!--                                    <p class="description">-->
-<!--                                        Mon stage d'initiation à la programmation en JAVA, effectué au sein de la société KARINA SA à Madagascar, a été une immersion enrichissante dans le monde de la technologie. Cette expérience m'a non seulement permis d'acquérir des compétences pratiques en programmation, mais elle m'a également aidé à clarifier mes aspirations académiques et professionnelles. Grâce à ce stage, j'ai pu confirmer ma passion pour l'informatique et définir clairement ma voie dans mes études futures. </p>-->
-<!--                                </div>-->
-<!--                            </div>-->
-                            <!-- end experience section-->
-
-                            <!-- start experience section-->
-<!--                            <div class="timeline">-->
-<!--                                <div class="icon"></div>-->
-<!--                                <div class="date-content">-->
-<!--                                    <div class="date-outer">-->
-<!--                                    <span class="date">-->
-<!--                                        <span class="month">1 semaine</span>-->
-<!--                                        <span class="year">2022</span>-->
-<!--                                    </span>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                                <div class="timeline-content" data-aos="fade-up" data-aos-anchor-placement="top-bottom">-->
-<!--                                    <h5 class="title">Stage en Gestion Finance</h5>-->
-<!--                                    <p class="description">-->
-<!--                                        Pendant mon stage d'initiation au processus d'établissement des états financiers au sein du cabinet Hasina RAMANANDRIANA à Madagascar, j'ai eu l'opportunité précieuse de plonger dans le monde de la gestion financière. Cette expérience m'a permis de découvrir et de comprendre le fonctionnement d'une entreprise, offrant ainsi une perspective enrichissante de mon domaine d'étude. Ce stage a été une première pour moi et j'ai été ravi de pouvoir appliquer mes connaissances théoriques dans un environnement professionnel.-->
-<!--                                    </p>-->
-<!--                                </div>-->
-<!--                            </div>-->
 
                             <div class="timeline">
                                 <div class="icon"></div>
@@ -447,11 +375,6 @@
 
                     </div>
 
-                    <div class="tech-icon">
-                        <img src="image/GitHub.png" alt="github">
-                        <div class="tech-name"><strong>GitHub</strong></div>
-
-                    </div>
 
                     <div class="tech-icon" id="visual">
                         <img src="image/visual paradigm.png" alt="visual">
@@ -1179,6 +1102,17 @@
     </main>
 
 
+<<script>
+    window.addEventListener("scroll", function () {
+        const navbar = document.getElementById("navbar");
+        if (window.scrollY > 50) {
+            navbar.classList.add("scrolled");
+        } else {
+            navbar.classList.remove("scrolled");
+        }
+    });
+</script>
+
 
 
 
@@ -1193,14 +1127,6 @@
 <script>
     AOS.init();
 
-    window.addEventListener('scroll', function () {
-        var element = document.getElementById('navigation');
-        if (window.scrollY > 200) {
-            element.classList.remove('dark');
-        } else {
-            element.classList.add('dark');
-        }
-    });
 </script>
 
 
