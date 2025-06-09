@@ -293,14 +293,15 @@ padding-bottom: 8em;
     padding-bottom: 5rem;
 }
 
-#Apropos .education{
-    padding-bottom: 2rem;
-    padding-top: 75px;
-    background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
-    background-clip: text;
-    color: transparent;
+/*#Apropos .education {*/
+/*    padding-bottom: 2rem;*/
+/*    padding-top: 75px;*/
+/*    background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);*/
+/*    background-clip: text;*/
+/*    color: transparent;*/
 
-}
+/*}*/
+
 
 #Apropos .main-timeline{
     margin-bottom: 10rem;
