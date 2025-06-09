@@ -81,6 +81,16 @@ nav .navbar-collapse ul li {
     background-color: #0a0f1f; /* légèrement plus sombre */
 }
 
+#mobile-menu {
+    transition: background-color 0.5s ease-in-out;
+}
+
+#mobile-menu.scrolled {
+    background-color: #0a0f1f; /* légèrement plus sombre */
+}
+
+
+
 .navbar-brand{
     font-family: 'blackFuture';
 }
@@ -141,29 +151,6 @@ nav .navbar-collapse ul li {
 }
 
 
-/*.button{*/
-/*    margin-top: 20px;*/
-/*    width: 80%;*/
-/*}*/
-
-/*.button button{*/
-/*    padding: 10px 50px;*/
-/*    border: none;*/
-/*    border-radius: 25px;*/
-/*    background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59); */
-/* }*/
-
-
-/*.button button:hover {*/
-/*    background: white;*/
-/*    opacity: 0.8;*/
-/*    transition: 0.5s;*/
-/*}*/
-
-/*.button button:hover a{*/
-/*    color:#000;*/
-/*    transition: 0.3s;*/
-/*}*/
 
 /* Photo de profil */
 .sukuna{
@@ -175,6 +162,7 @@ nav .navbar-collapse ul li {
     border-radius: 50%;
     z-index: 2;
     border: 5px solid  #12c2e9;
+    margin-top: 4em;
 }
 .sukuna img{
     width: 100%;
@@ -185,7 +173,6 @@ nav .navbar-collapse ul li {
 
 /* contact */
 #contact{
-    /*background-color: #151718;*/
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -288,7 +275,6 @@ padding-bottom: 8em;
 
 /* A propos */
 #Apropos{
-    /*background: radial-gradient(circle, rgb(26, 10, 27) 0%, rgba(1,9,20,1) 100%); */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -669,11 +655,7 @@ article{
     align-items: center;
     text-align: center;
     position: relative;
-    /*border: 1px solid #dee2e6;*/
-    /*color: #4e4e4e;*/
-    /*background-color: #fff;*/
-    /*border-radius: 10px;*/
-    /*box-shadow: 20px 10px 30px rgba(224, 222, 222, 0.05);*/
+
 }
 
 
@@ -795,17 +777,6 @@ article{
 /* projet */
 #projets{
 }
-
-/*.card {*/
-/*    background-color: transparent;*/
-/*    border: none;*/
-/*    border-radius: 20px;*/
-/*    margin-right: 40px;*/
-/*}*/
-
-/*.card:hover{*/
-/*    background-color: rgb(10, 10, 10); */
-/*}*/
 
 
 .card {
