@@ -1,1183 +1,680 @@
 <!DOCTYPE html>
-<html lang="fr" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
-
+<html lang="fr" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manohisoa MBELO NDRIAMANAMPY</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
-
-    <script src="https://kit.fontawesome.com/aa561a90f2.js" crossorigin="anonymous"></script>
-
-    <link rel="stylesheet" href="style.css">
-
-
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Manohisoa MBELO NDRIAMANAMPY</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+  <script src="https://kit.fontawesome.com/aa561a90f2.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css"/>
 </head>
-
 <body>
 
-
-<header id="navbar" class="fixed w-full top-0 left-0 z-50 transition-all duration-300 py-3 ">
-    <div id="navigation" class="container mx-auto px-4 md:px-8">
-        <div class="flex justify-between items-center">
-            <!-- Logo -->
-            <a class="navbar-brand" href="#">M.N_MANOHISOA</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                    </button>
-
-
-            <!-- Desktop Navigation -->
-            <nav class="hidden md:flex items-center space-x-8">
-                <a href="#accueil_general" class="text-gray-300 hover:text-white transition-colors duration-300">Accueil</a>
-                <a href="#Apropos" class="text-gray-300 hover:text-white transition-colors duration-300">À propos de moi</a>
-                <a href="#competences" class="text-gray-300 hover:text-white transition-colors duration-300">Compétences</a>
-                <a href="#projets" class="text-gray-300 hover:text-white transition-colors duration-300">Expériences</a>
-                <a href="#contact" class="text-gray-300 hover:text-white transition-colors duration-300">Contact</a>
-                <a href="CV_Manohisoa-MBELO-NDRIAMANAMPY-1.pdf" download="CV-Manohisoa MBELO NDRIAMANAMPY" class="bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-6 rounded-full transition-all duration-300 flex items-center gap-2 justify-center">
-                    <i class="ri-download-line"></i> Télécharger mon CV
-                </a>
-            </nav>
-
-            <!-- Mobile Menu Button -->
-            <button id="menu-btn" class="md:hidden text-2xl">
-                <i class="ri-menu-line"></i>
-            </button>
-        </div>
+<!-- ===== NAVBAR ===== -->
+<header id="navbar">
+  <div class="nav-container">
+    <a class="nav-logo" href="#">M.N_MANOHISOA</a>
+    <nav class="nav-links" id="nav-links">
+      <a href="#accueil">Accueil</a>
+      <a href="#apropos">À propos</a>
+      <a href="#competences">Compétences</a>
+      <a href="#experiences">Expériences</a>
+      <a href="#projets">Projets</a>
+      <a href="#contact">Contact</a>
+      <a href="CV_Manohisoa-MBELO-NDRIAMANAMPY.pdf" download class="btn-cv">
+        <i class="ri-download-line"></i> Mon CV
+      </a>
+      <button id="theme-toggle" class="theme-toggle" title="Changer le thème">
+        <i class="ri-sun-line" id="icon-sun"></i>
+        <i class="ri-moon-line" id="icon-moon"></i>
+      </button>
+    </nav>
+    <div class="nav-right-mobile">
+      <button id="theme-toggle-mobile" class="theme-toggle">
+        <i class="ri-sun-line" id="icon-sun-m"></i>
+        <i class="ri-moon-line" id="icon-moon-m"></i>
+      </button>
+      <button class="nav-toggle" id="nav-toggle"><i class="ri-menu-line"></i></button>
     </div>
-
-    <!-- Mobile Navigation -->
-    <div id="mobile-menu" class="md:hidden  absolute top-full left-0 w-full py-4 px-4 hidden ">
-        <div class="flex flex-col space-y-4">
-            <a href="#accueil_general" class="text-gray-300 hover:text-white transition-colors duration-300 py-2">Accueil</a>
-            <a href="#Apropos" class="text-gray-300 hover:text-white transition-colors duration-300">À propos de moi</a>
-            <a href="#competences" class="text-gray-300 hover:text-white transition-colors duration-300 py-2">Compétences</a>
-            <a href="#projets" class="text-gray-300 hover:text-white transition-colors duration-300 py-2">Expériences</a>
-            <a href="#contact" class="text-gray-300 hover:text-white transition-colors duration-300 py-2">Contact</a>
-            <a href="CV_Manohisoa-MBELO-NDRIAMANAMPY-1.pdf" download="CV-Manohisoa MBELO NDRIAMANAMPY" class="bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-6 rounded-full transition-all duration-300 flex items-center gap-2 justify-center">
-                <i class="ri-download-line"></i> Télécharger mon CV
-            </a>
-        </div>
-    </div>
-
+  </div>
 </header>
 
-<script>
-    // Récupérer le bouton de menu et le menu mobile
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    // Ajouter un événement pour afficher/cacher le menu mobile
-    menuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-    });
-
-
-</script>
-
-
-    <main>
-        <section id="accueil_general" class="accueil container d-flex onepage ">
-            <div class="info d-flex flex-column flex-column-reverse flex-md-row flex-md-row">
-                <div class="information col-lg-8">
-                    <div class="description pt-5">
-                        <h1>Manohisoa</h1>
-                        <h1>MBELO NDRIAMANAMPY</h1>
-                        <p>Étudiant en informatique</p>
-                    </div>
-                    <ul>
-                        <li>
-                            <i class="fa-solid fa-envelope"></i>
-                            <a href="mailto:mn.manohisoa@gmail.com">mn.manohisoa@gmail.com</a>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-phone"></i>
-                            <a href="tel:+33675950812"> 06 75 95 08 12</a>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-location-dot"></i>
-                            <span>90 avenue Jules Vallès, 38100 Grenoble, France</span>
-                        </li>
-                    </ul>
-                    <div class="mt-2">
-                        <div class="flex gap-4">
-                            <a href="https://github.com/mn-manohisoa/" class="bg-slate-700 hover:bg-indigo-600 transition-colors duration-300 p-3 rounded-lg text-white">
-                                <i class="ri-github-fill text-xl"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/manohisoa-mbelo-ndriamanampy-650455309/" class="bg-slate-700 hover:bg-indigo-600 transition-colors duration-300 p-3 rounded-lg text-white">
-                                <i class="ri-linkedin-fill text-xl"></i>
-                            </a>
-                            <a href="https://x.com/mn_manohisoa" class="bg-slate-700 hover:bg-indigo-600 transition-colors duration-300 p-3 rounded-lg text-white">
-                                <i class="ri-twitter-x-fill text-xl"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="button mt-4">
-                        <button type="submit" value="Submit" class="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white py-3 px-6 rounded-full transition-all duration-300">
-                            <a href="#contact"> <span>Contactez-moi</span></a>
-                        </button>
-                    </div>
-                </div>
-                <div class="sukuna col-lg-4">
-<!--                    <img src="image/Photo_Mano.jpg" alt="Mano">-->
-                    <img src="image/test.jpg" alt="Professional Photo" class="w-full h-auto rounded-xl">
-                </div>
-            </div>
-        </section>
-
-
-        <section id="Apropos" class="pt-24  bg-slate-900">
-            <div class="container mx-auto px-4 md:px-8">
-                <div class="flex flex-col items-center mb-16">
-
-                    <h1 class="text-3xl md:text-4xl font-bold text-center">
-                        Qui <span>suis-je ?</span>
-                    </h1>
-                </div>
-
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <!-- About Image -->
-                    <div class="relative max-w-md mx-auto md:mx-0">
-                        <!-- Background Gradient Blob -->
-                        <div class="absolute -z-10 w-full h-full rounded-2xl bg-indigo-600/20 blur-3xl"></div>
-
-                        <!-- Image Container -->
-                        <div class="relative z-10 border-2 border-indigo-500/20 p-4 rounded-2xl bg-slate-800/50 backdrop-blur-sm transform hover:scale-[1.02] transition-transform duration-500">
-<!--                            <img src="image/test.jpg" alt="Professional Photo" class="w-full h-auto rounded-xl">-->
-                            <img src="image/Photo_Mano.jpg" alt="Mano">
-
-                            <!-- Experience Badge -->
-                            <div class="absolute -bottom-6 -right-6 bg-slate-800 rounded-2xl p-4 shadow-lg border border-indigo-500/30">
-                                <div class="text-center">
-                                    <span class="text-3xl font-bold text-indigo-400">Bac +2</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="space-y-6 mt-5 mb-4" >
-                            <h3 class="text-2xl font-semibold">Étudiant en réseaux et cybérsécurité</h3>
-
-                            <p class="text-gray-300">
-                                Je suis Manohisoa MBELO NDRIAMANAMPY, un passionné d'informatique avec un intérêt
-                                particulier par le
-                                monde des réseaux et la cybersécurité. Depuis que j'ai plongé dans l'univers de
-                                l'informatique, j'ai été
-                                captivé par la complexité et la dynamique des réseaux, ainsi que par les défis passionnants
-                                qu'ils
-                                présentent. Mon objectif professionnel est de contribuer à garantir la sécurité numérique en
-                                travaillant
-                                dans le domaine de la cybersécurité.                            </p>
-
-                            <p class="text-gray-300">
-                                En dehors de ma passion pour la technologie, je suis également un grand amateur de
-                                basket-ball. Jouer
-                                sur le terrain m'apporte non seulement de la joie et de l'adrénaline, mais aussi des leçons
-                                précieuses
-                                sur le travail d'équipe, la persévérance et le dépassement de soi.                            </p>
-
-                        <div class="pt-6">
-                            <a href="CV_Manohisoa-MBELO-NDRIAMANAMPY-1.pdf" download="CV-Manohisoa MBELO NDRIAMANAMPY" class="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white py-3 px-6 rounded-full transition-all duration-300">
-                                <i class="ri-file-download-line"></i>
-                                    Télécharger mon CV
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-
-                <article class="Apropos-Formation mt-5 ">
-                    <div class="container pt-10 ">
-                        <h1 class="education "> Stage - <span>Formations</span>  </h1>
-                        <div class="main-timeline">
-
-                            <!-- start experience section-->
-                            <div class="timeline">
-                                <div class="icon"></div>
-                                <div class="date-content">
-                                    <div class="date-outer">
-                                    <span class="date">
-                                        <span class="month">Avril-Juin</span>
-                                        <span class="year">2025</span>
-                                    </span>
-                                    </div>
-                                </div>
-                                <div class="timeline-content" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                                    <h5 class="title">Enlaps</h5>
-                                    <p class="description">
-                                        J’ai effectué un stage de 12 semaines chez Enlaps, entreprise spécialisée dans les contenus timelapse et l’hébergement cloud sur AWS.
-                                        J’y ai contribué à l’optimisation de l’infrastructure en mettant en place des Amazon Machine Images (AMI) préchargées d’images Docker, et en réduisant la taille des images existantes grâce à DockerSlim, dans un objectif de performance et de maîtrise des coûts.
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- end experience section-->
-
-
-
-                            <!-- start experience section-->
-                            <div class="timeline">
-                                <div class="icon"></div>
-                                <div class="date-content">
-                                    <div class="date-outer">
-                                    <span class="date">
-                                        <span class="month">Maintenant</span>
-                                        <span class="year">2025</span>
-                                    </span>
-                                    </div>
-                                </div>
-                                <div class="timeline-content" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                                    <h5 class="title">BUT Informatique</h5>
-                                    <p class="description">
-                                        Je suis actuellement inscrit au sein du BUT Informatique à
-                                        Grenoble. Ce cursus représente une opportunité exceptionnelle pour moi, car il me permettra d'acquérir un large éventail de compétences dans le domaine de l'informatique, avec une attention particulière portée aux réseaux et à la cybersécurité. Ces compétences, une fois acquises, seront un atout précieux que je pourrai mettre à profit dans ma future carrière professionnelle.
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- end experience section-->
-
-                            <!-- start experience section-->
-                            <div class="timeline">
-                                <div class="icon"></div>
-                                <div class="date-content">
-                                    <div class="date-outer">
-                                    <span class="date">
-                                        <span class="month">3 ans</span>
-                                        <span class="year">2023</span>
-                                    </span>
-                                    </div>
-                                </div>
-                                <div class="timeline-content" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                                    <h5 class="title">Baccalauréat</h5>
-                                    <p class="description">
-                                        À La Clairefontaine Ambodivoanjo, à Madagascar, j'ai obtenu mon Baccalauréat STMG (Sciences et Technologies du Management et de la Gestion), spécialité Gestion et Finance, avec mention Bien.
-                                        Ce parcours m'a offert une opportunité d'approfondir mes connaissances dans les domaines économiques et financiers, me préparant ainsi à relever les défis  professionnels qui m'attendent.
-                                    </p>
-                                </div>
-                            </div>
-
-
-                            <div class="timeline">
-                                <div class="icon"></div>
-                                <div class="date-content">
-                                    <div class="date-outer">
-                                    <span class="date">
-                                        <span class="month">4 ans</span>
-                                        <span class="year">2020</span>
-                                    </span>
-                                    </div>
-                                </div>
-                                <div class="timeline-content" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                                    <h5 class="title">Brevet d'Etude du Premier Cycle</h5>
-                                    <p class="description">
-                                        En dépit des défis imposés par la pandémie de Covid-19 et les périodes de confinement qui ont suivi, j'ai réussi à obtenir mon Brevet d'Études du Premier Cycle à la Lycée Saint Antoine Ankadifotsy,
-                                        située à Madagascar. Cette réalisation a posé les fondations de mon parcours éducatif, me fournissant une base solide dans divers domaines académiques et en me préparant efficacement pour mes futures études.
-
-                                    </p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </article>
-
-            </div>
-
-
-        </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <section id="competences" class="d-flex flex-column">
-            <div class="container d-flex flex-column">
-                <h1>Langages de <span>programmation</span></h1>
-                <div class="listoutil">
-                    <div class="tech-icon" data-aos="fade-right">
-                        <img src="image/pngegg(2).png" alt="java">
-                    </div>
-                    <div class="tech-icon" data-aos="fade-right">
-                        <img src="image/javascript.png" alt="javascript">
-                    </div>
-                    <div class="tech-icon" data-aos="fade-right">
-                        <img src="image/logo-c.png" alt="C">
-                    </div>
-                    <div class="tech-icon" id="cpp" data-aos="fade-left">
-                        <img src="image/c++.png" alt="C++">
-                    </div>
-                    <div class="tech-icon" data-aos="fade-left">
-                        <img src="image/php.png" alt="php">
-                    </div>
-                    <div class="tech-icon" data-aos="fade-right">
-                        <img src="image/tailwind-css.png" alt="tailwind-css">
-                    </div>
-                    <div class="tech-icon" data-aos="fade-right">
-                        <img src="image/pngegg(1).png" alt="html">
-                    </div>
-                    <div class="tech-icon" id="css" data-aos="fade-left">
-                        <img src="image/css.png" alt="css">
-                    </div>
-                    <div class="tech-icon" id="psql" data-aos="fade-left">
-                        <img src="image/postgre.png" alt="psql">
-                    </div>
-                </div>
-
-            </div>
-            <div>
-                <h1>Outils <span>utilisés</span></h1>
-                <div class="listoutil">
-                    <div class="tech-icon">
-                        <img src="image/idea.png" alt="idea">
-                        <div class="tech-name"><strong>IntelliJ IDEA</strong></div>
-                    </div>
-
-                    <div class="tech-icon">
-                        <img src="image/phpstorm.png" alt="phpstorm">
-                        <div class="tech-name"><strong>PhpStorm</strong></div>
-                    </div>
-
-
-                    <div class="tech-icon">
-                        <img src="image/webstorm.png" alt="webstorm">
-                        <div class="tech-name"><strong>WebStorm</strong></div>
-                    </div>
-
-
-
-
-
-                    <div class="tech-icon" data-aos="fade-up">
-                        <img src="image/wireshark.png" alt="wireshark">
-                        <div class="tech-name"><strong>Wireshark</strong></div>
-                    </div>
-
-                    <div class="tech-icon" data-aos="fade-up">
-                        <img src="image/windows.png" alt="windows">
-                        <div class="tech-name"><strong>Windows</strong></div>
-                    </div>
-
-                    <div class="tech-icon" data-aos="fade-up">
-                        <img src="image/linux.png" alt="Linux">
-                        <div class="tech-name"><strong>Linux</strong></div>
-                    </div>
-
-                    <div class="tech-icon" data-aos="fade-up">
-                        <img src="image/git.png" alt="git">
-                        <div class="tech-name"><strong>Git</strong></div>
-                    </div>
-
-                    <div class="tech-icon" id="visual" data-aos="fade-up">
-                        <img src="image/visual paradigm.png" alt="visual">
-                        <div class="tech-name"><strong>Visual Paradigm</strong></div>
-                    </div>
-
-                    <div class="tech-icon" data-aos="fade-up">
-                        <img src="image/Docker.png" alt="Docker ">
-                        <div class="tech-name"><strong>Docker</strong></div>
-                    </div>
-
-                    <div class="tech-icon" id="packer" data-aos="fade-up">
-                        <img src="image/packer-seeklogo.png" alt="packer ">
-                        <div class="tech-name"><strong>Packer</strong></div>
-                    </div>
-
-                    <div class="tech-icon" id="terraform" data-aos="fade-up">
-                        <img src="image/terraform.png" alt="terraform ">
-                        <div class="tech-name"><strong>Terraform</strong></div>
-                    </div>
-
-                    <div class="tech-icon" data-aos="fade-up">
-                        <img src="image/proxmox.png" alt="proxmox ">
-                        <div class="tech-name"><strong>Proxmox</strong></div>
-                    </div>
-
-
-
-
-
-
-
-
-
-                </div>
-            </div>
-            <div class="mb-5">
-                <h1>Compétences <span>transversales</span></h1>
-                <div class="listoutil">
-                    <div class="clash autonome" data-aos="fade-right">
-                        <img src="image/combattant3.png" alt="hammer">
-                        <blockquote><strong>Autonome</strong></blockquote>
-
-                    </div>
-
-                    <div class="clash adaptabilite" data-aos="fade-right">
-                        <img src="image/Hammer.png" alt="combattant">
-                        <blockquote><strong>Adaptabilité</strong></blockquote>
-
-                    </div>
-
-
-
-                    <div class="clash" data-aos="fade-left">
-                        <img src="image/pngaaa.com-189481.png" alt="">
-                        <blockquote><strong>Discipliné</strong></blockquote>
-
-                    </div>
-
-
-                    <div class="clash" data-aos="fade-left">
-                        <img src="image/champion suprême.png" alt="champion">
-                        <blockquote><strong> Persévérant</strong></blockquote>
-
-                    </div>
-
-
-                </div>
-
-            </div>
-        </section>
-
-        <section id="projets" class="d-flex flex-column">
-            <div class="myproject">
-                <h1>Mes <span>projets</span></h1>
-                <div class="container row g-4">
-                    <div class="col-12 col-md-6 col-lg-4"  data-aos="fade-right">
-                        <div class="card">
-                            <img src="image/Java Certification Course.jpg" class="card-img-top" alt="Image du Projet 1">
-                            <div class="card-body">
-                                <h5 class="projects__subtitle">Application JAVA</h5>
-                                <h5 class="card-title">Implémentation d’un besoin client - Comparaison d’approches
-                                    algorithmiques: </h5>
-                                <p class="card-text"> Réaliser un développement d’application </br>
-                                    Optimiser des applications informatiques
-                                </p>
-
-
-                                <div class="description">
-                                    <h6>Compétences </h6>
-                                    <ul>
-                                        <li>Implémenter des conceptions simples
-                                        </li>
-                                        <li>Élaborer des conceptions simples
-                                        </li>
-                                        <li>Faire des essais et évaluer leurs résultats en regard des spécifications
-                                        </li>
-                                        <li>Analyser un problème avec méthode
-                                        </li>
-                                        <li> Comparer des algorithmes pour des problèmes classiques
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <h6 class="duree">Durée : <span > 1 semaine </span></h6>
-
-                                <div class="projects__buttons">
-                                    <a data-bs-toggle="modal" data-bs-target="#algorithme" class="projects__link">
-                                        <i class="fa-solid fa-plus"></i> Voir plus
-                                    </a>
-                                    <a href="https://github.com/mn-manohisoa/classification-depeche" target="_blank" class="projects__link ml-3">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-6 col-lg-4" data-aos="zoom-in">
-                        <div class="card">
-                            <img src="image/Atos Origin.jpg" class="card-img-top" alt="Image du Projet 1">
-                            <div class="card-body">
-                                <h5 class="projects__subtitle">Site Web</h5>
-                                <h5 class="card-title">Recueil de besoins / Découverte de l’environnement économique et écologique
-                                </h5>
-                                <p class="card-text"> Conduire un projet
-                                </br>
-                                Travailler dans une équipe informatique
-                                </p>
-                                <div class="description">
-                                    <h6>Compétences</h6>
-                                    <ul>
-                                        <li>Appréhender les besoins du client et de l’utilisateur
-                                        </li>
-                                        <li>Mettre en place les outils de gestion de projet
-                                        </li>
-                                        <li>	Identifier les acteurs et les différentes phases d’un cycle de développement
-                                        </li>
-                                        <li>Analyser un problème avec méthode
-                                        </li>
-                                        <li> Acquérir les compétences interpersonnelles pour travailler en équipe
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <h6 class="duree">Durée : <span > 4 mois </span></h6>
-
-                                <div class="projects__buttons">
-                                    <a data-bs-toggle="modal" data-bs-target="#site_web" class="projects__link">
-                                        <i class="fa-solid fa-plus"></i> Voir plus
-                                    </a>
-<!--                                    <a href="https://github.com/ton-depot" target="_blank" class="projects__link ml-3">-->
-<!--                                        <i class="fab fa-github"></i>-->
-<!--                                    </a>-->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-12 col-md-6 col-lg-4" data-aos="fade-left">
-                        <div class="card">
-                            <img src="image/linux.jpg" class="card-img-top" alt="Image du Projet 1">
-                            <div class="card-body">
-                                <h5 class="projects__subtitle">Admin Système</h5>
-                                <h5 class="card-title">Installation d’un poste pour le développement:
-                                </h5>
-                                <p class="card-text">  Administrer des systèmes informatiques communicants complexes
-                                </p>
-                                <div class="description">
-                                    <h6>Compétences</h6>
-                                    <ul>
-                                        <li>Identifier les différents composants d’un système numérique
-                                        </li>
-                                        <li>Installer et configurer un système d’exploitation et des outils de développement
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <h6 class="duree">Durée : <span > 1 semaine </span></h6>
-
-
-                                <div class="projects__buttons">
-                                    <a data-bs-toggle="modal" data-bs-target="#linux" class="projects__link">
-                                        <i class="fa-solid fa-plus"></i> Voir plus
-                                    </a>
-<!--                                    <a href="https://github.com/ton-depot" target="_blank" class="projects__link ml-3">-->
-<!--                                        <i class="fab fa-github"></i>-->
-<!--                                    </a>-->
-                                 </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up-right">
-                        <div class="card">
-                            <img src="image/Titanic Sinking Ship Decor, Titanic Poster, Maritime Wall Art, Titanic Ship, Titanic Ship Wall Art, Titanic, Unsinkable Ship.jpg" class="card-img-top" alt="Image du Projet 1">
-                            <div class="card-body">
-                                <h5 class="projects__subtitle">Administration de base de données</h5>
-                                <h5 class="card-title"> Création d’une base de données </h5>
-                                <p class="card-text"> Gérer des données de l’information
-                                </p>
-                                <div class="description">
-                                    <h6>Compétences</h6>
-                                    <ul>
-                                        <li>Mettre à jour et interroger une base de données relationnelle
-                                        </li>
-                                        <li>Visualiser des données
-                                        </li>
-                                        <li>Concevoir une base de données relationnelle à  partir d’ un cahier des charges
-                                        </li>
-
-                                    </ul>
-                                </div>
-
-                                <h6 class="duree">Durée : <span > 1 mois </span></h6>
-
-
-                                <div class="projects__buttons">
-                                    <a data-bs-toggle="modal" data-bs-target="#data" class="projects__link">
-                                        <i class="fa-solid fa-plus"></i> Voir plus
-                                    </a>
-                                    <a href="https://github.com/mn-manohisoa/creation-BD" target="_blank" class="projects__link ml-3">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up">
-                        <div class="card">
-                            <img src="image/vague.jpeg" class="card-img-top" alt="Image du Projet 1">
-                            <div class="card-body">
-                                <h5 class="projects__subtitle">Application Web</h5>
-                                <h5 class="card-title">Création et déploiement de services applicatifs autour des données culturelles françaises
-                                </h5>
-                                <p class="card-text"> Développer une application web client-serveur intégrant des services et une base de données.
-                                    </br>
-                                    Conduire un projet
-                                    </br>
-                                    Travailler dans une équipe informatique
-                                </p>
-                                <div class="description">
-                                    <h6>Compétences</h6>
-                                    <ul>
-                                        <li> Concevoir et développer des applications communicantes
-                                        </li>
-                                        <li>Utiliser des serveurs et des services réseaux virtualisés
-                                        </li>
-                                        <li>	Manipuler des données hétérogènes
-                                        </li>
-                                        <li>Adopter de bonnes pratiques de conception et de programmation
-                                        </li>
-                                        <li> Mobiliser les compétences interpersonnelles pour travailler dans une équipe informatique
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <h6 class="duree">Durée : <span > 4 mois </span></h6>
-
-                                <div class="projects__buttons">
-                                    <a data-bs-toggle="modal" data-bs-target="#node_js" class="projects__link">
-                                        <i class="fa-solid fa-plus"></i> Voir plus
-                                    </a>
-                                    <a href="https://gricad-gitlab.univ-grenoble-alpes.fr/iut2-info-stud/2024-s3/s3.01/team-15/rendus" target="_blank" class="projects__link ml-3">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up-left">
-                        <div class="card">
-                            <img src="image/AnubisDev%20work.jpg" class="card-img-top" alt="Image du Projet 1">
-                            <div class="card-body">
-                                <h5 class="projects__subtitle">Admin réseaux</h5>
-                                <h5 class="card-title">Conception et mise en œuvre d'une infrastructure réseau sécurisée à l'aide d'outils open-source
-                                </h5>
-                                <p class="card-text"> Déployer une infrastructure virtuelle avec segmentation réseau
-                                    </br>
-                                    Configurer des services réseaux
-                                    </br>
-                                    Travailler dans une équipe informatique
-                                </p>
-                                <div class="description">
-                                    <h6>Compétences</h6>
-                                    <ul>
-                                        <li> Sécuriser les services et données d’un système
-                                        </li>
-                                        <li>Assurer la sécurité des données (intégrité et confidentialité)
-                                        </li>
-                                        <li>	Identifier les critères de faisabilité d’un projet informatique
-                                        </li>
-                                        <li> Rendre compte de son activité professionnelle
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <h6 class="duree">Durée : <span > 3 mois </span></h6>
-
-                                <div class="projects__buttons">
-                                    <a data-bs-toggle="modal" data-bs-target="#reseaux" class="projects__link">
-                                        <i class="fa-solid fa-plus"></i> Voir plus
-                                    </a>
-                                    <a href="https://github.com/mn-manohisoa/infrastructure-r-seau" target="_blank" class="projects__link ml-3">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-                </div>
-            </div>
-        </section>
-
-
-
-
-
-
-        <section id="contact" class="py-20 relative overflow-hidden">
-            <div id="contact-particles" class="absolute inset-0"></div>
-
-            <!-- Background Elements -->
-            <div class="absolute top-20 left-10 w-64 h-64 bg-indigo-600/20 rounded-full blur-3xl"></div>
-            <div class="absolute bottom-10 right-10 w-80 h-80 bg-purple-600/10 rounded-full blur-3xl"></div>
-
-            <div class="container mx-auto px-4 md:px-8 relative z-10">
-                <!-- Section Header -->
-                <div class="text-center mb-12">
-                    <h1 class="text-3xl md:text-4xl font-bold mb-4">Travaillons
-                        <span>ensemble</span></h1>
-                    <p class="text-gray-300 max-w-2xl mx-auto">Pour discuter de vos projets et de la manière dont je peux vous aider, n'hésitez pas à me contacter directement. Je suis toujours ouvert aux nouvelles opportunités de collaboration.
-                    </p>
-                </div>
-
-                <div class="grid md:grid-cols-5 gap-8 max-w-5xl mx-auto">
-                    <!-- Contact Info Sidebar -->
-                    <div class="md:col-span-2 bg-slate-800/50 backdrop-blur-sm p-6 rounded-2xl border border-indigo-500/20">
-                        <h3 class="text-xl font-semibold mb-6 flex items-center gap-2">
-                            <i class="ri-contacts-book-line text-indigo-400"></i> Information de contact
-                        </h3>
-
-                        <div class="space-y-6">
-                            <div class="flex items-start gap-4">
-                                <div class="bg-indigo-600/20 p-3 rounded-lg">
-                                    <i class="ri-mail-line text-xl text-indigo-400"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-lg font-medium text-white">Email</h4>
-                                    <a href="mailto:mn.manohisoa@gmail.com" class="text-gray-300 hover:text-indigo-400 transition-colors">mn.manohisoa@gmail.com</a>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start gap-4">
-                                <div class="bg-indigo-600/20 p-3 rounded-lg">
-                                    <i class="ri-map-pin-line text-xl text-indigo-400"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-lg font-medium text-white">Localisation</h4>
-                                    <p class="text-gray-300">Grenoble, France</p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start gap-4">
-                                <div class="bg-indigo-600/20 p-3 rounded-lg">
-                                    <i class="ri-phone-line text-xl text-indigo-400"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-lg font-medium text-white">Contact</h4>
-                                    <p class="text-gray-300">06 75 95 08 12</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Social Media Links -->
-                        <div class="mt-8">
-                            <h4 class="text-lg font-medium mb-4">Se connecter</h4>
-                            <div class="flex gap-4">
-                                <a href="https://github.com/mn-manohisoa/" class="bg-slate-700 hover:bg-indigo-600 transition-colors duration-300 p-3 rounded-lg text-white">
-                                    <i class="ri-github-fill text-xl"></i>
-                                </a>
-                                <a href="https://www.linkedin.com/in/manohisoa-mbelo-ndriamanampy-650455309/" class="bg-slate-700 hover:bg-indigo-600 transition-colors duration-300 p-3 rounded-lg text-white">
-                                    <i class="ri-linkedin-fill text-xl"></i>
-                                </a>
-                                <a href="https://x.com/mn_manohisoa" class="bg-slate-700 hover:bg-indigo-600 transition-colors duration-300 p-3 rounded-lg text-white">
-                                    <i class="ri-twitter-x-fill text-xl"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Contact Form -->
-
-                    <div class="md:col-span-3 bg-slate-800/50 backdrop-blur-sm p-6 rounded-2xl border border-indigo-500/20">
-                        <h3 class="text-xl font-semibold mb-6 flex items-center gap-2">
-                            <i class="ri-send-plane-line text-indigo-400"></i> Contactez-moi
-                        </h3>
-
-                        <form id="contact-form" class="space-y-6" method="post" >
-                            <div class="grid md:grid-cols-2 gap-4">
-                                <div class="form-group">
-                                    <label for="name" class="block text-gray-300 mb-2">Name</label>
-                                    <div class="relative">
-                                        <i class="ri-user-line absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
-                                        <input
-                                                type="text"
-                                                id="name"
-                                                name="name"
-                                                class="w-full bg-slate-900/70 border border-slate-700 rounded-lg py-3 px-10 text-white focus:outline-none focus:border-indigo-500 transition-colors"
-                                                placeholder="Nom"
-                                        >
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="email" class="block text-gray-300 mb-2">Email</label>
-                                    <div class="relative">
-                                        <i class="ri-mail-line absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
-                                        <input
-                                                type="email"
-                                                required
-                                                id="email"
-                                                name="email"
-                                                class="w-full bg-slate-900/70 border border-slate-700 rounded-lg py-3 px-10 text-white focus:outline-none focus:border-indigo-500 transition-colors"
-                                                placeholder="Email"
-                                        >
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="subject" class="block text-gray-300 mb-2">Subject</label>
-                                <div class="relative">
-                                    <i class="ri-bookmark-line absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
-                                    <input
-                                            type="text"
-                                            id="subject"
-                                            name="subject"
-                                            class="w-full bg-slate-900/70 border border-slate-700 rounded-lg py-3 px-10 text-white focus:outline-none focus:border-indigo-500 transition-colors"
-                                            placeholder="Objet"
-                                    >
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="message" class="block text-gray-300 mb-2">Message</label>
-                                <div class="relative">
-                                    <i class="ri-chat-1-line absolute left-3 top-3 text-gray-400"></i>
-                                    <textarea
-                                            id="message"
-                                            name="message"
-                                            required
-                                            rows="5"
-                                            class="w-full bg-slate-900/70 border border-slate-700 rounded-lg py-3 px-10 text-white focus:outline-none focus:border-indigo-500 transition-colors"
-                                            placeholder="Votre message"
-                                    ></textarea>
-                                </div>
-                            </div>
-
-
-                            <button
-                                    type="submit"
-                                    class="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 font-medium"
-                            >
-                                <i class="ri-send-plane-fill"></i>
-                               Envoyer le message
-                                <span class="send-icon-wrapper"></span>
-                            </button>
-                        </form>
-
-                        <!-- Form Success Message (hidden by default) -->
-                        <div id="form-success" class="hidden bg-green-600/20 border border-green-500/30 text-green-400 p-4 rounded-lg mt-6 flex items-center gap-3">
-                            <i class="ri-checkbox-circle-line text-xl"></i>
-                            <p>Votre message a bien été reçu! Un email de confirmation vous a été envoyé.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-            <script>
-                (function () {
-                    emailjs.init("lbZMxtf5iyjFMoxZs"); // Ta clé publique EmailJS
-                })();
-
-                document.getElementById('contact-form').addEventListener('submit', function (e) {
-                    e.preventDefault();
-
-                    const form = this;
-
-                    emailjs.sendForm('service_gy835qa', 'template_zu7pjwp', form)
-                        .then(function () {
-                            emailjs.sendForm('service_gy835qa', 'template_b04bktl', form)
-                                .then(function () {
-                                    form.reset();
-                                    document.getElementById('form-success').classList.remove('hidden');
-                                })
-                                .catch(function (error) {
-                                    alert("Erreur envoi confirmation : " + JSON.stringify(error));
-                                });
-                        })
-                        .catch(function (error) {
-                            alert("Erreur envoi du message : " + JSON.stringify(error));
-                        });
-                });
-            </script>
-
-
-
-
-
-
-        </section>
-
-        <div class="border-t border-gray-800 my-8"></div>
-
-        <!-- Bottom Footer -->
-                <div class="flex flex-col md:flex-row justify-center items-center gap-4 m-6">
-                    <p class="text-gray-400 text-sl">
-                        © <strong>Manohisoa MBELO NDRIAMANAMPY - Portfolio</strong>. Tous droits résérvés - <span id="current-year">2025</span>
-                    </p>
-
-                    <a href="#accueil_general" class="bg-indigo-600/20 hover:bg-indigo-600/40 text-white p-2 rounded-full transition-all duration-300">
-                        <i class="ri-arrow-up-line"></i>
-                    </a>
-                </div>
-
-        <!-- modal projet  -->
-        <div class="modal fade" id="algorithme" tabindex="-1" aria-labelledby="algo" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="algoLabel">Implémentation d’un besoin client / Comparaison d’approches algorithmiques</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"  style="filter: invert(1);"></button>
-                </div>
-                <div class="modal-body">
-                        <h6>Description du projet</h6>
-                        <p>
-                            Nous avons réalisé un projet de classification automatique des dépêches qui vise à créer un programme efficace et rapide capable d’attribuer automatiquement une catégorie à chaque dépêche journalistique en fonction des scores attribués aux mots. En effet, chaque dépêche est associée à l’une des cinq catégories suivantes : ENVIRONNEMENT-SCIENCE, CULTURE, ÉCONOMIE, POLITIQUE et SPORTS.L'objectif principal est de développer un système de classification basé sur des lexiques spécifiques pour chaque catégorie, composé de mots-clés et de poids associés.
-
-                        </p>
-
-                        <h6>Travail que j'ai effectué</h6>
-
-                        <p>
-                             Dans ce projet, ma contribution principale a résidé dans le développement de la classe `PaireChaineEntier.java`, impliquant spécifiquement la création des méthodes suivantes : `initLexique`, `entierPourChaine`, calcul du score des dépêches, détermination de la chaîne maximale (`chaineMax`), établissement de l'indice pour une chaîne donnée (`indicePourChaine`), calcul de la moyenne, et enfin, la mise à niveau des résultats obtenus.
-
-                            Dans le cadre de ce projet, j'ai conçu et développé un système de classification automatique de dépêches en utilisant des techniques d'apprentissage automatique. J'ai implémenté une méthode pour calculer la moyenne des valeurs dans une liste de paires, ainsi qu'une fonctionnalité de classification des dépêches basée sur des scores attribués selon un lexique. La pierre angulaire de ce projet a été la génération automatique de lexiques à partir d'un fichier de dépêches, en employant des calculs de scores basés sur la fréquence et la spécificité des mots, et en attribuant des poids pour affiner la précision de la classification. J'ai optimisé les performances du système en utilisant des vecteurs ordonnés et des méthodes de recherche efficaces, réduisant les temps de traitement. Le processus itératif de tests et d'améliorations basé sur des données réelles a permis d'atteindre une grande précision dans la classification des dépêches, marquant une avancée significative dans l'application de l'apprentissage automatique pour le traitement automatique du langage naturel.
-                         </p>
-                    </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="modal fade" id="linux" tabindex="-1" aria-labelledby="linux" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" >Installation d’un poste pour le développement</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"  style="filter: invert(1);"></button>
-                </div>
-                <div class="modal-body">
-                    <h6>Description du projet</h6>
-
-                   <p>
-                    Lors de cette mission, j'avais pour but de préparer une
-                    présentation sur l'installation d'un poste de développement. Pour ce faire, j'ai téléchargé l'image
-                    ISO de Debian 12 et vérifié son intégrité en comparant les empreintes SHA-512. Ensuite, j'ai installé Debian 12 sur une machine virtuelle et créé un utilisateur avec mon login UGA. J'ai installé Git et le JDK en utilisant les packages Debian, puis j'ai installé IntelliJ IDEA Community de trois façons différentes : sous forme d'archive, de package snap, et de package flatpak. Après ces installations, j'ai vérifié l'espace de stockage restant pour évaluer l'impact sur le disque. Pour conserver la machine virtuelle après le projet, j'ai déplacé l'image disque sur le serveur Erebus4, en m'assurant que toutes les configurations et installations étaient correctement sauvegardées. Enfin, j'ai créé une carte mentale détaillant les étapes de l'installation du système d'exploitation Debian 12 avec KDE/Plasma et des outils de développement comme le JDK et Git.
-
-                 </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="modal fade" id="data" tabindex="-1" aria-labelledby="data" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" >Création d’une base de données</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"  style="filter: invert(1);"></button>
-                </div>
-                <div class="modal-body">
-                    <h6>Description du projet</h6>
-
-                   <p>
-                    Nous avons effectué une analyse approfondie du naufrage du Titanic, expliquant les facteurs ayant conduit à un grand nombre de décès parmi les passagers et justifiant l'impossibilité logistique de sauver tous les passagers. En utilisant les informations disponibles, nous avons conçu et justifié le Schéma Entité-Association (SEA) représentant les données fournies, en suivant des règles de gestion élaborées. Nous avons ensuite créé notre propre base de données relative au naufrage du Titanic en implémentant le Schéma Logique de Relations (SLR) dérivé du SEA.  Nous avons peuplé cette base de données à partir des fichiers CSV fournis et effectué les premières requêtes pour extraire des informations pertinentes. Nous avons également rédigé et exécuté les scripts SQL nécessaires pour la création et la suppression des relations de la base, ainsi que pour l'expression des contraintes référentielles, d'attributs et de relations.
-                 </p>
-                    <h6>Travail que j'ai effectué</h6>
-                    <p>
-                    J’ai exploré la webographie proposée pour comprendre les circonstances du naufrage du Titanic, et j'ai examiné le fichier Data_Titanic_S1_04.ods pour vérifier les informations relatives aux passagers. J'ai écrit les requêtes SQL nécessaires pour vérifier les informations des passagers, telles que leur nom, âge, classe, cabines, et les détails de leur sauvetage, y compris les numéros de leurs canots de sauvetage. Ensuite, j’ai interrogé la base de données pour analyser les facteurs influençant la survie des passagers, en tenant compte de leur classe et de leur catégorie (enfant, femme, homme). J'ai rédigé des requêtes pour déterminer les taux de survie par classe et catégorie, et j'ai analysé les résultats pour comprendre l'influence de ces facteurs sur les taux de survie.
-                    </p>
-
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="modal fade" id="site_web" tabindex="-1" aria-labelledby="site_web" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" >Recueil de besoins / Découverte de l’environnement économique et écologique
-                </h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"  style="filter: invert(1);"></button>
-                </div>
-                <div class="modal-body">
-                    <h6>Description du projet</h6>
-
-                   <p>
-                    Nous allons développer un site web à la fois pratique et sobre, tant sur le plan écologique que visuel, pour présenter l’entreprise Atos. Le public cible est constitué d'élèves de 3ème qui ne connaissent pas le monde de l’entreprise et souhaitent choisir un stage ou un métier en connaissance de cause.
-                    Nous avons analysé l'environnement d'Atos en termes d'activités, de services, d'organisation, de concurrents, de clients et de stratégie. Nous avons également évalué la transition numérique et écologique d'Atos, en considérant la situation actuelle, les contraintes, les avantages et les impacts.
-                    Nous avons rédigé une fiche synthèse sur le contexte actuel et la transition écologique et numérique d'Atos. Chaque membre a rédigé sa partie et vérifié les sources. Chacun a également contribué à la proposition et à la discussion de l'architecture du site web. Ensuite, nous avons réalisé un site internet en accord avec la maquette.
-                    </p>
-
-                    <h6>Travail que j'ai effectué</h6>
-                    <p>
-                    Durant ce projet, j’ai principalement étudié les concurrents, les clients, et la stratégie de l'entreprise, ainsi que son organisation géographique. Concernant les maquettes, j’ai conçu la page de contact ainsi que le footer.
-                     </p>
-
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="modal fade" tabindex="-1" aria-labelledby="algo" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" >Implémentation d’un besoin client / Comparaison d’approches algorithmiques</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                   <p>
-                   Nous avons réalisé un projet de classification automatique des dépêches qui vise à créer un programme efficace et rapide capable d’attribuer automatiquement une catégorie à chaque dépêche journalistique en fonction des scores attribués aux mots. En effet, chaque dépêche est associée à l’une des cinq catégories suivantes : ENVIRONNEMENT-SCIENCE, CULTURE, ÉCONOMIE, POLITIQUE et SPORTS.L'objectif principal est de développer un système de classification basé sur des lexiques spécifiques pour chaque catégorie, composé de mots-clés et de poids associés.
-
-
-                    Dans ce projet, ma contribution principale a résidé dans le développement de la classe `PaireChaineEntier.java`, impliquant spécifiquement la création des méthodes suivantes : `initLexique`, `entierPourChaine`, calcul du score des dépêches, détermination de la chaîne maximale (`chaineMax`), établissement de l'indice pour une chaîne donnée (`indicePourChaine`), calcul de la moyenne, et enfin, la mise à niveau des résultats obtenus. J’ai aussi
-
-                   Dans le cadre de ce projet, j'ai conçu et développé un système de classification automatique de dépêches en utilisant des techniques d'apprentissage automatique. J'ai implémenté une méthode pour calculer la moyenne des valeurs dans une liste de paires, ainsi qu'une fonctionnalité de classification des dépêches basée sur des scores attribués selon un lexique. La pierre angulaire de ce projet a été la génération automatique de lexiques à partir d'un fichier de dépêches, en employant des calculs de scores basés sur la fréquence et la spécificité des mots, et en attribuant des poids pour affiner la précision de la classification. J'ai optimisé les performances du système en utilisant des vecteurs ordonnés et des méthodes de recherche efficaces, réduisant les temps de traitement. Le processus itératif de tests et d'améliorations basé sur des données réelles a permis d'atteindre une grande précision dans la classification des dépêches, marquant une avancée significative dans l'application de l'apprentissage automatique pour le traitement automatique du langage naturel.
-                </p>
-
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="modal fade"tabindex="-1" aria-labelledby="algo" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" >Implémentation d’un besoin client / Comparaison d’approches algorithmiques</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                   <p>
-                   Nous avons réalisé un projet de classification automatique des dépêches qui vise à créer un programme efficace et rapide capable d’attribuer automatiquement une catégorie à chaque dépêche journalistique en fonction des scores attribués aux mots. En effet, chaque dépêche est associée à l’une des cinq catégories suivantes : ENVIRONNEMENT-SCIENCE, CULTURE, ÉCONOMIE, POLITIQUE et SPORTS.L'objectif principal est de développer un système de classification basé sur des lexiques spécifiques pour chaque catégorie, composé de mots-clés et de poids associés.
-
-
-                    Dans ce projet, ma contribution principale a résidé dans le développement de la classe `PaireChaineEntier.java`, impliquant spécifiquement la création des méthodes suivantes : `initLexique`, `entierPourChaine`, calcul du score des dépêches, détermination de la chaîne maximale (`chaineMax`), établissement de l'indice pour une chaîne donnée (`indicePourChaine`), calcul de la moyenne, et enfin, la mise à niveau des résultats obtenus. J’ai aussi
-
-                   Dans le cadre de ce projet, j'ai conçu et développé un système de classification automatique de dépêches en utilisant des techniques d'apprentissage automatique. J'ai implémenté une méthode pour calculer la moyenne des valeurs dans une liste de paires, ainsi qu'une fonctionnalité de classification des dépêches basée sur des scores attribués selon un lexique. La pierre angulaire de ce projet a été la génération automatique de lexiques à partir d'un fichier de dépêches, en employant des calculs de scores basés sur la fréquence et la spécificité des mots, et en attribuant des poids pour affiner la précision de la classification. J'ai optimisé les performances du système en utilisant des vecteurs ordonnés et des méthodes de recherche efficaces, réduisant les temps de traitement. Le processus itératif de tests et d'améliorations basé sur des données réelles a permis d'atteindre une grande précision dans la classification des dépêches, marquant une avancée significative dans l'application de l'apprentissage automatique pour le traitement automatique du langage naturel.
-                </p>
-
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-
-        <div class="modal fade" id="reseaux" tabindex="-1" aria-labelledby="reseaux" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" >Conception et mise en œuvre d'une infrastructure réseau sécurisée à l'aide d'outils open-source
-                        </h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"  style="filter: invert(1);"></button>
-                    </div>
-                    <div class="modal-body">
-                        <h6>Description du projet</h6>
-
-                        <p>
-                            Notre objectif était de concevoir, déployer et sécuriser une infrastructure réseau virtuelle composée de plusieurs services essentiels
-                            à une organisation. Le projet impliquait la mise en place de serveurs DHCP, DNS, Web, SGBD, ainsi que de services d’authentification comme LDAP, CAS et PAM.
-                            Nous avons travaillé dans un environnement virtualisé et segmenté (via routeurs et pare-feu), avec l’objectif de garantir l'intégrité, la confidentialité et la disponibilité des données et services. Des scripts d’automatisation et une documentation technique complète ont accompagné notre solution. Le travail était structuré autour de livrables progressifs et d'une soutenance finale.
-                        </p>
-
-                        <h6>Travail que j'ai effectué</h6>
-                        <p>
-                            J’ai principalement été en charge de la mise en place des services d’authentification : j’ai installé et configuré un annuaire LDAP, intégré PAM pour l’authentification locale sur les machines clientes, et déployé un serveur CAS permettant une authentification centralisée sur les services web. J’ai également contribué à la virtualisation du réseau (création de VMs, segmentation via routeurs) et à la documentation technique. Enfin, j’ai participé à l’écriture de scripts de test pour valider la disponibilité et la sécurité des services déployés.                        </p>
-
-                    </div>
-                </div>
-            </div>
+<!-- ===== HERO ===== -->
+<section id="accueil" class="hero">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-content" data-aos="fade-up">
+    <div class="hero-avatar">MN</div>
+    <div class="hero-badge"><span class="badge-dot"></span> Disponible en alternance</div>
+    <h1 class="hero-name">Manohisoa<br/><span>MBELO NDRIAMANAMPY</span></h1>
+    <p class="hero-title">Ingénieur Systèmes, Réseaux &amp; DevSecOps</p>
+    <p class="hero-sub">Étudiant BUT Informatique · Grenoble, France</p>
+    <div class="hero-contacts">
+      <a href="mailto:mn.manohisoa@gmail.com"><i class="fa-solid fa-envelope"></i> mn.manohisoa@gmail.com</a>
+      <a href="tel:+33675950812"><i class="fa-solid fa-phone"></i> 06 75 95 08 12</a>
+    </div>
+    <div class="hero-socials">
+      <a href="https://github.com/mn-manohisoa/" target="_blank"><i class="ri-github-fill"></i></a>
+      <a href="https://www.linkedin.com/in/manohisoa-mbelo-ndriamanampy-650455309/" target="_blank"><i class="ri-linkedin-fill"></i></a>
+    </div>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">Contactez-moi</a>
+      <a href="#competences" class="btn-outline">Mes compétences</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== À PROPOS ===== -->
+<section id="apropos" class="apropos">
+  <div class="section-header" data-aos="fade-up">
+    <h2>Qui <span>suis-je ?</span></h2>
+    <p class="section-sub">Passionné par les infrastructures, la sécurité et l'automatisation</p>
+  </div>
+  <div class="apropos-grid">
+    <div class="apropos-photo" data-aos="fade-right">
+      <div class="photo-frame">
+        <img src="images/Photo_Mano.jpg" alt="Manohisoa"/>
+        <div class="photo-badge">Bac +3</div>
+      </div>
+    </div>
+    <div class="apropos-text" data-aos="fade-left">
+      <h3>Étudiant en Systèmes, Réseaux &amp; Cybersécurité</h3>
+      <p>Je suis Manohisoa MBELO NDRIAMANAMPY, un passionné d'informatique avec un intérêt particulier pour les réseaux et la cybersécurité. Je souhaite poursuivre en école d'ingénieur en alternance avec une spécialisation DevSecOps.</p>
+      <p>En dehors de ma passion pour la technologie, je suis également un grand amateur de basket-ball, un sport qui m'enseigne le travail d'équipe et la persévérance.</p>
+      <div class="apropos-langs">
+        <div class="lang-chip">🇲🇬 Malgache — Natif</div>
+        <div class="lang-chip">🇫🇷 Français — C2</div>
+        <div class="lang-chip">🇬🇧 Anglais — B2</div>
+      </div>
+      <a href="CV_Manohisoa-MBELO-NDRIAMANAMPY.pdf" download class="btn-primary">
+        <i class="ri-file-download-line"></i> Télécharger mon CV
+      </a>
+    </div>
+  </div>
+  <div class="timeline-section" data-aos="fade-up">
+    <h3 class="timeline-title">Formation &amp; <span>Parcours</span></h3>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-date">2025 — Aujourd'hui</div>
+        <div class="tl-content"><h4>Alternant — Corys Grenoble</h4><p>Administrateur Systèmes &amp; Réseaux en alternance. Administration parc hétérogène, Active Directory, Ansible, Docker, Microsoft LAPS.</p></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-date">Avr — Juil 2025</div>
+        <div class="tl-content"><h4>Stagiaire Administration Systèmes &amp; CI/CD — Enlaps Grenoble</h4><p>Optimisation Docker (multi-stage, DockerSlim), AMI AWS, pipelines CI/CD avec Terraform &amp; EC2 images Builder, Packer.</p></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-date">2023 — 2026</div>
+        <div class="tl-content"><h4>BUT Informatique — IUT2 Grenoble Alpes</h4><p>Spécialité : Déploiement d'applications communicantes et sécurisées.</p></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-date">2023</div>
+        <div class="tl-content"><h4>Baccalauréat STMG — Mention Bien</h4><p>La Clairefontaine Ambodivoanjo, Madagascar. Spécialité Gestion &amp; Finance.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== COMPÉTENCES ===== -->
+<section id="competences">
+  <div class="section-header" data-aos="fade-up">
+    <h2>Mes <span>Compétences</span></h2>
+    <p class="section-sub">Organisées par domaine d'expertise</p>
+  </div>
+
+  <div class="skills-block" data-aos="fade-up">
+    <div class="skills-block-header"><i class="ri-code-s-slash-line"></i><h3>Langages de programmation</h3></div>
+    <div class="skills-langs-grid">
+      <div class="lang-card"><img src="images/pngegg(2).png" alt="Java"/><span>Java</span></div>
+      <div class="lang-card"><img src="images/javascript.png" alt="JavaScript"/><span>JavaScript</span></div>
+      <div class="lang-card"><img src="images/logo-c.png" alt="C"/><span>C</span></div>
+      <div class="lang-card"><img src="images/c++.png" alt="C++"/><span>C++</span></div>
+      <div class="lang-card"><img src="images/php.png" alt="PHP"/><span>PHP</span></div>
+      <div class="lang-card"><img src="images/pngegg(1).png" alt="HTML5"/><span>HTML5</span></div>
+      <div class="lang-card"><img src="images/css.png" alt="CSS"/><span>CSS</span></div>
+      <div class="lang-card"><img src="images/tailwind-css.png" alt="Tailwind"/><span>Tailwind</span></div>
+      <div class="lang-card"><img src="images/postgre.png" alt="PostgreSQL"/><span>PostgreSQL</span></div>
+    </div>
+  </div>
+
+  <div class="skills-block" data-aos="fade-up">
+    <div class="skills-block-header"><i class="ri-server-line"></i><h3>Système &amp; Annuaire</h3></div>
+    <div class="skills-tags-grid">
+      <div class="skill-tag tool"><i class="ri-terminal-box-line"></i> Linux</div>
+      <div class="skill-tag tool"><i class="ri-windows-line"></i> Windows Server</div>
+      <div class="skill-tag tool"><i class="ri-shield-user-line"></i> Active Directory</div>
+      <div class="skill-tag tool"><i class="ri-book-open-line"></i> LDAP</div>
+      <div class="skill-tag tool"><i class="ri-settings-3-line"></i> GPO</div>
+      <div class="skill-tag tool"><i class="ri-lock-password-line"></i> Microsoft LAPS</div>
+      <div class="skill-tag tool"><img src="images/windows.png" alt="" class="tag-img"/> Windows</div>
+      <div class="skill-tag tool"><img src="images/linux.png" alt="" class="tag-img"/> Linux</div>
+
+    </div>
+  </div>
+
+  <div class="skills-block" data-aos="fade-up">
+    <div class="skills-block-header"><i class="ri-router-line"></i><h3>Réseaux &amp; Protocoles</h3></div>
+    <div class="skills-tags-grid">
+      <div class="skill-tag net"><i class="ri-wifi-line"></i> DHCP</div>
+      <div class="skill-tag net"><i class="ri-earth-line"></i> DNS</div>
+      <div class="skill-tag net"><i class="ri-lock-line"></i> HTTP/HTTPS</div>
+      <div class="skill-tag net"><i class="ri-git-branch-line"></i> Segmentation réseau</div>
+      <div class="skill-tag net"><i class="ri-shield-keyhole-line"></i> Pare-feu</div>
+      <div class="skill-tag net"><i class="ri-key-line"></i> LDAP / CAS / PAM</div>
+      <div class="skill-tag net"><img src="images/wireshark.png" alt="" class="tag-img"/> Wireshark</div>
+    </div>
+  </div>
+
+  <div class="skills-block" data-aos="fade-up">
+    <div class="skills-block-header"><i class="ri-stack-line"></i><h3>Virtualisation &amp; Conteneurs</h3></div>
+    <div class="skills-tags-grid">
+      <div class="skill-tag virt"><img src="images/Docker.png" alt="" class="tag-img"/> Docker</div>
+      <div class="skill-tag virt"><img src="images/proxmox.png" alt="" class="tag-img"/> Proxmox</div>
+      <div class="skill-tag virt"><i class="ri-computer-line"></i> VMware</div>
+      <div class="skill-tag virt"><i class="ri-cpu-line"></i> QEMU/KVM</div>
+      <div class="skill-tag virt"><i class="ri-cube-line"></i> Kubernetes (notions)</div>
+      <div class="skill-tag virt"><i class="ri-code-box-line"></i> DevContainers</div>
+    </div>
+  </div>
+
+  <div class="skills-block" data-aos="fade-up">
+    <div class="skills-block-header"><i class="ri-git-merge-line"></i><h3>Infrastructure as Code &amp; DevOps</h3></div>
+    <div class="skills-tags-grid">
+      <div class="skill-tag iac"><img src="images/terraform.png" alt="" class="tag-img"/> Terraform</div>
+      <div class="skill-tag iac"><img src="images/packer-seeklogo.png" alt="" class="tag-img"/> Packer</div>
+      <div class="skill-tag iac"><i class="ri-robot-line"></i> Ansible</div>
+      <div class="skill-tag iac"><i class="ri-git-commit-line"></i> GitLab CI</div>
+      <div class="skill-tag iac"><i class="ri-flow-chart"></i> CI/CD</div>
+      <div class="skill-tag iac"><i class="ri-box-3-line"></i> Vagrant</div>
+    </div>
+  </div>
+
+  <div class="skills-block" data-aos="fade-up">
+    <div class="skills-block-header"><i class="ri-cloud-line"></i><h3>Cloud — AWS</h3></div>
+    <div class="skills-tags-grid">
+      <div class="skill-tag cloud"><i class="ri-server-2-line"></i> EC2</div>
+      <div class="skill-tag cloud"><i class="ri-archive-line"></i> ECR</div>
+      <div class="skill-tag cloud"><i class="ri-images-line"></i> AMI</div>
+      <div class="skill-tag cloud"><i class="ri-hard-drive-line"></i> EBS</div>
+      <div class="skill-tag cloud"><i class="ri-shield-user-line"></i> IAM</div>
+      <div class="skill-tag cloud"><i class="ri-tools-line"></i> EC2 mage Builder</div>
+    </div>
+  </div>
+
+  <div class="skills-block" data-aos="fade-up">
+    <div class="skills-block-header"><i class="ri-tools-line"></i><h3>Outils &amp; IDE</h3></div>
+    <div class="skills-tags-grid">
+      <div class="skill-tag tool"><img src="images/idea.png" alt="" class="tag-img"/> IntelliJ IDEA</div>
+      <div class="skill-tag tool"><img src="images/phpstorm.png" alt="" class="tag-img"/> PhpStorm</div>
+      <div class="skill-tag tool"><img src="images/webstorm.png" alt="" class="tag-img"/> WebStorm</div>
+      <div class="skill-tag tool"><img src="images/git.png" alt="" class="tag-img"/> Git</div>
+      <div class="skill-tag tool"><img src="images/visual paradigm.png" alt="" class="tag-img"/> Visual Paradigm</div>
+    </div>
+  </div>
+</section>
+<!-- ===== EXPÉRIENCES ===== -->
+<section id="experiences">
+  <div class="section-header" data-aos="fade-up">
+    <h2>Mes <span>Expériences</span></h2>
+    <p class="section-sub">Alternance et stages en entreprise</p>
+  </div>
+  <div class="exp-grid">
+
+    <div class="exp-card" data-aos="fade-up">
+      <!-- images en-tête -->
+      <div class="exp-img-wrap">
+        <img src="images/CORYS_EG2.jpg" alt="Corys"/>
+        <div class="exp-img-overlay">
+          <span class="exp-badge"><i class="ri-briefcase-line"></i> Alternance</span>
         </div>
-
-
-
-
-        <div class="modal fade" id="node_js" tabindex="-1" aria-labelledby="node_js" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" >Conception et mise en œuvre d'une infrastructure réseau sécurisée à l'aide d'outils open-source
-                        </h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"  style="filter: invert(1);"></button>
-                    </div>
-                    <div class="modal-body">
-                        <h6>Description du projet</h6>
-
-                        <p>
-                            Ce projet avait pour objectif de concevoir une application web client-serveur permettant de proposer des parcours de visite personnalisés dans un musée, en fonction du temps disponible ou des centres d’intérêt de l’utilisateur. Réalisée en équipe dans le cadre d’une SAÉ, l’application s’appuyait sur des données ouvertes issues de data.gouv.fr (collections, expositions, œuvres, etc.). Elle visait à valoriser le patrimoine culturel tout en offrant une expérience interactive et adaptée aux visiteurs.
-                            L’architecture technique reposait sur un backend en Node.js, une base de données relationnelle et une interface web.
-                        </p>
-
-                        <h6>Travail que j'ai effectué</h6>
-                        <p>
-                            J’ai été responsable de l’administration de la base de données: conception du modèle, création des tables, rédaction des requêtes SQL, et gestion de la qualité des données. J’ai également utilisé Talend pour intégrer et transformer les données culturelles provenant de différentes sources ouvertes, en assurant leur cohérence et leur compatibilité avec notre base. En parallèle, j’ai participé au développement de l’application, notamment côté serveur avec Node.js, en implémentant des routes et traitements liés à la logique de personnalisation des visites.
-                        </p>
-                    </div>
-                </div>
-            </div>
+      </div>
+      <div class="exp-body">
+        <div class="exp-card-header">
+          <div class="exp-icon"><i class="ri-server-line"></i></div>
+          <div>
+            <h4>Alternant Administrateur Systèmes &amp; Réseaux</h4>
+            <p class="exp-company">Corys · Grenoble</p>
+            <p class="exp-date"><i class="ri-calendar-line"></i> Oct 2025 — Aujourd'hui</p>
+          </div>
         </div>
+        <ul class="exp-list">
+          <li>Administration d'un parc hétérogène : postes Windows/Linux, serveurs VMware</li>
+          <li>Migration OCS Inventory de Windows vers Linux avec remise à niveau complète</li>
+          <li>Étude et préparation Microsoft LAPS pour sécuriser les comptes administrateurs locaux</li>
+          <li>Administration Active Directory : utilisateurs, groupes, droits et GPO</li>
+          <li>Automatisation Ansible, conteneurisation Docker</li>
+          <li>Rédaction de documentation technique (DAT, procédures d'exploitation, DevContainer)</li>
+        </ul>
+        <div class="exp-tags">
+          <span>VMware</span><span>Active Directory</span><span>Ansible</span><span>Docker</span><span>LAPS</span>
+        </div>
+      </div>
+    </div>
 
+    <div class="exp-card" data-aos="fade-up" data-aos-delay="100">
+      <!-- images en-tête -->
+      <div class="exp-img-wrap">
+        <img src="images/2024-04-22_Logotype_Enlaps_+_tagline.jpg" alt="Enlaps"/>
+        <div class="exp-img-overlay">
+          <span class="exp-badge"><i class="ri-award-line"></i> Stage</span>
+        </div>
+      </div>
+      <div class="exp-body">
+        <div class="exp-card-header">
+          <div class="exp-icon"><i class="ri-cloud-line"></i></div>
+          <div>
+            <h4>Stagiaire Administration Systèmes &amp; CI/CD</h4>
+            <p class="exp-company">Enlaps · Grenoble</p>
+            <p class="exp-date"><i class="ri-calendar-line"></i> Avr — Juil 2025</p>
+          </div>
+        </div>
+        <ul class="exp-list">
+          <li>Réduction des imagess Docker via multi-stage build et DockerSlim</li>
+          <li>Mise en place d'AMI préchargées sur AWS pour accélérer les instances EC2</li>
+          <li>Automatisation de pipelines de build avec EC2 images Builder et Terraform (IaC)</li>
+          <li>Exploration de Packer pour la génération automatisée d'imagess machine</li>
+          <li>Mise en place des pipelines CI/CD</li>
+        </ul>
+        <div class="exp-tags">
+          <span>Docker</span><span>AWS EC2</span><span>Terraform</span><span>Packer</span><span>CI/CD</span>
+        </div>
+      </div>
+    </div>
 
+  </div>
+</section>
 
+<!-- ===== PROJETS ===== -->
+<section id="projets">
+  <div class="section-header" data-aos="fade-up">
+    <h2>Mes <span>Projets</span></h2>
+    <p class="section-sub">Projets académiques et personnels</p>
+  </div>
+  <div class="projects-grid">
 
-    </main>
+    <div class="project-card" data-aos="fade-up">
+      <div class="project-img-wrap">
+        <img src="images/AnubisDev work.jpg" alt="Infrastructure réseau"/>
+        <div class="project-overlay"><span>Admin Réseaux</span></div>
+      </div>
+      <div class="project-body">
+        <h4>Infrastructure Réseau Sécurisée</h4>
+        <p>Conception et mise en œuvre d'une infrastructure virtuelle segmentée : DHCP, DNS, HTTPS, LDAP, CAS, PAM, pare-feu.</p>
+        <div class="project-tags"><span>Linux</span><span>LDAP</span><span>CAS</span><span>PAM</span><span>DNS</span><span>DHCP</span></div>
+        <div class="project-links">
+          <button class="btn-modal" onclick="openModal('reseaux')"><i class="fa-solid fa-plus"></i> Voir plus</button>
+          <a href="https://github.com/mn-manohisoa/infrastructure-r-seau" target="_blank"><i class="ri-github-fill"></i></a>
+        </div>
+      </div>
+    </div>
 
+    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+      <div class="project-img-wrap">
+        <img src="images/vague.jpeg" alt="App muséale"/>
+        <div class="project-overlay"><span>Application Web</span></div>
+      </div>
+      <div class="project-body">
+        <h4>Application Visites Muséales</h4>
+        <p>App Node.js/TypeScript de personnalisation de visites muséales avec PostgreSQL et pipeline ETL (Talend, web scraping).</p>
+        <div class="project-tags"><span>Node.js</span><span>TypeScript</span><span>PostgreSQL</span><span>Talend</span></div>
+        <div class="project-links">
+          <button class="btn-modal" onclick="openModal('node_js')"><i class="fa-solid fa-plus"></i> Voir plus</button>
+          <a href="https://gricad-gitlab.univ-grenoble-alpes.fr/iut2-info-stud/2024-s3/s3.01/team-15/rendus" target="_blank"><i class="ri-github-fill"></i></a>
+        </div>
+      </div>
+    </div>
 
-<<script>
-    window.addEventListener("scroll", function () {
-        const navbar = document.getElementById("navbar");
-        const mobile = document.getElementById("mobile-menu")
-        if (window.scrollY > 50) {
-            navbar.classList.add("scrolled");
-            mobile.classList.add("scrolled");
-        } else {
-            navbar.classList.remove("scrolled");
-            mobile.classList.remove("scrolled");
-        }
-    });
-</script>
+    <div class="project-card" data-aos="fade-up" data-aos-delay="150">
+      <div class="project-img-wrap">
+        <img src="images/Java Certification Course.jpg" alt="Java"/>
+        <div class="project-overlay"><span>Application Java</span></div>
+      </div>
+      <div class="project-body">
+        <h4>Classification automatique de dépêches</h4>
+        <p>Système de classification automatique de dépêches journalistiques par apprentissage automatique en Java.</p>
+        <div class="project-tags"><span>Java</span><span>Algorithmes</span><span>NLP</span></div>
+        <div class="project-links">
+          <button class="btn-modal" onclick="openModal('algorithme')"><i class="fa-solid fa-plus"></i> Voir plus</button>
+          <a href="https://github.com/mn-manohisoa/classification-depeche" target="_blank"><i class="ri-github-fill"></i></a>
+        </div>
+      </div>
+    </div>
 
+    <div class="project-card" data-aos="fade-up">
+      <div class="project-img-wrap">
+        <img src="images/Titanic Sinking Ship Decor, Titanic Poster, Maritime Wall Art, Titanic Ship, Titanic Ship Wall Art, Titanic, Unsinkable Ship.jpg" alt="BDD"/>
+        <div class="project-overlay"><span>Base de données</span></div>
+      </div>
+      <div class="project-body">
+        <h4>Base de données — Titanic</h4>
+        <p>Conception du SEA/SLR, création et peuplement depuis CSV, requêtes d'analyse des facteurs de survie.</p>
+        <div class="project-tags"><span>PostgreSQL</span><span>SQL</span><span>Modélisation</span></div>
+        <div class="project-links">
+          <button class="btn-modal" onclick="openModal('data')"><i class="fa-solid fa-plus"></i> Voir plus</button>
+          <a href="https://github.com/mn-manohisoa/creation-BD" target="_blank"><i class="ri-github-fill"></i></a>
+        </div>
+      </div>
+    </div>
 
+    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+      <div class="project-img-wrap">
+        <img src="images/linux.jpg" alt="Linux"/>
+        <div class="project-overlay"><span>Admin Système</span></div>
+      </div>
+      <div class="project-body">
+        <h4>Installation poste développeur Debian</h4>
+        <p>Installation Debian 12, configuration environnement de développement, JDK, IntelliJ, Git. Vérification intégrité SHA-512.</p>
+        <div class="project-tags"><span>Linux</span><span>Debian</span><span>Git</span><span>JDK</span></div>
+        <div class="project-links">
+          <button class="btn-modal" onclick="openModal('linux')"><i class="fa-solid fa-plus"></i> Voir plus</button>
+        </div>
+      </div>
+    </div>
 
+    <div class="project-card" data-aos="fade-up" data-aos-delay="150">
+      <div class="project-img-wrap">
+        <img src="images/Atos Origin.jpg" alt="Site web"/>
+        <div class="project-overlay"><span>Site Web</span></div>
+      </div>
+      <div class="project-body">
+        <h4>Site Web Entreprise — Atos</h4>
+        <p>Recueil de besoins, analyse de l'environnement économique/écologique d'Atos. Conception et développement du site.</p>
+        <div class="project-tags"><span>HTML</span><span>CSS</span><span>Gestion de projet</span></div>
+        <div class="project-links">
+          <button class="btn-modal" onclick="openModal('site_web')"><i class="fa-solid fa-plus"></i> Voir plus</button>
+        </div>
+      </div>
+    </div>
 
-</body>
+  </div>
+</section>
 
+<!-- ===== CONTACT ===== -->
+<section id="contact">
+  <div class="contact-glow"></div>
+  <div class="section-header" data-aos="fade-up">
+    <h2>Travaillons <span>ensemble</span></h2>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-info" data-aos="fade-right">
+      <h3><i class="ri-contacts-book-line"></i> Informations de contact</h3>
+      <div class="contact-item">
+        <div class="contact-icon"><i class="ri-mail-line"></i></div>
+        <div><strong>Email</strong><a href="mailto:mn.manohisoa@gmail.com">mn.manohisoa@gmail.com</a></div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon"><i class="ri-phone-line"></i></div>
+        <div><strong>Téléphone</strong><a href="tel:+33675950812">06 75 95 08 12</a></div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon"><i class="ri-map-pin-line"></i></div>
+        <div><strong>Localisation</strong><span>Grenoble, France</span></div>
+      </div>
+      <div class="contact-socials">
+        <a href="https://github.com/mn-manohisoa/" target="_blank"><i class="ri-github-fill"></i></a>
+        <a href="https://www.linkedin.com/in/manohisoa-mbelo-ndriamanampy-650455309/" target="_blank"><i class="ri-linkedin-fill"></i></a>
+      </div>
+    </div>
+    <div class="contact-form-wrap" data-aos="fade-left">
+      <h3><i class="ri-send-plane-line"></i> Envoyez-moi un message</h3>
+      <form id="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Nom</label>
+            <div class="input-icon"><i class="ri-user-line"></i><input type="text" name="name" placeholder="Votre nom"/></div>
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <div class="input-icon"><i class="ri-mail-line"></i><input type="email" name="email" required placeholder="Votre email"/></div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Objet</label>
+          <div class="input-icon"><i class="ri-bookmark-line"></i><input type="text" name="subject" placeholder="Objet du message"/></div>
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <div class="input-icon"><i class="ri-chat-1-line"></i><textarea name="message" rows="5" required placeholder="Votre message"></textarea></div>
+        </div>
+        <button type="submit" class="btn-primary full-width"><i class="ri-send-plane-fill"></i> Envoyer le message</button>
+      </form>
+      <div id="form-success" class="form-success hidden">
+        <i class="ri-checkbox-circle-line"></i> Message envoyé avec succès !
+      </div>
+    </div>
+  </div>
+</section>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-    </script>
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-inner">
+    <p>© <strong>Manohisoa MBELO NDRIAMANAMPY</strong> — Tous droits réservés <span id="year"></span></p>
+    <a href="#accueil" class="footer-top"><i class="ri-arrow-up-line"></i></a>
+  </div>
+</footer>
+
+<!-- ===== MODALS ===== -->
+<div class="modal-overlay" id="modal-overlay" onclick="closeModal()"></div>
+
+<div class="modal-box" id="modal-reseaux">
+  <div class="modal-box-header"><h5>Infrastructure Réseau Sécurisée</h5><button onclick="closeModal()"><i class="ri-close-line"></i></button></div>
+  <div class="modal-box-body">
+    <div class="modal-meta">
+      <span><i class="ri-calendar-line"></i> Fév — Avr 2025</span>
+      <span><i class="ri-group-line"></i> Projet d'équipe</span>
+      <span><i class="ri-time-line"></i> 3 mois</span>
+    </div>
+    <h6>Contexte &amp; objectif</h6>
+    <p>Dans le cadre du BUT Informatique (IUT2 Grenoble), notre équipe avait pour mission de concevoir, déployer et sécuriser une infrastructure réseau virtuelle complète simulant le réseau d'une organisation réelle. L'objectif était de garantir l'intégrité, la confidentialité et la disponibilité de l'ensemble des services déployés.</p>
+    <h6>Architecture mise en place</h6>
+    <ul class="modal-list">
+      <li><i class="ri-arrow-right-s-line"></i> Segmentation réseau via routeurs virtuels et pare-feu (règles de filtrage entrantes/sortantes)</li>
+      <li><i class="ri-arrow-right-s-line"></i> Serveur DHCP pour l'attribution automatique des adresses IP par sous-réseau</li>
+      <li><i class="ri-arrow-right-s-line"></i> Serveur DNS interne avec zones de résolution directe et inverse</li>
+      <li><i class="ri-arrow-right-s-line"></i> Serveur Web sécurisé (HTTPS avec certificat autosigné)</li>
+      <li><i class="ri-arrow-right-s-line"></i> Base de données relationnelle (SGBD) accessible uniquement depuis le réseau interne</li>
+      <li><i class="ri-arrow-right-s-line"></i> Annuaire LDAP pour la gestion centralisée des utilisateurs</li>
+      <li><i class="ri-arrow-right-s-line"></i> Serveur CAS (Central Authentication Service) pour l'authentification unique (SSO)</li>
+      <li><i class="ri-arrow-right-s-line"></i> Intégration PAM pour l'authentification locale sur les machines clientes</li>
+    </ul>
+    <h6>Mon rôle</h6>
+    <p>J'ai été principalement en charge des services d'authentification : installation et configuration de l'annuaire OpenLDAP (schémas, unités organisationnelles, comptes utilisateurs), intégration de PAM sur les machines clientes Linux, et déploiement du serveur CAS pour centraliser l'authentification sur les services web. J'ai également contribué à la virtualisation du réseau (création de VMs sous Proxmox/KVM, configuration des interfaces réseau et des routeurs), à la rédaction de la documentation technique, et à l'écriture de scripts Bash de validation et de tests de sécurité.</p>
+    <h6>Compétences développées</h6>
+    <div class="modal-tags"><span>Linux</span><span>OpenLDAP</span><span>CAS / SSO</span><span>PAM</span><span>DNS</span><span>DHCP</span><span>HTTPS</span><span>Pare-feu</span><span>Proxmox</span><span>Bash</span></div>
+  </div>
+</div>
+
+<div class="modal-box" id="modal-node_js">
+  <div class="modal-box-header"><h5>Application de Personnalisation de Visites Muséales</h5><button onclick="closeModal()"><i class="ri-close-line"></i></button></div>
+  <div class="modal-box-body">
+    <div class="modal-meta">
+      <span><i class="ri-calendar-line"></i> Oct 2024 — Jan 2025</span>
+      <span><i class="ri-group-line"></i> Projet d'équipe</span>
+      <span><i class="ri-time-line"></i> 4 mois</span>
+    </div>
+    <h6>Contexte &amp; objectif</h6>
+    <p>Dans le cadre d'une SAÉ (Situation d'Apprentissage et d'Évaluation) du BUT Informatique, notre équipe a développé une application web permettant de proposer des parcours de visite personnalisés dans un musée, en fonction du temps disponible ou des centres d'intérêt du visiteur. Le projet visait à valoriser le patrimoine culturel français en exploitant des données ouvertes issues de data.gouv.fr (collections, expositions, œuvres, artistes).</p>
+    <h6>Architecture technique</h6>
+    <ul class="modal-list">
+      <li><i class="ri-arrow-right-s-line"></i> Backend Node.js / TypeScript avec architecture REST</li>
+      <li><i class="ri-arrow-right-s-line"></i> Base de données PostgreSQL avec modélisation relationnelle avancée</li>
+      <li><i class="ri-arrow-right-s-line"></i> Pipeline ETL complet avec Talend pour l'intégration des données culturelles</li>
+      <li><i class="ri-arrow-right-s-line"></i> Web scraping pour la collecte de données complémentaires</li>
+      <li><i class="ri-arrow-right-s-line"></i> Interface web responsive côté client</li>
+    </ul>
+    <h6>Mon rôle</h6>
+    <p>J'ai été responsable de l'administration et de la conception de la base de données : modélisation du schéma entité-relation, création des tables et contraintes, rédaction des requêtes SQL complexes, et gestion de la qualité des données. J'ai utilisé Talend pour concevoir et exécuter les flux d'intégration (ETL) permettant de transformer et charger les données culturelles issues de sources hétérogènes. Côté serveur, j'ai implémenté plusieurs routes Node.js liées à la logique de personnalisation des parcours (filtrage par thème, durée, accessibilité).</p>
+    <h6>Compétences développées</h6>
+    <div class="modal-tags"><span>Node.js</span><span>TypeScript</span><span>PostgreSQL</span><span>Talend (ETL)</span><span>Web scraping</span><span>API REST</span><span>Modélisation BDD</span></div>
+  </div>
+</div>
+
+<div class="modal-box" id="modal-algorithme">
+  <div class="modal-box-header"><h5>Classification Automatique de Dépêches — Java</h5><button onclick="closeModal()"><i class="ri-close-line"></i></button></div>
+  <div class="modal-box-body">
+    <div class="modal-meta">
+      <span><i class="ri-calendar-line"></i> 2023 — 2024</span>
+      <span><i class="ri-user-line"></i> Projet individuel</span>
+      <span><i class="ri-time-line"></i> 1 semaine</span>
+    </div>
+    <h6>Contexte &amp; objectif</h6>
+    <p>Ce projet consistait à développer un système de classification automatique de dépêches journalistiques en Java. Chaque dépêche devait être associée à l'une des 5 catégories suivantes : ENVIRONNEMENT-SCIENCE, CULTURE, ÉCONOMIE, POLITIQUE et SPORTS. La classification repose sur des lexiques de mots-clés pondérés, construits automatiquement à partir d'un corpus de dépêches labellisées.</p>
+    <h6>Fonctionnement du système</h6>
+    <ul class="modal-list">
+      <li><i class="ri-arrow-right-s-line"></i> Génération automatique de lexiques par catégorie à partir du corpus d'entraînement</li>
+      <li><i class="ri-arrow-right-s-line"></i> Calcul de scores basé sur la fréquence et la spécificité de chaque mot</li>
+      <li><i class="ri-arrow-right-s-line"></i> Attribution de la catégorie avec le score maximal à chaque dépêche</li>
+      <li><i class="ri-arrow-right-s-line"></i> Comparaison de deux approches algorithmiques : recherche linéaire vs. vecteur trié avec recherche dichotomique</li>
+      <li><i class="ri-arrow-right-s-line"></i> Mesure et comparaison des performances (temps d'exécution, précision)</li>
+    </ul>
+    <h6>Mon rôle</h6>
+    <p>J'ai développé la classe <code>PaireChaineEntier.java</code> qui est le cœur du système : méthode <code>initLexique</code> pour construire le lexique depuis le corpus, <code>entierPourChaine</code> pour retrouver le poids d'un mot, <code>chaineMax</code> pour identifier la catégorie dominante, <code>indicePourChaine</code> pour la recherche optimisée, et le calcul de moyenne pour normaliser les scores. J'ai également évalué et comparé les deux approches algorithmiques en termes de complexité et de temps d'exécution réel.</p>
+    <h6>Compétences développées</h6>
+    <div class="modal-tags"><span>Java</span><span>Algorithmique</span><span>Structures de données</span><span>NLP basique</span><span>Optimisation</span><span>Tests unitaires</span></div>
+  </div>
+</div>
+
+<div class="modal-box" id="modal-data">
+  <div class="modal-box-header"><h5>Base de Données — Analyse du Titanic</h5><button onclick="closeModal()"><i class="ri-close-line"></i></button></div>
+  <div class="modal-box-body">
+    <div class="modal-meta">
+      <span><i class="ri-calendar-line"></i> 2023 — 2024</span>
+      <span><i class="ri-group-line"></i> Projet d'équipe</span>
+      <span><i class="ri-time-line"></i> 1 mois</span>
+    </div>
+    <h6>Contexte &amp; objectif</h6>
+    <p>Ce projet consistait à concevoir et exploiter une base de données relationnelle autour des données du naufrage du Titanic, à partir de fichiers CSV fournis. L'objectif final était d'analyser les facteurs ayant influencé la survie des passagers (classe sociale, âge, sexe) en utilisant des requêtes SQL avancées.</p>
+    <h6>Étapes du projet</h6>
+    <ul class="modal-list">
+      <li><i class="ri-arrow-right-s-line"></i> Analyse et compréhension des données sources (passagers, cabines, canots de sauvetage)</li>
+      <li><i class="ri-arrow-right-s-line"></i> Conception du Schéma Entité-Association (SEA) avec justification des choix de modélisation</li>
+      <li><i class="ri-arrow-right-s-line"></i> Dérivation du Schéma Logique de Relations (SLR) avec contraintes d'intégrité</li>
+      <li><i class="ri-arrow-right-s-line"></i> Implémentation SQL : scripts de création, suppression, contraintes référentielles</li>
+      <li><i class="ri-arrow-right-s-line"></i> Peuplement automatisé depuis les fichiers CSV fournis</li>
+      <li><i class="ri-arrow-right-s-line"></i> Requêtes d'analyse : taux de survie par classe, par catégorie (enfant/femme/homme), par canot</li>
+    </ul>
+    <h6>Mon rôle</h6>
+    <p>J'ai rédigé les requêtes SQL d'analyse permettant de vérifier les informations des passagers (nom, âge, classe, cabine, canot de sauvetage) et d'analyser les taux de survie par classe et catégorie. J'ai notamment mis en évidence l'influence de la classe sociale et du sexe sur les chances de survie, et comparé ces résultats avec les données historiques réelles.</p>
+    <h6>Compétences développées</h6>
+    <div class="modal-tags"><span>PostgreSQL</span><span>Modélisation SEA/SLR</span><span>SQL avancé</span><span>Analyse de données</span><span>Import CSV</span></div>
+  </div>
+</div>
+
+<div class="modal-box" id="modal-linux">
+  <div class="modal-box-header"><h5>Installation d'un Poste Développeur sous Debian 12</h5><button onclick="closeModal()"><i class="ri-close-line"></i></button></div>
+  <div class="modal-box-body">
+    <div class="modal-meta">
+      <span><i class="ri-calendar-line"></i> 2023 — 2024</span>
+      <span><i class="ri-user-line"></i> Projet individuel</span>
+      <span><i class="ri-time-line"></i> 1 semaine</span>
+    </div>
+    <h6>Contexte &amp; objectif</h6>
+    <p>L'objectif de ce projet était de préparer un poste de développement complet sous Linux, en suivant une procédure rigoureuse et documentée. Il s'agissait d'installer et configurer Debian 12 sur une machine virtuelle, puis d'y déployer un environnement de développement Java fonctionnel.</p>
+    <h6>Étapes réalisées</h6>
+    <ul class="modal-list">
+      <li><i class="ri-arrow-right-s-line"></i> Téléchargement de l'ISO Debian 12 et vérification de l'intégrité avec empreinte SHA-512</li>
+      <li><i class="ri-arrow-right-s-line"></i> Installation de Debian 12 sur machine virtuelle avec partitionnement adapté</li>
+      <li><i class="ri-arrow-right-s-line"></i> Création d'un utilisateur avec login UGA et configuration des droits sudo</li>
+      <li><i class="ri-arrow-right-s-line"></i> Installation de Git et du JDK via les paquets Debian officiels</li>
+      <li><i class="ri-arrow-right-s-line"></i> Installation d'IntelliJ IDEA Community selon 3 méthodes : archive tar.gz, paquet snap, paquet flatpak</li>
+      <li><i class="ri-arrow-right-s-line"></i> Comparaison des trois méthodes d'installation (espace disque, intégration système, mises à jour)</li>
+      <li><i class="ri-arrow-right-s-line"></i> Sauvegarde de l'images disque sur le serveur distant Erebus4</li>
+      <li><i class="ri-arrow-right-s-line"></i> Rédaction d'une carte mentale récapitulant le processus d'installation</li>
+    </ul>
+    <h6>Compétences développées</h6>
+    <div class="modal-tags"><span>Linux / Debian</span><span>Administration système</span><span>Vérification intégrité SHA-512</span><span>Git</span><span>JDK</span><span>snap / flatpak</span><span>Documentation</span></div>
+  </div>
+</div>
+
+<div class="modal-box" id="modal-site_web">
+  <div class="modal-box-header"><h5>Site Web Entreprise — Présentation d'Atos</h5><button onclick="closeModal()"><i class="ri-close-line"></i></button></div>
+  <div class="modal-box-body">
+    <div class="modal-meta">
+      <span><i class="ri-calendar-line"></i> 2023 — 2024</span>
+      <span><i class="ri-group-line"></i> Projet d'équipe</span>
+      <span><i class="ri-time-line"></i> 4 mois</span>
+    </div>
+    <h6>Contexte &amp; objectif</h6>
+    <p>Ce projet consistait à développer un site web sobre, accessible et écologiquement responsable pour présenter l'entreprise Atos à un public d'élèves de 3ème souhaitant en apprendre davantage sur le monde de l'entreprise informatique, dans le but de choisir un stage ou une orientation professionnelle.</p>
+    <h6>Périmètre du projet</h6>
+    <ul class="modal-list">
+      <li><i class="ri-arrow-right-s-line"></i> Analyse complète de l'environnement d'Atos : activités, services, organisation, concurrents, clients, stratégie</li>
+      <li><i class="ri-arrow-right-s-line"></i> Évaluation de la transition numérique et écologique de l'entreprise</li>
+      <li><i class="ri-arrow-right-s-line"></i> Rédaction d'une fiche synthèse sur la situation actuelle d'Atos</li>
+      <li><i class="ri-arrow-right-s-line"></i> Conception des maquettes (wireframes) de chaque page du site</li>
+      <li><i class="ri-arrow-right-s-line"></i> Développement du site en HTML/CSS avec une approche sobre et éco-conçue</li>
+      <li><i class="ri-arrow-right-s-line"></i> Mise en place des outils de gestion de projet (répartition des tâches, suivi d'avancement)</li>
+    </ul>
+    <h6>Mon rôle</h6>
+    <p>J'ai principalement étudié la stratégie, les concurrents et l'organisation géographique d'Atos. Pour le développement, j'ai conçu la page de contact (formulaire, validation) ainsi que le footer du site. J'ai également participé aux discussions sur l'architecture du site et à la proposition de la maquette générale.</p>
+    <h6>Compétences développées</h6>
+    <div class="modal-tags"><span>HTML5</span><span>CSS</span><span>Gestion de projet</span><span>Analyse d'entreprise</span><span>Maquettage</span><span>Travail en équipe</span><span>Éco-conception</span></div>
+  </div>
+</div>
+
+<!-- SCRIPTS -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
 <script>
-    AOS.init();
+  AOS.init({ duration: 700, once: true });
+  document.getElementById('year').textContent = new Date().getFullYear();
 
+  window.addEventListener('scroll', () => {
+    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+  });
+
+  document.getElementById('nav-toggle').addEventListener('click', () => {
+    document.getElementById('nav-links').classList.toggle('open');
+  });
+
+  // Modals
+  function openModal(id) {
+    document.getElementById('modal-overlay').classList.add('active');
+    document.getElementById('modal-' + id).classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal() {
+    document.querySelectorAll('.modal-box.active').forEach(m => m.classList.remove('active'));
+    document.getElementById('modal-overlay').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  // Dark / Light mode
+  const root = document.documentElement;
+  const saved = localStorage.getItem('theme') || 'dark';
+  root.setAttribute('data-theme', saved);
+  updateIcons(saved);
+
+  function updateIcons(theme) {
+    const dark = theme === 'dark';
+    ['icon-sun','icon-sun-m'].forEach(id => { const el = document.getElementById(id); if(el) el.style.display = dark ? 'inline':'none'; });
+    ['icon-moon','icon-moon-m'].forEach(id => { const el = document.getElementById(id); if(el) el.style.display = dark ? 'none':'inline'; });
+  }
+  function toggleTheme() {
+    const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    updateIcons(next);
+  }
+  document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+  document.getElementById('theme-toggle-mobile').addEventListener('click', toggleTheme);
+
+  // EmailJS
+  (function(){ emailjs.init("lbZMxtf5iyjFMoxZs"); })();
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    emailjs.sendForm('service_gy835qa', 'template_zu7pjwp', this)
+      .then(() => {
+        emailjs.sendForm('service_gy835qa', 'template_b04bktl', this);
+        this.reset();
+        document.getElementById('form-success').classList.remove('hidden');
+      })
+      .catch(err => alert('Erreur : ' + JSON.stringify(err)));
+  });
 </script>
-
-
+</body>
 </html>
-
-
-
