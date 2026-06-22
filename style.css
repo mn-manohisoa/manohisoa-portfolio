@@ -363,12 +363,12 @@ section {
   background-clip: text;
   color: transparent;
 }
-/* .hero-title {
+.hero-title {
   font-size: 1.2rem;
   color: var(--accent);
   margin-bottom: 0.4rem;
   font-weight: 600;
-} */
+}
 .hero-sub {
   color: var(--muted);
   margin-bottom: 1.5rem;
@@ -1471,6 +1471,56 @@ footer {
 /* ==============================
    RESPONSIVE
 ============================== */
+@media (max-width: 1100px) {
+  .nav-links {
+    gap: 1rem;
+  }
+  .nav-links a {
+    font-size: 0.82rem;
+  }
+}
+
+@media (max-width: 980px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--nav-bg);
+    padding: 1.5rem;
+    gap: 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  .nav-right-mobile {
+    display: flex;
+  }
+  .apropos-grid {
+    grid-template-columns: 1fr;
+  }
+  .apropos-photo {
+    display: flex;
+    justify-content: center;
+  }
+  .photo-frame {
+    max-width: 320px;
+    width: 100%;
+  }
+  .exp-grid {
+    grid-template-columns: 1fr;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 900px) {
   .apropos-grid {
     grid-template-columns: 1fr;
