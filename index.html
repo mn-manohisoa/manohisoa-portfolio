@@ -41,13 +41,17 @@
   </div>
 </header>
 
+<!-- Barre de progression scroll -->
+<div id="scroll-progress"></div>
+
 <!-- ===== HERO ===== -->
 <section id="accueil" class="hero">
   <div class="hero-bg-grid"></div>
   <div class="hero-glow"></div>
+  <div class="hero-scanlines" aria-hidden="true"></div>
   <div class="hero-content" data-aos="fade-up">
     <div class="hero-avatar">MN</div>
-    <div class="hero-badge"><span class="badge-dot"></span> En recherche d'alternance ingénieur · Sept. 2026</div>
+    <div class="hero-badge"><span class="badge-dot"></span> En alternance chez Corys · Futur ingénieur à CY Tech</div>
     <h1 class="hero-name">Manohisoa<br/><span>MBELO NDRIAMANAMPY</span></h1>
     <p class="hero-title">Futur Ingénieur DevSecOps / SRE</p>
     <p class="hero-sub">Administrateur Systèmes &amp; Réseaux en alternance · Grenoble, France</p>
@@ -63,8 +67,74 @@
       <a href="#contact" class="btn-primary">Contactez-moi</a>
       <a href="#competences" class="btn-outline">Mes compétences</a>
     </div>
+
+    <!-- Status board -->
+    <div class="status-board" data-aos="fade-up" data-aos-delay="200">
+      <div class="status-board-header">
+        <span class="sb-dot sb-dot-red"></span>
+        <span class="sb-dot sb-dot-amber"></span>
+        <span class="sb-dot sb-dot-green"></span>
+        <span class="sb-title">manohisoa@portfolio:~ $ cat /etc/career.status</span>
+      </div>
+      <div class="status-board-body">
+        <div class="sb-row">
+          <span class="sb-state sb-ok">[ OK ]</span>
+          <span class="sb-name">alternance.corys</span>
+          <span class="sb-meta">SysAdmin · Grenoble</span>
+          <span class="sb-uptime">active</span>
+        </div>
+        <div class="sb-row">
+          <span class="sb-state sb-ok">[ OK ]</span>
+          <span class="sb-name">stage.enlaps</span>
+          <span class="sb-meta">CI/CD &amp; AWS · 3mo</span>
+          <span class="sb-uptime">completed</span>
+        </div>
+        <div class="sb-row">
+          <span class="sb-state sb-ok">[ OK ]</span>
+          <span class="sb-name">projet.parefeu-ips</span>
+          <span class="sb-meta">nftables + Suricata</span>
+          <span class="sb-uptime">deployed</span>
+        </div>
+        <div class="sb-row">
+          <span class="sb-state sb-pending">[ &gt;&gt; ]</span>
+          <span class="sb-name">formation.cytech</span>
+          <span class="sb-meta">Cycle ingénieur · Cyber</span>
+          <span class="sb-uptime">starting sept. 2026</span>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
+
+<!-- ===== LOG FEED ===== -->
+<div class="log-feed" aria-hidden="true">
+  <div class="log-feed-header">
+    <i class="ri-terminal-box-line"></i>
+    <span>tail -f /var/log/career.log</span>
+    <span class="log-live"><span class="live-dot"></span> LIVE</span>
+  </div>
+  <div class="log-feed-viewport">
+    <div class="log-feed-track">
+      <div class="log-entry"><span class="log-ts">2026-06-23 09:12:04</span><span class="log-lvl log-info">INFO </span><span class="log-msg">Portfolio v3.0 deployed on GitHub Pages</span></div>
+      <div class="log-entry"><span class="log-ts">2026-04-08 14:30:11</span><span class="log-lvl log-info">INFO </span><span class="log-msg">LAPS rolled out on ~100 workstations at Corys</span></div>
+      <div class="log-entry"><span class="log-ts">2026-02-15 16:45:00</span><span class="log-lvl log-ok  ">OK   </span><span class="log-msg">Moodle containerized on Docker Swarm (image custom + MariaDB + NFS)</span></div>
+      <div class="log-entry"><span class="log-ts">2025-12-10 11:20:33</span><span class="log-lvl log-info">INFO </span><span class="log-msg">GitLab CI/CD pipelines + DevContainer template shipped</span></div>
+      <div class="log-entry"><span class="log-ts">2025-10-01 08:00:00</span><span class="log-lvl log-ok  ">OK   </span><span class="log-msg">Started alternance at Corys · SysAdmin role</span></div>
+      <div class="log-entry"><span class="log-ts">2025-07-12 17:30:00</span><span class="log-lvl log-ok  ">OK   </span><span class="log-msg">Enlaps stage completed · Docker images optimized (30 Go)</span></div>
+      <div class="log-entry"><span class="log-ts">2025-06-05 10:15:22</span><span class="log-lvl log-info">INFO </span><span class="log-msg">AWS AMI prebuilt strategy deployed via Terraform + Image Builder</span></div>
+      <div class="log-entry"><span class="log-ts">2025-04-22 09:00:00</span><span class="log-lvl log-info">INFO </span><span class="log-msg">Started internship at Enlaps · Cloud &amp; CI/CD</span></div>
+      <div class="log-entry"><span class="log-ts">2025-03-18 13:45:00</span><span class="log-lvl log-warn">WARN </span><span class="log-msg">Suricata IPS triggered: blocked DNS query for malicious.com</span></div>
+      <div class="log-entry"><span class="log-ts">2025-02-10 16:00:00</span><span class="log-lvl log-info">INFO </span><span class="log-msg">Pare-feu nftables + IPS Suricata deployed on 5 Debian VMs</span></div>
+      <!-- duplicat pour boucle infinie -->
+      <div class="log-entry"><span class="log-ts">2026-06-23 09:12:04</span><span class="log-lvl log-info">INFO </span><span class="log-msg">Portfolio v3.0 deployed on GitHub Pages</span></div>
+      <div class="log-entry"><span class="log-ts">2026-04-08 14:30:11</span><span class="log-lvl log-info">INFO </span><span class="log-msg">LAPS rolled out on ~100 workstations at Corys</span></div>
+      <div class="log-entry"><span class="log-ts">2026-02-15 16:45:00</span><span class="log-lvl log-ok  ">OK   </span><span class="log-msg">Moodle containerized on Docker Swarm (image custom + MariaDB + NFS)</span></div>
+      <div class="log-entry"><span class="log-ts">2025-12-10 11:20:33</span><span class="log-lvl log-info">INFO </span><span class="log-msg">GitLab CI/CD pipelines + DevContainer template shipped</span></div>
+      <div class="log-entry"><span class="log-ts">2025-10-01 08:00:00</span><span class="log-lvl log-ok  ">OK   </span><span class="log-msg">Started alternance at Corys · SysAdmin role</span></div>
+      <div class="log-entry"><span class="log-ts">2025-07-12 17:30:00</span><span class="log-lvl log-ok  ">OK   </span><span class="log-msg">Enlaps stage completed · Docker images optimized (30 Go)</span></div>
+    </div>
+  </div>
+</div>
 
 <!-- ===== À PROPOS ===== -->
 <section id="apropos" class="apropos">
@@ -81,8 +151,8 @@
     </div>
     <div class="apropos-text" data-aos="fade-left">
       <h3>Étudiant en Systèmes, Réseaux &amp; Cybersécurité</h3>
-<p>Je suis Manohisoa MBELO NDRIAMANAMPY, passionné d'informatique avec un intérêt marqué pour l'infrastructure, la sécurité et l'automatisation. Mon parcours est orienté depuis le début vers un rôle d'<strong>ingénieur DevSecOps / SRE</strong> : administration de parcs hétérogènes, conteneurisation, pipelines CI/CD et durcissement des systèmes.</p>
-<p>Actuellement en alternance chez Corys et après un stage chez Enlaps, je poursuis mes études en école d'ingénieur à <strong>CY Tech</strong> avec une spécialisation <strong>Cybersécurité</strong>.</p>
+      <p>Je suis Manohisoa MBELO NDRIAMANAMPY, passionné d'informatique avec un intérêt marqué pour l'infrastructure, la sécurité et l'automatisation. Mon parcours est orienté depuis le début vers un rôle d'<strong>ingénieur DevSecOps / SRE</strong> : administration de parcs hétérogènes, conteneurisation, pipelines CI/CD et durcissement des systèmes.</p>
+      <p>Actuellement en alternance chez Corys et après un stage chez Enlaps, je cherche une <strong>alternance ingénieur à partir de septembre 2026</strong> pour progresser sur Kubernetes en production, la sécurisation des pipelines et les pratiques DevSecOps à grande échelle.</p>
       <div class="apropos-langs">
         <div class="lang-chip">🇲🇬 Malgache — Natif</div>
         <div class="lang-chip">🇫🇷 Français — C2</div>
@@ -95,27 +165,87 @@
   </div>
   <div class="timeline-section" data-aos="fade-up">
     <h3 class="timeline-title">Formation &amp; <span>Parcours</span></h3>
-    <div class="timeline">
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-date">2025 — Aujourd'hui</div>
-        <div class="tl-content"><h4>Alternant Administrateur Systèmes &amp; Réseaux — Corys, Grenoble</h4><p>Déploiement de Microsoft LAPS, conteneurisation de services (Docker Swarm), pipelines CI/CD GitLab, Active Directory, Ansible, supervision Grafana.</p></div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-date">Avr — Juil 2025</div>
-        <div class="tl-content"><h4>Stagiaire Administration Systèmes &amp; CI/CD — Enlaps, Grenoble</h4><p>Optimisation d'infrastructure AWS : préchargement d'AMI (EC2 Image Builder + Terraform), réduction d'images Docker (DockerSlim, multi-stage), pipelines CI/CD.</p></div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-date">2023 — 2026</div>
-        <div class="tl-content"><h4>BUT Informatique — IUT2, Université Grenoble Alpes</h4><p>Parcours B : Déploiement d'applications communicantes et sécurisées. En alternance.</p></div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-date">2023</div>
-        <div class="tl-content"><h4>Baccalauréat STMG — Mention Bien</h4><p>La Clairefontaine Ambodivoanjo, Madagascar. Spécialité Gestion &amp; Finance.</p></div>
-      </div>
+
+    <ol class="editorial-list">
+
+      <li class="ed-item">
+        <div class="ed-date">
+          <span class="ed-year">2025</span>
+          <span class="ed-year-end">Aujourd'hui</span>
+        </div>
+        <div class="ed-content">
+          <p class="ed-eyebrow">Alternance · Corys</p>
+          <h4>Administrateur Systèmes &amp; Réseaux</h4>
+          <p class="ed-desc">Déploiement de Microsoft LAPS, conteneurisation de services (Docker Swarm), pipelines CI/CD GitLab, Active Directory, Ansible, supervision Grafana.</p>
+          <div class="ed-meta">Grenoble, France</div>
+        </div>
+      </li>
+
+      <li class="ed-item">
+        <div class="ed-date">
+          <span class="ed-year">2025</span>
+          <span class="ed-year-end">Avr → Juil</span>
+        </div>
+        <div class="ed-content">
+          <p class="ed-eyebrow">Stage · Enlaps</p>
+          <h4>Administration Systèmes &amp; CI/CD</h4>
+          <p class="ed-desc">Optimisation d'infrastructure AWS : préchargement d'AMI (EC2 Image Builder + Terraform), réduction d'images Docker (DockerSlim, multi-stage), pipelines CI/CD.</p>
+          <div class="ed-meta">Grenoble, France</div>
+        </div>
+      </li>
+
+      <li class="ed-item">
+        <div class="ed-date">
+          <span class="ed-year">2023</span>
+          <span class="ed-year-end">2026</span>
+        </div>
+        <div class="ed-content">
+          <p class="ed-eyebrow">Formation · IUT2 Grenoble Alpes</p>
+          <h4>BUT Informatique — Parcours B</h4>
+          <p class="ed-desc">Déploiement d'applications communicantes et sécurisées. En alternance.</p>
+          <div class="ed-meta">Université Grenoble Alpes</div>
+        </div>
+      </li>
+
+      <li class="ed-item">
+        <div class="ed-date">
+          <span class="ed-year">2023</span>
+          <span class="ed-year-end">Baccalauréat</span>
+        </div>
+        <div class="ed-content">
+          <p class="ed-eyebrow">Baccalauréat STMG · Mention Bien</p>
+          <h4>Spécialité Gestion &amp; Finance</h4>
+          <p class="ed-desc">Lycée La Clairefontaine Ambodivoanjo, Madagascar.</p>
+          <div class="ed-meta">Antananarivo, Madagascar</div>
+        </div>
+      </li>
+
+    </ol>
+  </div>
+</section>
+
+<!-- ===== STACK EN CHIFFRES ===== -->
+<section id="stats" class="stats-section">
+  <div class="stats-grid" data-aos="fade-up">
+    <div class="stat-card">
+      <div class="stat-icon"><i class="ri-briefcase-line"></i></div>
+      <div class="stat-num counter" data-target="2" data-prefix="" data-suffix="">0</div>
+      <div class="stat-label">Expériences en entreprise</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon"><i class="ri-folder-3-line"></i></div>
+      <div class="stat-num counter" data-target="6" data-prefix="" data-suffix="">0</div>
+      <div class="stat-label">Projets réalisés</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon"><i class="ri-stack-line"></i></div>
+      <div class="stat-num counter" data-target="25" data-prefix="" data-suffix="+">0</div>
+      <div class="stat-label">Technologies maîtrisées</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon"><i class="ri-translate-2"></i></div>
+      <div class="stat-num counter" data-target="3" data-prefix="" data-suffix="">0</div>
+      <div class="stat-label">Langues parlées</div>
     </div>
   </div>
 </section>
@@ -135,11 +265,12 @@
       <div class="lang-card"><img src="images/logo-c.png" alt="C"/><span>C</span></div>
       <div class="lang-card"><img src="images/c++.png" alt="C++"/><span>C++</span></div>
       <div class="lang-card"><img src="images/php.png" alt="PHP"/><span>PHP</span></div>
-      <div class="lang-card"><img src="images/python.png" alt="Python" class="tag-img"/><span>Python</span></div>
       <div class="lang-card"><img src="images/pngegg(1).png" alt="HTML5"/><span>HTML5</span></div>
       <div class="lang-card"><img src="images/css.png" alt="CSS"/><span>CSS</span></div>
       <div class="lang-card"><img src="images/tailwind-css.png" alt="Tailwind"/><span>Tailwind</span></div>
       <div class="lang-card"><img src="images/postgre.png" alt="PostgreSQL"/><span>PostgreSQL</span></div>
+      <div class="lang-card"><img src="images/python.png" alt="Python" class="tag-img"/><span>Python</span></div>
+
     </div>
   </div>
 
@@ -244,7 +375,7 @@
           </div>
         </div>
         <div class="exp-metrics">
-          <div class="metric"><span class="metric-num">~100</span><span class="metric-label">postes sécurisés (LAPS)</span></div>
+          <div class="metric"><span class="metric-num counter" data-target="100" data-prefix="~" data-suffix="">~100</span><span class="metric-label">postes sécurisés (LAPS)</span></div>
           <div class="metric"><span class="metric-num">CI/CD</span><span class="metric-label">en production</span></div>
           <div class="metric"><span class="metric-num">Swarm</span><span class="metric-label">cluster conteneurs</span></div>
         </div>
@@ -278,9 +409,27 @@
           </div>
         </div>
         <div class="exp-metrics">
-          <div class="metric"><span class="metric-num">30 Go</span><span class="metric-label">images Docker optimisées</span></div>
+          <div class="metric"><span class="metric-num counter" data-target="30" data-prefix="" data-suffix=" Go">30 Go</span><span class="metric-label">images Docker optimisées</span></div>
           <div class="metric"><span class="metric-num">↓ coûts</span><span class="metric-label">EBS &amp; trafic réseau</span></div>
           <div class="metric"><span class="metric-num">IaC</span><span class="metric-label">Terraform + Image Builder</span></div>
+        </div>
+        <div class="pipeline-anim" aria-hidden="true">
+          <div class="pipeline-header">
+            <i class="ri-git-merge-line"></i>
+            <span>CI/CD Pipeline · Enlaps AWS</span>
+            <span class="pipeline-status">passing</span>
+          </div>
+          <div class="pipeline-stages">
+            <div class="pl-stage" style="--d:0s"><i class="ri-code-line"></i><span>build</span></div>
+            <div class="pl-arrow"></div>
+            <div class="pl-stage" style="--d:0.4s"><i class="ri-test-tube-line"></i><span>test</span></div>
+            <div class="pl-arrow"></div>
+            <div class="pl-stage" style="--d:1.2s"><i class="ri-image-line"></i><span>build AMI</span></div>
+            <div class="pl-arrow"></div>
+            <div class="pl-stage" style="--d:1.6s"><i class="ri-rocket-2-line"></i><span>deploy</span></div>
+            <div class="pl-arrow"></div>
+            <div class="pl-stage" style="--d:2s"><i class="ri-line-chart-line"></i><span>monitor</span></div>
+          </div>
         </div>
         <ul class="exp-list">
           <li>Optimisation d'une infrastructure AWS basée sur de gros conteneurs Docker (jusqu'à 30 Go)</li>
@@ -417,7 +566,15 @@
       <h3><i class="ri-contacts-book-line"></i> Informations de contact</h3>
       <div class="contact-item">
         <div class="contact-icon"><i class="ri-mail-line"></i></div>
-        <div><strong>Email</strong><a href="mailto:mn.manohisoa@gmail.com">mn.manohisoa@gmail.com</a></div>
+        <div>
+          <strong>Email</strong>
+          <div class="email-copy-wrap">
+            <a href="mailto:mn.manohisoa@gmail.com">mn.manohisoa@gmail.com</a>
+            <button class="email-copy" id="copy-email" title="Copier l'email" aria-label="Copier l'email">
+              <i class="ri-file-copy-line"></i>
+            </button>
+          </div>
+        </div>
       </div>
       <div class="contact-item">
         <div class="contact-icon"><i class="ri-phone-line"></i></div>
@@ -467,11 +624,22 @@
 </section>
 
 
-<!-- ===== FOOTER ===== -->
-<footer>
+<!-- ===== FOOTER STATUS BAR ===== -->
+<footer class="footer-statusbar">
   <div class="footer-inner">
-    <p>© <strong>Manohisoa MBELO NDRIAMANAMPY</strong> — Tous droits réservés <span id="year"></span></p>
-    <a href="#accueil" class="footer-top" aria-label="Haut de page"><i class="ri-arrow-up-line"></i></a>
+    <div class="fsb-left">
+      <span class="fsb-item"><span class="fsb-led"></span> online</span>
+      <span class="fsb-item"><i class="ri-user-line"></i> manohisoa@portfolio</span>
+      <span class="fsb-item"><i class="ri-git-branch-line"></i> main</span>
+    </div>
+    <div class="fsb-center">
+      <p>© <strong>Manohisoa MBELO NDRIAMANAMPY</strong> <span id="year"></span></p>
+    </div>
+    <div class="fsb-right">
+      <span class="fsb-item"><i class="ri-map-pin-line"></i> Grenoble, FR</span>
+      <span class="fsb-item"><i class="ri-time-line"></i> <span id="clock">--:--</span></span>
+      <a href="#accueil" class="footer-top" aria-label="Haut de page"><i class="ri-arrow-up-line"></i></a>
+    </div>
   </div>
 </footer>
 
@@ -488,27 +656,151 @@
     </div>
     <h6>Contexte &amp; objectif</h6>
     <p>Dans le cadre du BUT3 Informatique (parcours alternant), ce projet consistait à concevoir, déployer et tester une infrastructure réseau réaliste protégée par un pare-feu <code>nftables</code> et un IPS <code>Suricata</code>. L'objectif : garantir l'isolation des zones, le filtrage stateful du trafic et la détection/blocage d'attaques en temps réel, le tout en dual-stack IPv4/IPv6.</p>
-    <h6>Architecture mise en place</h6>
-    <ul class="modal-list">
-      <li><i class="ri-arrow-right-s-line"></i> 5 machines virtuelles Debian 12 sous VirtualBox, provisionnées automatiquement avec Vagrant (Infrastructure as Code)</li>
-      <li><i class="ri-arrow-right-s-line"></i> Segmentation en zones isolées : Internet simulé, DMZ publique, réseau interne et DMZ privée</li>
-      <li><i class="ri-arrow-right-s-line"></i> Services exposés : DNS (bind9) et HTTP (apache2) en DMZ publique, SSH en DMZ privée</li>
-      <li><i class="ri-arrow-right-s-line"></i> Routage et NAT (masquerade) entre les zones, support complet IPv4 et IPv6</li>
-      <li><i class="ri-arrow-right-s-line"></i> Script <code>setup.sh</code> de remise en état automatique de toute la configuration réseau après chaque démarrage</li>
-    </ul>
-    <h6>Pare-feu nftables</h6>
-    <ul class="modal-list">
-      <li><i class="ri-arrow-right-s-line"></i> Politique par défaut <code>drop</code> sur les chaînes input, forward et output</li>
-      <li><i class="ri-arrow-right-s-line"></i> Filtrage stateful (suivi de connexions established/related, rejet des paquets invalid)</li>
-      <li><i class="ri-arrow-right-s-line"></i> Règles d'anti-spoofing et autorisations fines par interface et par protocole</li>
-      <li><i class="ri-arrow-right-s-line"></i> Redirection du trafic forward vers Suricata via une règle NFQUEUE</li>
-    </ul>
-    <h6>IPS Suricata (mode inline NFQUEUE)</h6>
-    <ul class="modal-list">
-      <li><i class="ri-arrow-right-s-line"></i> Suricata 7.0.10 couplé à nftables : chaque paquet est analysé avant d'être routé</li>
-      <li><i class="ri-arrow-right-s-line"></i> Démarrage en mode IPS via un override systemd</li>
-      <li><i class="ri-arrow-right-s-line"></i> Règles personnalisées : blocage des requêtes DNS vers un domaine malveillant, détection de ping flood (seuil 10/s) et de brute-force SSH (seuil 5/s)</li>
-    </ul>
+
+    <h6>Architecture interactive — cliquez sur un nœud</h6>
+    <div class="archi-diagram">
+      <svg viewBox="0 0 600 320" xmlns="http://www.w3.org/2000/svg">
+        <!-- Connections -->
+        <g stroke="#00d4ff" stroke-width="1.5" fill="none" opacity="0.5">
+          <path d="M 75 160 L 175 160" class="archi-arrow"/>
+          <path d="M 275 160 L 375 90" class="archi-arrow"/>
+          <path d="M 275 160 L 375 160" class="archi-arrow"/>
+          <path d="M 275 160 L 375 230" class="archi-arrow"/>
+        </g>
+        <!-- Nodes -->
+        <g class="archi-node" data-info="internet" onclick="showArchiInfo('internet')">
+          <rect x="25" y="135" width="100" height="50" rx="8" fill="rgba(239,68,68,0.15)" stroke="#ef4444" stroke-width="1.5"/>
+          <text x="75" y="160" text-anchor="middle" fill="#ef4444" font-size="14" font-weight="700">Internet</text>
+          <text x="75" y="176" text-anchor="middle" fill="#94a3b8" font-size="10">5.5.5.0/24</text>
+        </g>
+        <g class="archi-node" data-info="firewall" onclick="showArchiInfo('firewall')">
+          <rect x="175" y="120" width="100" height="80" rx="8" fill="rgba(0,212,255,0.15)" stroke="#00d4ff" stroke-width="2"/>
+          <text x="225" y="148" text-anchor="middle" fill="#00d4ff" font-size="13" font-weight="700">Pare-feu</text>
+          <text x="225" y="166" text-anchor="middle" fill="#fff" font-size="11">nftables</text>
+          <text x="225" y="182" text-anchor="middle" fill="#fff" font-size="11">+ Suricata</text>
+        </g>
+        <g class="archi-node" data-info="dmz" onclick="showArchiInfo('dmz')">
+          <rect x="375" y="65" width="100" height="50" rx="8" fill="rgba(124,58,237,0.15)" stroke="#7c3aed" stroke-width="1.5"/>
+          <text x="425" y="90" text-anchor="middle" fill="#7c3aed" font-size="13" font-weight="700">DMZ Pub</text>
+          <text x="425" y="106" text-anchor="middle" fill="#94a3b8" font-size="10">DNS · HTTP</text>
+        </g>
+        <g class="archi-node" data-info="lan" onclick="showArchiInfo('lan')">
+          <rect x="375" y="135" width="100" height="50" rx="8" fill="rgba(16,185,129,0.15)" stroke="#10b981" stroke-width="1.5"/>
+          <text x="425" y="160" text-anchor="middle" fill="#10b981" font-size="13" font-weight="700">Réseau int.</text>
+          <text x="425" y="176" text-anchor="middle" fill="#94a3b8" font-size="10">10.0.0.0/24</text>
+        </g>
+        <g class="archi-node" data-info="priv" onclick="showArchiInfo('priv')">
+          <rect x="375" y="205" width="100" height="50" rx="8" fill="rgba(245,158,11,0.15)" stroke="#f59e0b" stroke-width="1.5"/>
+          <text x="425" y="230" text-anchor="middle" fill="#f59e0b" font-size="13" font-weight="700">DMZ Priv</text>
+          <text x="425" y="246" text-anchor="middle" fill="#94a3b8" font-size="10">SSH IPv6</text>
+        </g>
+      </svg>
+      <div class="archi-info" id="archi-info">
+        <p class="archi-hint"><i class="ri-cursor-line"></i> Cliquez sur un nœud du diagramme pour voir le détail technique</p>
+      </div>
+    </div>
+
+    <h6>Threat model &amp; défenses déployées</h6>
+    <div class="threat-matrix">
+      <div class="threat-item">
+        <div class="threat-attack"><i class="ri-virus-line"></i> DNS Exfiltration</div>
+        <div class="threat-arrow">→</div>
+        <div class="threat-defense"><i class="ri-shield-check-line"></i> Suricata · drop sur domaine malveillant</div>
+      </div>
+      <div class="threat-item">
+        <div class="threat-attack"><i class="ri-flood-line"></i> ICMP Flood (DDoS)</div>
+        <div class="threat-arrow">→</div>
+        <div class="threat-defense"><i class="ri-shield-check-line"></i> Suricata · alerte seuil 10/s</div>
+      </div>
+      <div class="threat-item">
+        <div class="threat-attack"><i class="ri-key-line"></i> SSH Brute Force</div>
+        <div class="threat-arrow">→</div>
+        <div class="threat-defense"><i class="ri-shield-check-line"></i> Suricata · alerte seuil 5/s</div>
+      </div>
+      <div class="threat-item">
+        <div class="threat-attack"><i class="ri-spy-line"></i> IP Spoofing</div>
+        <div class="threat-arrow">→</div>
+        <div class="threat-defense"><i class="ri-shield-check-line"></i> nftables · règles anti-spoofing</div>
+      </div>
+      <div class="threat-item">
+        <div class="threat-attack"><i class="ri-arrow-left-right-line"></i> Latéralisation</div>
+        <div class="threat-arrow">→</div>
+        <div class="threat-defense"><i class="ri-shield-check-line"></i> Segmentation 4 zones + default drop</div>
+      </div>
+    </div>
+
+    <h6>Extraits de configuration réels</h6>
+    <div class="code-tabs">
+      <div class="code-tab-headers">
+        <button class="code-tab-btn active" onclick="switchCodeTab(this, 'tab-nft')">nftables.conf</button>
+        <button class="code-tab-btn" onclick="switchCodeTab(this, 'tab-suri')">local.rules (Suricata)</button>
+        <button class="code-tab-btn" onclick="switchCodeTab(this, 'tab-setup')">setup.sh</button>
+      </div>
+      <div class="code-block active" id="tab-nft"><pre><code><span class="ck">table</span> <span class="cf">inet filter</span> {
+  <span class="ck">chain</span> <span class="cf">forward</span> {
+    <span class="ck">type filter hook forward priority</span> <span class="cn">0</span>; <span class="ck">policy</span> <span class="cs">drop</span>;
+
+    <span class="cc"># NFQUEUE vers Suricata (1ère position)</span>
+    queue flags bypass to <span class="cn">0</span>
+
+    <span class="cc"># Stateful</span>
+    ct state established,related <span class="cs">accept</span>
+    ct state invalid <span class="cs">drop</span>
+
+    <span class="cc"># Internet → DMZ publique : HTTP, DNS</span>
+    iifname <span class="cstr">"eth1"</span> oifname <span class="cstr">"eth2"</span> tcp dport <span class="cn">80</span> <span class="cs">accept</span>
+    iifname <span class="cstr">"eth1"</span> oifname <span class="cstr">"eth2"</span> udp dport <span class="cn">53</span> <span class="cs">accept</span>
+  }
+}
+
+<span class="ck">table</span> <span class="cf">ip nat</span> {
+  <span class="ck">chain</span> <span class="cf">postrouting</span> {
+    ip saddr <span class="cn">10.0.0.0/24</span> oifname <span class="cstr">"eth2"</span> masquerade
+    ip saddr <span class="cn">10.0.1.0/24</span> oifname <span class="cstr">"eth1"</span> masquerade
+  }
+}</code></pre></div>
+      <div class="code-block" id="tab-suri"><pre><code><span class="cc"># DNS vers domaine malveillant → BLOQUER</span>
+<span class="cs">drop</span> dns any any -&gt; any any (
+  msg:<span class="cstr">"DNS query for malicious.com blocked"</span>;
+  dns.query; content:<span class="cstr">"malicious.com"</span>; nocase;
+  sid:<span class="cn">1000001</span>; rev:<span class="cn">1</span>;
+)
+
+<span class="cc"># Ping flood : seuil 10/s → ALERTER</span>
+<span class="ck">alert</span> icmp any any -&gt; any any (
+  msg:<span class="cstr">"ICMP Ping Flood detected"</span>;
+  itype:<span class="cn">8</span>;
+  detection_filter:track by_src, count <span class="cn">10</span>, seconds <span class="cn">1</span>;
+  sid:<span class="cn">1000002</span>; rev:<span class="cn">1</span>;
+)
+
+<span class="cc"># SSH brute-force : seuil 5/s → ALERTER</span>
+<span class="ck">alert</span> tcp any any -&gt; any <span class="cn">22</span> (
+  msg:<span class="cstr">"SSH Brute Force detected"</span>;
+  flags:S;
+  detection_filter:track by_src, count <span class="cn">5</span>, seconds <span class="cn">1</span>;
+  sid:<span class="cn">1000003</span>; rev:<span class="cn">1</span>;
+)</code></pre></div>
+      <div class="code-block" id="tab-setup"><pre><code><span class="cc">#!/bin/bash</span>
+<span class="cc"># Remise en état complète post vagrant up</span>
+
+<span class="ck">echo</span> <span class="cstr">"[1/5] Configuration pare-feu..."</span>
+vagrant ssh vm-parefeu <span class="ck">-c</span> <span class="cstr">"
+  sudo sysctl -w net.ipv4.ip_forward=1
+  sudo sysctl -w net.ipv6.conf.all.forwarding=1
+  sudo nft -f /etc/nftables.conf
+  sudo ip addr add 5.5.5.1/24 dev eth1 || true
+"</span>
+
+<span class="ck">echo</span> <span class="cstr">"[2/5] Routes vm-dmz-pub..."</span>
+vagrant ssh vm-dmz-pub <span class="ck">-c</span> <span class="cstr">"
+  sudo ip route add default via 66.6.6.5 dev eth1
+"</span>
+
+<span class="cc"># Vérification IPv6 inter-zones</span>
+vagrant ssh vm-interne <span class="ck">-c</span> <span class="cstr">"ping6 -c 1 2001:1::4"</span></code></pre></div>
+    </div>
+
     <h6>Tests &amp; validation</h6>
     <ul class="modal-list">
       <li><i class="ri-arrow-right-s-line"></i> Matrices de connectivité automatisées (scripts Python) depuis chaque zone, confirmant l'isolation attendue</li>
@@ -680,6 +972,86 @@
   }
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
+  // ===== Missions repliables =====
+  function toggleMissions(btn) {
+    const list = btn.previousElementSibling;
+    const collapsed = list.dataset.collapsed === 'true';
+    list.dataset.collapsed = collapsed ? 'false' : 'true';
+    const txtEl = btn.querySelector('.btn-toggle-text');
+    btn.classList.toggle('open', collapsed);
+    txtEl.textContent = collapsed ? 'Voir moins' : 'Voir toutes les missions (3 de plus)';
+  }
+
+  // ===== Horloge en bas =====
+  function tickClock() {
+    const now = new Date();
+    const h = String(now.getHours()).padStart(2, '0');
+    const m = String(now.getMinutes()).padStart(2, '0');
+    const el = document.getElementById('clock');
+    if (el) el.textContent = h + ':' + m;
+  }
+  tickClock();
+  setInterval(tickClock, 30000);
+
+  // ===== Diagramme architecture interactif =====
+  const archiData = {
+    internet: {
+      icon: 'ri-global-line',
+      title: 'Zone Internet (simulée)',
+      desc: 'Réseau externe non maîtrisé. Toute la défense est en aval. Seul ICMP echo et le trafic vers la DMZ publique sont autorisés à entrer.',
+      tech: ['IP 5.5.5.0/24', 'Anti-spoofing actif', 'Trafic filtré au pare-feu']
+    },
+    firewall: {
+      icon: 'ri-shield-flash-line',
+      title: 'Pare-feu nftables + IPS Suricata',
+      desc: 'Point de contrôle central. Politique default drop sur input/forward/output. Trafic forward passé en NFQUEUE 0 vers Suricata 7 pour inspection en temps réel.',
+      tech: ['Stateful filtering (ct state)', 'NFQUEUE → Suricata IPS', 'NAT IPv4 + IPv6 dual-stack', 'Anti-spoofing par interface']
+    },
+    dmz: {
+      icon: 'ri-cloud-line',
+      title: 'DMZ publique',
+      desc: 'Zone exposée à Internet. Sert le DNS (bind9) et le HTTP (apache2). Aucun accès direct au réseau interne, isolation par interfaces séparées.',
+      tech: ['IP 66.6.6.4/30', 'Services exposés : 80, 53', 'Isolée du LAN interne']
+    },
+    lan: {
+      icon: 'ri-team-line',
+      title: 'Réseau interne',
+      desc: 'Postes clients. Accès Internet via NAT (masquerade). Ne peut pas dialoguer avec la DMZ privée en IPv4, uniquement en SSH IPv6 (segmentation).',
+      tech: ['IP 10.0.0.0/24 + 2001::/64', 'NAT sortant vers DMZ pub', 'ICMP bloqué vers DMZ priv']
+    },
+    priv: {
+      icon: 'ri-database-2-line',
+      title: 'DMZ privée',
+      desc: 'Zone à accès restreint. SSH IPv6 uniquement depuis le LAN interne et le pare-feu. NAT sortant vers Internet possible (mises à jour, sauvegardes).',
+      tech: ['IP 10.0.1.0/24 + 2001:1::/64', 'SSH IPv6 inbound', 'NAT sortant via pare-feu']
+    }
+  };
+  function showArchiInfo(key) {
+    const data = archiData[key];
+    if (!data) return;
+    const box = document.getElementById('archi-info');
+    box.innerHTML = `
+      <div class="archi-info-card">
+        <h6><i class="${data.icon}"></i> ${data.title}</h6>
+        <p>${data.desc}</p>
+        <div class="archi-tech">
+          ${data.tech.map(t => `<span>${t}</span>`).join('')}
+        </div>
+      </div>
+    `;
+    // Highlight node
+    document.querySelectorAll('.archi-node').forEach(n => n.classList.remove('active'));
+    document.querySelector(`.archi-node[data-info="${key}"]`)?.classList.add('active');
+  }
+
+  // ===== Code tabs =====
+  function switchCodeTab(btn, tabId) {
+    btn.parentElement.querySelectorAll('.code-tab-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    btn.closest('.code-tabs').querySelectorAll('.code-block').forEach(b => b.classList.remove('active'));
+    document.getElementById(tabId)?.classList.add('active');
+  }
+
   // Dark / Light mode
   const root = document.documentElement;
   const saved = localStorage.getItem('theme') || 'dark';
@@ -727,6 +1099,77 @@
       btn.innerHTML = '<i class="ri-send-plane-fill"></i> Envoyer le message';
     }
   });
+
+  // ===== Barre de progression scroll =====
+  const scrollProgress = document.getElementById('scroll-progress');
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement;
+    const scrolled = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+    scrollProgress.style.width = scrolled + '%';
+  });
+
+  // ===== Compteurs animés =====
+  function animateCounter(el) {
+    const target = parseInt(el.dataset.target, 10);
+    const prefix = el.dataset.prefix || '';
+    const suffix = el.dataset.suffix || '';
+    const duration = Math.max(1200, target * 20);
+    const start = performance.now();
+    function tick(now) {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = prefix + Math.round(target * eased) + suffix;
+      if (progress < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+  const counterObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !entry.target.dataset.done) {
+        entry.target.dataset.done = '1';
+        animateCounter(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('.counter').forEach(c => counterObs.observe(c));
+
+  // ===== Copier l'email =====
+  const copyBtn = document.getElementById('copy-email');
+  if (copyBtn) {
+    copyBtn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText('mn.manohisoa@gmail.com');
+        copyBtn.classList.add('copied');
+        copyBtn.innerHTML = '<i class="ri-check-line"></i>';
+        setTimeout(() => {
+          copyBtn.classList.remove('copied');
+          copyBtn.innerHTML = '<i class="ri-file-copy-line"></i>';
+        }, 1800);
+      } catch (e) { /* silent */ }
+    });
+  }
+
+  // ===== Easter egg console =====
+  const banner = `
+%c
+  __  __  _   _   __  __                       _      _                    
+ |  \\/  || \\ | | |  \\/  |  __ _  _ __    ___  | |__  (_) ___   ___    __ _ 
+ | |\\/| ||  \\| | | |\\/| | / _\` || '_ \\  / _ \\ | '_ \\ | |/ __| / _ \\  / _\` |
+ | |  | || |\\  | | |  | || (_| || | | || (_) || | | || |\\__ \\| (_) || (_| |
+ |_|  |_||_| \\_| |_|  |_| \\__,_||_| |_| \\___/ |_| |_||_||___/ \\___/  \\__,_|
+
+%cFutur ingénieur DevSecOps / SRE
+%cTu fouilles dans la console ? Bon réflexe.
+LinkedIn : linkedin.com/in/manohisoa-mbelo-ndriamanampy-650455309
+GitHub   : github.com/mn-manohisoa
+Email    : mn.manohisoa@gmail.com
+`;
+  console.log(
+    banner,
+    'color:#00d4ff;font-weight:bold;',
+    'color:#7c3aed;font-size:14px;font-weight:bold;',
+    'color:#94a3b8;font-size:12px;'
+  );
 </script>
 </body>
 </html>
