@@ -44,17 +44,22 @@
 <!-- Barre de progression scroll -->
 <div id="scroll-progress"></div>
 
-<!-- ===== HERO ===== -->
-<section id="accueil" class="hero">
+<!-- ===== HERO SPLIT ===== -->
+<section id="accueil" class="hero-split">
   <div class="hero-bg-grid"></div>
   <div class="hero-glow"></div>
   <div class="hero-scanlines" aria-hidden="true"></div>
-  <div class="hero-content" data-aos="fade-up">
-    <div class="hero-avatar">MN</div>
+
+  <!-- GAUCHE -->
+  <div class="hero-left" data-aos="fade-right">
     <div class="hero-badge"><span class="badge-dot"></span> En alternance chez Corys · Futur ingénieur à CY Tech</div>
     <h1 class="hero-name">Manohisoa<br/><span>MBELO NDRIAMANAMPY</span></h1>
     <p class="hero-title">Futur Ingénieur DevSecOps / SRE</p>
     <p class="hero-sub">Administrateur Systèmes &amp; Réseaux en alternance · Grenoble, France</p>
+    <div class="hero-split-actions">
+      <a href="#projets" class="btn-primary">Voir mes projets →</a>
+      <a href="CV_Manohisoa-MBELO-NDRIAMANAMPY.pdf" download class="btn-outline"><i class="ri-download-line"></i> Télécharger mon CV</a>
+    </div>
     <div class="hero-contacts">
       <a href="mailto:mn.manohisoa@gmail.com"><i class="fa-solid fa-envelope"></i> mn.manohisoa@gmail.com</a>
       <a href="tel:+33675950812"><i class="fa-solid fa-phone"></i> 06 75 95 08 12</a>
@@ -63,76 +68,74 @@
       <a href="https://github.com/mn-manohisoa/" target="_blank" aria-label="GitHub"><i class="ri-github-fill"></i></a>
       <a href="https://www.linkedin.com/in/manohisoa-mbelo-ndriamanampy-650455309/" target="_blank" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
     </div>
-    <div class="hero-actions">
-      <a href="#contact" class="btn-primary">Contactez-moi</a>
-      <a href="#competences" class="btn-outline">Mes compétences</a>
+  </div>
+
+  <!-- DROITE : Terminal + Status board -->
+  <div class="hero-right" data-aos="fade-left" data-aos-delay="100">
+    <!-- Terminal curl -->
+    <div class="hero-term">
+      <div class="hero-term-header">
+        <span class="hero-term-dot" style="background:#ef4444"></span>
+        <span class="hero-term-dot" style="background:#f59e0b"></span>
+        <span class="hero-term-dot" style="background:#10b981"></span>
+        <span class="hero-term-title">bash — manohisoa@portfolio</span>
+      </div>
+      <div class="hero-term-body">
+        <div class="hero-term-cmd"><span class="hcm">$</span> curl https://api.manohisoa.dev/profil</div>
+        <div class="hero-json">
+          <div class="hjline"><span class="hjdi">{</span></div>
+          <div class="hjline hji"><span class="hjky">"nom"</span>: <span class="hjst">"Manohisoa MBELO NDRIAMANAMPY"</span>,</div>
+          <div class="hjline hji"><span class="hjky">"poste"</span>: <span class="hjst">"Futur ingénieur DevSecOps / SRE"</span>,</div>
+          <div class="hjline hji"><span class="hjky">"ville"</span>: <span class="hjst">"Grenoble, France"</span>,</div>
+          <div class="hjline hji"><span class="hjky">"statut"</span>: <span class="hjst">"ouvert aux opportunités"</span>,</div>
+          <div class="hjline hji"><span class="hjky">"stack"</span>: <span class="hjar">[</span></div>
+          <div class="hjline" style="padding-left:2.8rem"><span class="hjst">"Docker"</span>, <span class="hjst">"Terraform"</span>, <span class="hjst">"GitLab CI/CD"</span>,</div>
+          <div class="hjline" style="padding-left:2.8rem"><span class="hjst">"AWS"</span>, <span class="hjst">"Ansible"</span>, <span class="hjst">"Linux"</span>, <span class="hjst">"nftables"</span></div>
+          <div class="hjline hji"><span class="hjar">]</span></div>
+          <div class="hjline"><span class="hjdi">}</span></div>
+        </div>
+        <div><span class="hcm">$</span> <span class="hero-cursor"></span></div>
+      </div>
     </div>
 
-    <!-- Status board -->
-    <div class="status-board" data-aos="fade-up" data-aos-delay="200">
-      <div class="status-board-header">
-        <span class="sb-dot sb-dot-red"></span>
-        <span class="sb-dot sb-dot-amber"></span>
-        <span class="sb-dot sb-dot-green"></span>
-        <span class="sb-title">manohisoa@portfolio:~ $ cat /etc/career.status</span>
-      </div>
-      <div class="status-board-body">
-        <div class="sb-row">
-          <span class="sb-state sb-ok">[ OK ]</span>
-          <span class="sb-name">alternance.corys</span>
-          <span class="sb-meta">SysAdmin · Grenoble</span>
-          <span class="sb-uptime">active</span>
-        </div>
-        <div class="sb-row">
-          <span class="sb-state sb-ok">[ OK ]</span>
-          <span class="sb-name">stage.enlaps</span>
-          <span class="sb-meta">CI/CD &amp; AWS · 3mo</span>
-          <span class="sb-uptime">completed</span>
-        </div>
-        <div class="sb-row">
-          <span class="sb-state sb-ok">[ OK ]</span>
-          <span class="sb-name">projet.parefeu-ips</span>
-          <span class="sb-meta">nftables + Suricata</span>
-          <span class="sb-uptime">deployed</span>
-        </div>
-        <div class="sb-row">
-          <span class="sb-state sb-pending">[ &gt;&gt; ]</span>
-          <span class="sb-name">formation.cytech</span>
-          <span class="sb-meta">Cycle ingénieur · Cyber</span>
-          <span class="sb-uptime">starting sept. 2026</span>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
-<!-- ===== LOG FEED ===== -->
-<div class="log-feed" aria-hidden="true">
-  <div class="log-feed-header">
-    <i class="ri-terminal-box-line"></i>
-    <span>tail -f /var/log/career.log</span>
-    <span class="log-live"><span class="live-dot"></span> LIVE</span>
-  </div>
-  <div class="log-feed-viewport">
-    <div class="log-feed-track">
-      <div class="log-entry"><span class="log-ts">2026-06-23 09:12:04</span><span class="log-lvl log-info">INFO </span><span class="log-msg">Portfolio v3.0 deployed on GitHub Pages</span></div>
-      <div class="log-entry"><span class="log-ts">2026-04-08 14:30:11</span><span class="log-lvl log-info">INFO </span><span class="log-msg">LAPS rolled out on ~100 workstations at Corys</span></div>
-      <div class="log-entry"><span class="log-ts">2026-02-15 16:45:00</span><span class="log-lvl log-ok  ">OK   </span><span class="log-msg">Moodle containerized on Docker Swarm (image custom + MariaDB + NFS)</span></div>
-      <div class="log-entry"><span class="log-ts">2025-12-10 11:20:33</span><span class="log-lvl log-info">INFO </span><span class="log-msg">GitLab CI/CD pipelines + DevContainer template shipped</span></div>
-      <div class="log-entry"><span class="log-ts">2025-10-01 08:00:00</span><span class="log-lvl log-ok  ">OK   </span><span class="log-msg">Started alternance at Corys · SysAdmin role</span></div>
-      <div class="log-entry"><span class="log-ts">2025-07-12 17:30:00</span><span class="log-lvl log-ok  ">OK   </span><span class="log-msg">Enlaps stage completed · Docker images optimized (30 Go)</span></div>
-      <div class="log-entry"><span class="log-ts">2025-06-05 10:15:22</span><span class="log-lvl log-info">INFO </span><span class="log-msg">AWS AMI prebuilt strategy deployed via Terraform + Image Builder</span></div>
-      <div class="log-entry"><span class="log-ts">2025-04-22 09:00:00</span><span class="log-lvl log-info">INFO </span><span class="log-msg">Started internship at Enlaps · Cloud &amp; CI/CD</span></div>
-      <div class="log-entry"><span class="log-ts">2025-03-18 13:45:00</span><span class="log-lvl log-warn">WARN </span><span class="log-msg">Suricata IPS triggered: blocked DNS query for malicious.com</span></div>
-      <div class="log-entry"><span class="log-ts">2025-02-10 16:00:00</span><span class="log-lvl log-info">INFO </span><span class="log-msg">Pare-feu nftables + IPS Suricata deployed on 5 Debian VMs</span></div>
-      <!-- duplicat pour boucle infinie -->
-      <div class="log-entry"><span class="log-ts">2026-06-23 09:12:04</span><span class="log-lvl log-info">INFO </span><span class="log-msg">Portfolio v3.0 deployed on GitHub Pages</span></div>
-      <div class="log-entry"><span class="log-ts">2026-04-08 14:30:11</span><span class="log-lvl log-info">INFO </span><span class="log-msg">LAPS rolled out on ~100 workstations at Corys</span></div>
-      <div class="log-entry"><span class="log-ts">2026-02-15 16:45:00</span><span class="log-lvl log-ok  ">OK   </span><span class="log-msg">Moodle containerized on Docker Swarm (image custom + MariaDB + NFS)</span></div>
-      <div class="log-entry"><span class="log-ts">2025-12-10 11:20:33</span><span class="log-lvl log-info">INFO </span><span class="log-msg">GitLab CI/CD pipelines + DevContainer template shipped</span></div>
-      <div class="log-entry"><span class="log-ts">2025-10-01 08:00:00</span><span class="log-lvl log-ok  ">OK   </span><span class="log-msg">Started alternance at Corys · SysAdmin role</span></div>
-      <div class="log-entry"><span class="log-ts">2025-07-12 17:30:00</span><span class="log-lvl log-ok  ">OK   </span><span class="log-msg">Enlaps stage completed · Docker images optimized (30 Go)</span></div>
-    </div>
+<!-- ===== TECH MARQUEE ===== -->
+<div class="tech-marquee" aria-hidden="true">
+  <div class="tech-marquee-track">
+    <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt=""/><span>Docker</span></div>
+    <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-plain.svg" alt=""/><span>Kubernetes</span></div>
+    <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/terraform/terraform-original.svg" alt=""/><span>Terraform</span></div>
+    <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ansible/ansible-original.svg" alt=""/><span>Ansible</span></div>
+    <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitlab/gitlab-original.svg" alt=""/><span>GitLab CI/CD</span></div>
+    <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt=""/><span>AWS</span></div>
+    <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" alt=""/><span>Linux</span></div>
+    <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt=""/><span>Git</span></div>
+    <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt=""/><span>Python</span></div>
+    <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt=""/><span>Java</span></div>
+    <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt=""/><span>Node.js</span></div>
+    <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" alt=""/><span>TypeScript</span></div>
+    <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt=""/><span>PostgreSQL</span></div>
+    <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vagrant/vagrant-original.svg" alt=""/><span>Vagrant</span></div>
+    <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/windows8/windows8-original.svg" alt=""/><span>Windows Server</span></div>
+    <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg" alt=""/><span>Bash</span></div>
+    <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt=""/><span>Docker</span></div>
+    <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-plain.svg" alt=""/><span>Kubernetes</span></div>
+    <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/terraform/terraform-original.svg" alt=""/><span>Terraform</span></div>
+    <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ansible/ansible-original.svg" alt=""/><span>Ansible</span></div>
+    <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitlab/gitlab-original.svg" alt=""/><span>GitLab CI/CD</span></div>
+    <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt=""/><span>AWS</span></div>
+    <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" alt=""/><span>Linux</span></div>
+    <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt=""/><span>Git</span></div>
+    <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt=""/><span>Python</span></div>
+    <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt=""/><span>Java</span></div>
+    <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt=""/><span>Node.js</span></div>
+    <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" alt=""/><span>TypeScript</span></div>
+    <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt=""/><span>PostgreSQL</span></div>
+    <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vagrant/vagrant-original.svg" alt=""/><span>Vagrant</span></div>
+    <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/windows8/windows8-original.svg" alt=""/><span>Windows Server</span></div>
+    <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg" alt=""/><span>Bash</span></div>
   </div>
 </div>
 
@@ -165,9 +168,7 @@
   </div>
   <div class="timeline-section" data-aos="fade-up">
     <h3 class="timeline-title">Formation &amp; <span>Parcours</span></h3>
-
     <ol class="editorial-list">
-
       <li class="ed-item">
         <div class="ed-date">
           <span class="ed-year">2025</span>
@@ -180,7 +181,6 @@
           <div class="ed-meta">Grenoble, France</div>
         </div>
       </li>
-
       <li class="ed-item">
         <div class="ed-date">
           <span class="ed-year">2025</span>
@@ -193,7 +193,6 @@
           <div class="ed-meta">Grenoble, France</div>
         </div>
       </li>
-
       <li class="ed-item">
         <div class="ed-date">
           <span class="ed-year">2023</span>
@@ -206,7 +205,6 @@
           <div class="ed-meta">Université Grenoble Alpes</div>
         </div>
       </li>
-
       <li class="ed-item">
         <div class="ed-date">
           <span class="ed-year">2023</span>
@@ -219,7 +217,6 @@
           <div class="ed-meta">Antananarivo, Madagascar</div>
         </div>
       </li>
-
     </ol>
   </div>
 </section>
@@ -260,94 +257,164 @@
   <div class="skills-block" data-aos="fade-up">
     <div class="skills-block-header"><i class="ri-code-s-slash-line"></i><h3>Langages de programmation</h3></div>
     <div class="skills-langs-grid">
-      <div class="lang-card"><img src="images/pngegg(2).png" alt="Java"/><span>Java</span></div>
-      <div class="lang-card"><img src="images/javascript.png" alt="JavaScript"/><span>JavaScript</span></div>
-      <div class="lang-card"><img src="images/logo-c.png" alt="C"/><span>C</span></div>
-      <div class="lang-card"><img src="images/c++.png" alt="C++"/><span>C++</span></div>
-      <div class="lang-card"><img src="images/php.png" alt="PHP"/><span>PHP</span></div>
-      <div class="lang-card"><img src="images/pngegg(1).png" alt="HTML5"/><span>HTML5</span></div>
-      <div class="lang-card"><img src="images/css.png" alt="CSS"/><span>CSS</span></div>
-      <div class="lang-card"><img src="images/tailwind-css.png" alt="Tailwind"/><span>Tailwind</span></div>
-      <div class="lang-card"><img src="images/postgre.png" alt="PostgreSQL"/><span>PostgreSQL</span></div>
-      <div class="lang-card"><img src="images/python.png" alt="Python" class="tag-img"/><span>Python</span></div>
-
+      <div class="lang-card clickable-skill" data-skill="java" onclick="filterBySkill('java','Java')"><img src="images/pngegg(2).png" alt="Java"/><span>Java</span></div>
+      <div class="lang-card clickable-skill" data-skill="javascript" onclick="filterBySkill('javascript','JavaScript')"><img src="images/javascript.png" alt="JavaScript"/><span>JavaScript</span></div>
+      <div class="lang-card clickable-skill" data-skill="c" onclick="filterBySkill('c','C')"><img src="images/logo-c.png" alt="C"/><span>C</span></div>
+      <div class="lang-card clickable-skill" data-skill="cpp" onclick="filterBySkill('cpp','C++')"><img src="images/c++.png" alt="C++"/><span>C++</span></div>
+      <div class="lang-card clickable-skill" data-skill="php" onclick="filterBySkill('php','PHP')"><img src="images/php.png" alt="PHP"/><span>PHP</span></div>
+      <div class="lang-card clickable-skill" data-skill="html" onclick="filterBySkill('html','HTML5')"><img src="images/pngegg(1).png" alt="HTML5"/><span>HTML5</span></div>
+      <div class="lang-card clickable-skill" data-skill="css" onclick="filterBySkill('css','CSS')"><img src="images/css.png" alt="CSS"/><span>CSS</span></div>
+      <div class="lang-card clickable-skill" data-skill="tailwind" onclick="filterBySkill('tailwind','Tailwind')"><img src="images/tailwind-css.png" alt="Tailwind"/><span>Tailwind</span></div>
+      <div class="lang-card clickable-skill" data-skill="postgresql" onclick="filterBySkill('postgresql','PostgreSQL')"><img src="images/postgre.png" alt="PostgreSQL"/><span>PostgreSQL</span></div>
+      <div class="lang-card clickable-skill" data-skill="python" onclick="filterBySkill('python','Python')"><img src="images/python.png" alt="Python" class="tag-img"/><span>Python</span></div>
     </div>
   </div>
 
   <div class="skills-block" data-aos="fade-up">
     <div class="skills-block-header"><i class="ri-tools-line"></i><h3>Outils &amp; IDE</h3></div>
     <div class="skills-langs-grid">
-      <div class="lang-card"><img src="images/idea.png" alt="IntelliJ IDEA" class="tag-img"/><span>IDEA</span></div>
-      <div class="lang-card"><img src="images/phpstorm.png" alt="PhpStorm" class="tag-img"/><span>PhpStorm</span></div>
-      <div class="lang-card"><img src="images/webstorm.png" alt="WebStorm" class="tag-img"/><span>WebStorm</span></div>
-      <div class="lang-card"><img src="images/visual studio.png" alt="VS Code" class="tag-img"/><span>VS Code</span></div>
-      <div class="lang-card"><img src="images/git.png" alt="Git" class="tag-img"/><span>Git</span></div>
-      <div class="lang-card"><img src="images/visual paradigm.png" alt="Visual Paradigm" class="tag-img"/><span>Paradigm</span></div>
-      <div class="lang-card"><img src="images/portainer.png" alt="Portainer" class="tag-img"/><span>Portainer</span></div>
-      <div class="lang-card"><img src="images/gitlab.png" alt="GitLab" class="tag-img"/><span>GitLab</span></div>
-      <div class="lang-card"><img src="images/powershell.png" alt="PowerShell" class="tag-img"/><span>PowerShell</span></div>
+      <div class="lang-card clickable-skill" data-skill="intellij" onclick="filterBySkill('intellij','IntelliJ IDEA')"><img src="images/idea.png" alt="IntelliJ IDEA" class="tag-img"/><span>IDEA</span></div>
+      <div class="lang-card clickable-skill" data-skill="phpstorm" onclick="filterBySkill('phpstorm','PhpStorm')"><img src="images/phpstorm.png" alt="PhpStorm" class="tag-img"/><span>PhpStorm</span></div>
+      <div class="lang-card clickable-skill" data-skill="webstorm" onclick="filterBySkill('webstorm','WebStorm')"><img src="images/webstorm.png" alt="WebStorm" class="tag-img"/><span>WebStorm</span></div>
+      <div class="lang-card clickable-skill" data-skill="vscode" onclick="filterBySkill('vscode','VS Code')"><img src="images/visual studio.png" alt="VS Code" class="tag-img"/><span>VS Code</span></div>
+      <div class="lang-card clickable-skill" data-skill="git" onclick="filterBySkill('git','Git')"><img src="images/git.png" alt="Git" class="tag-img"/><span>Git</span></div>
+      <div class="lang-card clickable-skill" data-skill="paradigm" onclick="filterBySkill('paradigm','Visual Paradigm')"><img src="images/visual paradigm.png" alt="Visual Paradigm" class="tag-img"/><span>Paradigm</span></div>
+      <div class="lang-card clickable-skill" data-skill="portainer" onclick="filterBySkill('portainer','Portainer')"><img src="images/portainer.png" alt="Portainer" class="tag-img"/><span>Portainer</span></div>
+      <div class="lang-card clickable-skill" data-skill="gitlab" onclick="filterBySkill('gitlab','GitLab')"><img src="images/gitlab.png" alt="GitLab" class="tag-img"/><span>GitLab</span></div>
+      <div class="lang-card clickable-skill" data-skill="powershell" onclick="filterBySkill('powershell','PowerShell')"><img src="images/powershell.png" alt="PowerShell" class="tag-img"/><span>PowerShell</span></div>
     </div>
   </div>
 
   <div class="skills-block" data-aos="fade-up">
     <div class="skills-block-header"><i class="ri-git-merge-line"></i><h3>Infrastructure as Code &amp; DevOps</h3></div>
     <div class="skills-langs-grid">
-      <div class="lang-card"><img src="images/terraform.png" alt="Terraform" class="tag-img"/><span>Terraform</span></div>
-      <div class="lang-card"><img src="images/packer-seeklogo.png" alt="Packer" class="tag-img"/><span>Packer</span></div>
-      <div class="lang-card"><img src="images/ansible.jpg" alt="Ansible" class="tag-img"/><span>Ansible</span></div>
-      <div class="lang-card"><img src="images/gitlab.png" alt="GitLab CI/CD" class="tag-img"/><span>GitLab CI/CD</span></div>
-      <div class="lang-card"><img src="images/Vagrant.png" alt="Vagrant" class="tag-img"/><span>Vagrant</span></div>
+      <div class="lang-card clickable-skill" data-skill="terraform" onclick="filterBySkill('terraform','Terraform')"><img src="images/terraform.png" alt="Terraform" class="tag-img"/><span>Terraform</span></div>
+      <div class="lang-card clickable-skill" data-skill="packer" onclick="filterBySkill('packer','Packer')"><img src="images/packer-seeklogo.png" alt="Packer" class="tag-img"/><span>Packer</span></div>
+      <div class="lang-card clickable-skill" data-skill="ansible" onclick="filterBySkill('ansible','Ansible')"><img src="images/ansible.jpg" alt="Ansible" class="tag-img"/><span>Ansible</span></div>
+      <div class="lang-card clickable-skill" data-skill="gitlab-cicd" onclick="filterBySkill('gitlab-cicd','GitLab CI/CD')"><img src="images/gitlab.png" alt="GitLab CI/CD" class="tag-img"/><span>GitLab CI/CD</span></div>
+      <div class="lang-card clickable-skill" data-skill="vagrant" onclick="filterBySkill('vagrant','Vagrant')"><img src="images/Vagrant.png" alt="Vagrant" class="tag-img"/><span>Vagrant</span></div>
     </div>
   </div>
 
   <div class="skills-block" data-aos="fade-up">
     <div class="skills-block-header"><i class="ri-box-3-line"></i><h3>Conteneurisation &amp; Orchestration</h3></div>
-    <div class="skills-tags-grid">
-      <div class="skill-tag virt"><i class="ri-ship-line"></i> Docker</div>
-      <div class="skill-tag virt"><i class="ri-stack-line"></i> Docker Swarm</div>
-      <div class="skill-tag virt"><i class="ri-dashboard-3-line"></i> Portainer</div>
-      <div class="skill-tag virt"><i class="ri-file-code-line"></i> DevContainer</div>
-      <div class="skill-tag virt"><i class="ri-hard-drive-2-line"></i> NFS</div>
+    <div class="skills-langs-grid">
+      <div class="lang-card clickable-skill" data-skill="docker" onclick="filterBySkill('docker','Docker')">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt="Docker"/>
+        <span>Docker</span>
+      </div>
+      <div class="lang-card clickable-skill" data-skill="docker-swarm" onclick="filterBySkill('docker-swarm','Docker Swarm')">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain.svg" alt="Docker Swarm"/>
+        <span>Docker Swarm</span>
+      </div>
+      <div class="lang-card clickable-skill" data-skill="portainer" onclick="filterBySkill('portainer','Portainer')">
+        <img src="images/portainer.png" alt="Portainer"/>
+        <span>Portainer</span>
+      </div>
+      <div class="lang-card clickable-skill" data-skill="devcontainer" onclick="filterBySkill('devcontainer','DevContainer')">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" alt="DevContainer"/>
+        <span>DevContainer</span>
+      </div>
+      <div class="lang-card clickable-skill" data-skill="nfs" onclick="filterBySkill('nfs','NFS')">
+        <div class="skill-icon-box"><i class="ri-hard-drive-2-line"></i></div>
+        <span>NFS</span>
+      </div>
     </div>
   </div>
 
   <div class="skills-block" data-aos="fade-up">
     <div class="skills-block-header"><i class="ri-cloud-line"></i><h3>Cloud — AWS</h3></div>
-    <div class="skills-tags-grid">
-      <div class="skill-tag cloud"><i class="ri-server-2-line"></i> EC2</div>
-      <div class="skill-tag cloud"><i class="ri-archive-line"></i> ECR</div>
-      <div class="skill-tag cloud"><i class="ri-image-line"></i> AMI</div>
-      <div class="skill-tag cloud"><i class="ri-hard-drive-line"></i> EBS</div>
-      <div class="skill-tag cloud"><i class="ri-shield-user-line"></i> IAM</div>
-      <div class="skill-tag cloud"><i class="ri-tools-line"></i> EC2 Image Builder</div>
+    <div class="skills-langs-grid">
+      <div class="lang-card clickable-skill" data-skill="aws-ec2" onclick="filterBySkill('aws-ec2','AWS EC2')">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt="EC2" style="filter:invert(60%) sepia(1) saturate(3) hue-rotate(10deg)"/>
+        <span>EC2</span>
+      </div>
+      <div class="lang-card clickable-skill" data-skill="aws-ecr" onclick="filterBySkill('aws-ecr','AWS ECR')">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt="ECR" style="filter:invert(60%) sepia(1) saturate(3) hue-rotate(10deg)"/>
+        <span>ECR</span>
+      </div>
+      <div class="lang-card clickable-skill" data-skill="aws-ami" onclick="filterBySkill('aws-ami','AWS AMI')">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt="AMI" style="filter:invert(60%) sepia(1) saturate(3) hue-rotate(10deg)"/>
+        <span>AMI</span>
+      </div>
+      <div class="lang-card clickable-skill" data-skill="aws-iam" onclick="filterBySkill('aws-iam','AWS IAM')">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt="IAM" style="filter:invert(60%) sepia(1) saturate(3) hue-rotate(10deg)"/>
+        <span>IAM</span>
+      </div>
+      <div class="lang-card clickable-skill" data-skill="aws-ebs" onclick="filterBySkill('aws-ebs','AWS EBS')">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt="EBS" style="filter:invert(60%) sepia(1) saturate(3) hue-rotate(10deg)"/>
+        <span>EBS</span>
+      </div>
+      <div class="lang-card clickable-skill" data-skill="ec2-image-builder" onclick="filterBySkill('ec2-image-builder','EC2 Image Builder')">
+        <div class="skill-icon-box" style="background:rgba(251,191,36,0.12)"><i class="ri-tools-line" style="color:#f59e0b"></i></div>
+        <span>Image Builder</span>
+      </div>
     </div>
   </div>
 
   <div class="skills-block" data-aos="fade-up">
     <div class="skills-block-header"><i class="ri-shield-keyhole-line"></i><h3>Sécurité &amp; Système</h3></div>
-    <div class="skills-tags-grid">
-      <div class="skill-tag tool"><i class="ri-fire-line"></i> nftables</div>
-      <div class="skill-tag tool"><i class="ri-radar-line"></i> Suricata IPS</div>
-      <div class="skill-tag tool"><i class="ri-key-2-line"></i> Microsoft LAPS</div>
-      <div class="skill-tag tool"><i class="ri-shield-user-line"></i> Active Directory / GPO</div>
-      <div class="skill-tag tool"><i class="ri-terminal-box-line"></i> Linux / Bash</div>
-      <div class="skill-tag tool"><i class="ri-windows-line"></i> Windows Server</div>
-      <div class="skill-tag tool"><i class="ri-computer-line"></i> VMware / VirtualBox</div>
+    <div class="skills-langs-grid">
+      <div class="lang-card clickable-skill" data-skill="nftables" onclick="filterBySkill('nftables','nftables')">
+        <div class="skill-icon-box" style="background:rgba(239,68,68,0.1)"><i class="ri-fire-line" style="color:#ef4444"></i></div>
+        <span>nftables</span>
+      </div>
+      <div class="lang-card clickable-skill" data-skill="suricata" onclick="filterBySkill('suricata','Suricata IPS')">
+        <img src="images/suricata.png" alt="Suricata"/>
+        <span>Suricata IPS</span>
+      </div>
+      <div class="lang-card clickable-skill" data-skill="laps" onclick="filterBySkill('laps','Microsoft LAPS')">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/windows8/windows8-original.svg" alt="LAPS"/>
+        <span>LAPS</span>
+      </div>
+      <div class="lang-card clickable-skill" data-skill="active-directory" onclick="filterBySkill('active-directory','Active Directory')">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/windows8/windows8-original.svg" alt="Active Directory"/>
+        <span>Active Directory</span>
+      </div>
+      <div class="lang-card clickable-skill" data-skill="windows-server" onclick="filterBySkill('windows-server','Windows Server')">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/windows8/windows8-original.svg" alt="Windows Server"/>
+        <span>Windows Server</span>
+      </div>
+      <div class="lang-card clickable-skill" data-skill="linux" onclick="filterBySkill('linux','Linux / Bash')">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" alt="Linux"/>
+        <span>Linux / Bash</span>
+      </div> 
+      <div class="lang-card clickable-skill" data-skill="vmware" onclick="filterBySkill('vmware','VMware / VirtualBox')">
+        <img src="images/vmware.png" alt="VMware"/>
+        <span>VMware / VBox</span>
+      </div>
     </div>
   </div>
 
   <div class="skills-block" data-aos="fade-up">
     <div class="skills-block-header"><i class="ri-router-line"></i><h3>Réseaux &amp; Protocoles</h3></div>
-    <div class="skills-tags-grid">
-      <div class="skill-tag net"><i class="ri-wifi-line"></i> DHCP</div>
-      <div class="skill-tag net"><i class="ri-earth-line"></i> DNS</div>
-      <div class="skill-tag net"><i class="ri-lock-line"></i> HTTP/HTTPS</div>
-      <div class="skill-tag net"><i class="ri-git-branch-line"></i> Segmentation / NAT</div>
-      <div class="skill-tag net"><i class="ri-global-line"></i> IPv4 / IPv6</div>
-      <div class="skill-tag net"><i class="ri-key-line"></i> LDAP / CAS / PAM</div>
+    <div class="skills-langs-grid">
+      <div class="lang-card clickable-skill" data-skill="dhcp" onclick="filterBySkill('dhcp','DHCP')">
+        <div class="skill-icon-box" style="background:rgba(16,185,129,0.1)"><i class="ri-wifi-line" style="color:#10b981"></i></div>
+        <span>DHCP</span>
+      </div>
+      <div class="lang-card clickable-skill" data-skill="dns" onclick="filterBySkill('dns','DNS')">
+        <div class="skill-icon-box" style="background:rgba(16,185,129,0.1)"><i class="ri-earth-line" style="color:#10b981"></i></div>
+        <span>DNS</span>
+      </div>
+      <div class="lang-card clickable-skill" data-skill="https" onclick="filterBySkill('https','HTTP/HTTPS')">
+        <div class="skill-icon-box" style="background:rgba(16,185,129,0.1)"><i class="ri-lock-line" style="color:#10b981"></i></div>
+        <span>HTTP/HTTPS</span>
+      </div>
+      <div class="lang-card clickable-skill" data-skill="nat" onclick="filterBySkill('nat','Segmentation / NAT')">
+        <div class="skill-icon-box" style="background:rgba(16,185,129,0.1)"><i class="ri-git-branch-line" style="color:#10b981"></i></div>
+        <span>Segmentation/NAT</span>
+      </div>
+      <div class="lang-card clickable-skill" data-skill="ipv4" onclick="filterBySkill('ipv4','IPv4 / IPv6')">
+        <div class="skill-icon-box" style="background:rgba(16,185,129,0.1)"><i class="ri-global-line" style="color:#10b981"></i></div>
+        <span>IPv4 / IPv6</span>
+      </div>
+      <div class="lang-card clickable-skill" data-skill="ldap" onclick="filterBySkill('ldap','LDAP / CAS / PAM')">
+        <div class="skill-icon-box" style="background:rgba(16,185,129,0.1)"><i class="ri-key-line" style="color:#10b981"></i></div>
+        <span>LDAP / CAS / PAM</span>
+      </div>
     </div>
   </div>
-
 </section>
 
 <!-- ===== EXPÉRIENCES ===== -->
@@ -357,8 +424,7 @@
     <p class="section-sub">Alternance et stage en entreprise</p>
   </div>
   <div class="exp-grid">
-
-    <div class="exp-card" data-aos="fade-up">
+    <div class="exp-card" data-aos="fade-up" data-skills="docker docker-swarm gitlab-cicd ansible laps active-directory powershell windows-server portainer devcontainer nfs linux git intellij">
       <div class="exp-img-wrap">
         <img src="images/CORYS_EG2.jpg" alt="Corys"/>
         <div class="exp-img-overlay">
@@ -392,7 +458,7 @@
       </div>
     </div>
 
-    <div class="exp-card" data-aos="fade-up" data-aos-delay="100">
+    <div class="exp-card" data-aos="fade-up" data-aos-delay="100" data-skills="aws-ec2 aws-iam aws-ami aws-ebs aws-ecr terraform packer docker ec2-image-builder gitlab-cicd linux git">
       <div class="exp-img-wrap">
         <img src="images/2024-04-22_Logotype_Enlaps_+_tagline.jpg" alt="Enlaps"/>
         <div class="exp-img-overlay">
@@ -443,7 +509,6 @@
         </div>
       </div>
     </div>
-
   </div>
 </section>
 
@@ -455,7 +520,7 @@
   </div>
   <div class="projects-grid">
 
-    <div class="project-card" data-aos="fade-up">
+    <div class="project-card" data-aos="fade-up" data-skills="nftables suricata vagrant linux ipv4 nat python">
       <div class="project-img-wrap">
         <img src="images/cyber.jpeg" alt="Pare-feu et IPS" onerror="this.classList.add('img-fallback'); this.removeAttribute('src');"/>
         <div class="img-fallback-icon"><i class="ri-shield-flash-line"></i></div>
@@ -472,7 +537,7 @@
       </div>
     </div>
 
-    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+    <div class="project-card" data-aos="fade-up" data-aos-delay="100" data-skills="linux ldap dns dhcp https nat">
       <div class="project-img-wrap">
         <img src="images/AnubisDev work.jpg" alt="Infrastructure réseau"/>
         <div class="project-overlay"><span>Admin Réseaux</span></div>
@@ -488,7 +553,7 @@
       </div>
     </div>
 
-    <div class="project-card" data-aos="fade-up" data-aos-delay="150">
+    <div class="project-card" data-aos="fade-up" data-aos-delay="150" data-skills="javascript postgresql">
       <div class="project-img-wrap">
         <img src="images/vague.jpeg" alt="Application muséale"/>
         <div class="project-overlay"><span>Application Web</span></div>
@@ -504,7 +569,7 @@
       </div>
     </div>
 
-    <div class="project-card" data-aos="fade-up">
+    <div class="project-card" data-aos="fade-up" data-skills="java intellij">
       <div class="project-img-wrap">
         <img src="images/Java Certification Course.jpg" alt="Java"/>
         <div class="project-overlay"><span>Application Java</span></div>
@@ -520,7 +585,7 @@
       </div>
     </div>
 
-    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+    <div class="project-card" data-aos="fade-up" data-aos-delay="100" data-skills="postgresql intellij">
       <div class="project-img-wrap">
         <img src="images/Titanic Sinking Ship Decor, Titanic Poster, Maritime Wall Art, Titanic Ship, Titanic Ship Wall Art, Titanic, Unsinkable Ship.jpg" alt="Base de données Titanic"/>
         <div class="project-overlay"><span>Base de données</span></div>
@@ -536,7 +601,7 @@
       </div>
     </div>
 
-    <div class="project-card" data-aos="fade-up" data-aos-delay="150">
+    <div class="project-card" data-aos="fade-up" data-aos-delay="150" data-skills="linux git intellij">
       <div class="project-img-wrap">
         <img src="images/linux.jpg" alt="Linux Debian"/>
         <div class="project-overlay"><span>Admin Système</span></div>
@@ -623,7 +688,6 @@
   </div>
 </section>
 
-
 <!-- ===== FOOTER STATUS BAR ===== -->
 <footer class="footer-statusbar">
   <div class="footer-inner">
@@ -646,9 +710,11 @@
 <!-- ===== MODALS ===== -->
 <div class="modal-overlay" id="modal-overlay" onclick="closeModal()"></div>
 
-<div class="modal-box" id="modal-parefeu">
+<div class="modal-box modal-wide" id="modal-parefeu">
   <div class="modal-box-header"><h5>Protection d'infrastructure — Pare-feu nftables &amp; IPS Suricata</h5><button onclick="closeModal()" aria-label="Fermer"><i class="ri-close-line"></i></button></div>
-  <div class="modal-box-body">
+  <div class="modal-box-body modal-2col">
+      <div class="modal-col">
+      
     <div class="modal-meta">
       <span><i class="ri-calendar-line"></i> 2025 — 2026</span>
       <span><i class="ri-user-line"></i> Projet académique (BUT3)</span>
@@ -656,18 +722,15 @@
     </div>
     <h6>Contexte &amp; objectif</h6>
     <p>Dans le cadre du BUT3 Informatique (parcours alternant), ce projet consistait à concevoir, déployer et tester une infrastructure réseau réaliste protégée par un pare-feu <code>nftables</code> et un IPS <code>Suricata</code>. L'objectif : garantir l'isolation des zones, le filtrage stateful du trafic et la détection/blocage d'attaques en temps réel, le tout en dual-stack IPv4/IPv6.</p>
-
     <h6>Architecture interactive — cliquez sur un nœud</h6>
     <div class="archi-diagram">
       <svg viewBox="0 0 600 320" xmlns="http://www.w3.org/2000/svg">
-        <!-- Connections -->
         <g stroke="#00d4ff" stroke-width="1.5" fill="none" opacity="0.5">
           <path d="M 75 160 L 175 160" class="archi-arrow"/>
           <path d="M 275 160 L 375 90" class="archi-arrow"/>
           <path d="M 275 160 L 375 160" class="archi-arrow"/>
           <path d="M 275 160 L 375 230" class="archi-arrow"/>
         </g>
-        <!-- Nodes -->
         <g class="archi-node" data-info="internet" onclick="showArchiInfo('internet')">
           <rect x="25" y="135" width="100" height="50" rx="8" fill="rgba(239,68,68,0.15)" stroke="#ef4444" stroke-width="1.5"/>
           <text x="75" y="160" text-anchor="middle" fill="#ef4444" font-size="14" font-weight="700">Internet</text>
@@ -676,8 +739,8 @@
         <g class="archi-node" data-info="firewall" onclick="showArchiInfo('firewall')">
           <rect x="175" y="120" width="100" height="80" rx="8" fill="rgba(0,212,255,0.15)" stroke="#00d4ff" stroke-width="2"/>
           <text x="225" y="148" text-anchor="middle" fill="#00d4ff" font-size="13" font-weight="700">Pare-feu</text>
-          <text x="225" y="166" text-anchor="middle" fill="#fff" font-size="11">nftables</text>
-          <text x="225" y="182" text-anchor="middle" fill="#fff" font-size="11">+ Suricata</text>
+          <text x="225" y="166" text-anchor="middle" class="archi-svg-text" font-size="11">nftables</text>
+          <text x="225" y="182" text-anchor="middle" class="archi-svg-text" font-size="11">+ Suricata</text>
         </g>
         <g class="archi-node" data-info="dmz" onclick="showArchiInfo('dmz')">
           <rect x="375" y="65" width="100" height="50" rx="8" fill="rgba(124,58,237,0.15)" stroke="#7c3aed" stroke-width="1.5"/>
@@ -699,7 +762,6 @@
         <p class="archi-hint"><i class="ri-cursor-line"></i> Cliquez sur un nœud du diagramme pour voir le détail technique</p>
       </div>
     </div>
-
     <h6>Threat model &amp; défenses déployées</h6>
     <div class="threat-matrix">
       <div class="threat-item">
@@ -728,8 +790,9 @@
         <div class="threat-defense"><i class="ri-shield-check-line"></i> Segmentation 4 zones + default drop</div>
       </div>
     </div>
-
-    <h6>Extraits de configuration réels</h6>
+      </div>
+      <div class="modal-col">
+      <h6>Extraits de configuration réels</h6>
     <div class="code-tabs">
       <div class="code-tab-headers">
         <button class="code-tab-btn active" onclick="switchCodeTab(this, 'tab-nft')">nftables.conf</button>
@@ -739,42 +802,30 @@
       <div class="code-block active" id="tab-nft"><pre><code><span class="ck">table</span> <span class="cf">inet filter</span> {
   <span class="ck">chain</span> <span class="cf">forward</span> {
     <span class="ck">type filter hook forward priority</span> <span class="cn">0</span>; <span class="ck">policy</span> <span class="cs">drop</span>;
-
-    <span class="cc"># NFQUEUE vers Suricata (1ère position)</span>
     queue flags bypass to <span class="cn">0</span>
-
-    <span class="cc"># Stateful</span>
     ct state established,related <span class="cs">accept</span>
     ct state invalid <span class="cs">drop</span>
-
-    <span class="cc"># Internet → DMZ publique : HTTP, DNS</span>
     iifname <span class="cstr">"eth1"</span> oifname <span class="cstr">"eth2"</span> tcp dport <span class="cn">80</span> <span class="cs">accept</span>
     iifname <span class="cstr">"eth1"</span> oifname <span class="cstr">"eth2"</span> udp dport <span class="cn">53</span> <span class="cs">accept</span>
   }
 }
-
 <span class="ck">table</span> <span class="cf">ip nat</span> {
   <span class="ck">chain</span> <span class="cf">postrouting</span> {
     ip saddr <span class="cn">10.0.0.0/24</span> oifname <span class="cstr">"eth2"</span> masquerade
     ip saddr <span class="cn">10.0.1.0/24</span> oifname <span class="cstr">"eth1"</span> masquerade
   }
 }</code></pre></div>
-      <div class="code-block" id="tab-suri"><pre><code><span class="cc"># DNS vers domaine malveillant → BLOQUER</span>
-<span class="cs">drop</span> dns any any -&gt; any any (
+      <div class="code-block" id="tab-suri"><pre><code><span class="cs">drop</span> dns any any -&gt; any any (
   msg:<span class="cstr">"DNS query for malicious.com blocked"</span>;
   dns.query; content:<span class="cstr">"malicious.com"</span>; nocase;
   sid:<span class="cn">1000001</span>; rev:<span class="cn">1</span>;
 )
-
-<span class="cc"># Ping flood : seuil 10/s → ALERTER</span>
 <span class="ck">alert</span> icmp any any -&gt; any any (
   msg:<span class="cstr">"ICMP Ping Flood detected"</span>;
   itype:<span class="cn">8</span>;
   detection_filter:track by_src, count <span class="cn">10</span>, seconds <span class="cn">1</span>;
   sid:<span class="cn">1000002</span>; rev:<span class="cn">1</span>;
 )
-
-<span class="cc"># SSH brute-force : seuil 5/s → ALERTER</span>
 <span class="ck">alert</span> tcp any any -&gt; any <span class="cn">22</span> (
   msg:<span class="cstr">"SSH Brute Force detected"</span>;
   flags:S;
@@ -782,8 +833,6 @@
   sid:<span class="cn">1000003</span>; rev:<span class="cn">1</span>;
 )</code></pre></div>
       <div class="code-block" id="tab-setup"><pre><code><span class="cc">#!/bin/bash</span>
-<span class="cc"># Remise en état complète post vagrant up</span>
-
 <span class="ck">echo</span> <span class="cstr">"[1/5] Configuration pare-feu..."</span>
 vagrant ssh vm-parefeu <span class="ck">-c</span> <span class="cstr">"
   sudo sysctl -w net.ipv4.ip_forward=1
@@ -791,155 +840,170 @@ vagrant ssh vm-parefeu <span class="ck">-c</span> <span class="cstr">"
   sudo nft -f /etc/nftables.conf
   sudo ip addr add 5.5.5.1/24 dev eth1 || true
 "</span>
-
 <span class="ck">echo</span> <span class="cstr">"[2/5] Routes vm-dmz-pub..."</span>
 vagrant ssh vm-dmz-pub <span class="ck">-c</span> <span class="cstr">"
   sudo ip route add default via 66.6.6.5 dev eth1
 "</span>
-
-<span class="cc"># Vérification IPv6 inter-zones</span>
 vagrant ssh vm-interne <span class="ck">-c</span> <span class="cstr">"ping6 -c 1 2001:1::4"</span></code></pre></div>
     </div>
-
     <h6>Tests &amp; validation</h6>
     <ul class="modal-list">
-      <li><i class="ri-arrow-right-s-line"></i> Matrices de connectivité automatisées (scripts Python) depuis chaque zone, confirmant l'isolation attendue</li>
-      <li><i class="ri-arrow-right-s-line"></i> Tests d'intrusion avec <code>hping3</code> et <code>dig</code> : DNS malveillant bloqué, ping flood et brute-force SSH détectés dans les logs Suricata</li>
-      <li><i class="ri-arrow-right-s-line"></i> Validation manuelle des accès SSH autorisés (IPv6 inter-zones, SSH via NAT vers Internet)</li>
+      <li><i class="ri-arrow-right-s-line"></i> Matrices de connectivité automatisées (scripts Python) depuis chaque zone</li>
+      <li><i class="ri-arrow-right-s-line"></i> Tests d'intrusion avec <code>hping3</code> et <code>dig</code> : DNS malveillant bloqué, ping flood et brute-force SSH détectés</li>
+      <li><i class="ri-arrow-right-s-line"></i> Validation manuelle des accès SSH autorisés (IPv6 inter-zones, SSH via NAT)</li>
     </ul>
     <h6>Compétences développées</h6>
     <div class="modal-tags"><span>nftables</span><span>Suricata IPS</span><span>NFQUEUE</span><span>Vagrant (IaC)</span><span>Debian</span><span>IPv4 / IPv6</span><span>NAT</span><span>Segmentation réseau</span><span>Bash</span><span>Tests d'intrusion</span></div>
-  </div>
+  
+      </div>
+    </div>
 </div>
 
-<div class="modal-box" id="modal-reseaux">
+<div class="modal-box modal-wide" id="modal-reseaux">
   <div class="modal-box-header"><h5>Infrastructure Réseau Sécurisée</h5><button onclick="closeModal()" aria-label="Fermer"><i class="ri-close-line"></i></button></div>
-  <div class="modal-box-body">
+  <div class="modal-box-body modal-2col">
+      <div class="modal-col">
+      
     <div class="modal-meta">
       <span><i class="ri-calendar-line"></i> Fév — Avr 2025</span>
       <span><i class="ri-group-line"></i> Projet d'équipe</span>
       <span><i class="ri-time-line"></i> 3 mois</span>
     </div>
     <h6>Contexte &amp; objectif</h6>
-    <p>Dans le cadre du BUT Informatique (IUT2 Grenoble), notre équipe avait pour mission de concevoir, déployer et sécuriser une infrastructure réseau virtuelle complète simulant le réseau d'une organisation réelle. L'objectif était de garantir l'intégrité, la confidentialité et la disponibilité de l'ensemble des services déployés.</p>
+    <p>Dans le cadre du BUT Informatique (IUT2 Grenoble), notre équipe avait pour mission de concevoir, déployer et sécuriser une infrastructure réseau virtuelle complète simulant le réseau d'une organisation réelle.</p>
     <h6>Architecture mise en place</h6>
     <ul class="modal-list">
-      <li><i class="ri-arrow-right-s-line"></i> Segmentation réseau via routeurs virtuels et pare-feu (règles de filtrage entrantes/sortantes)</li>
-      <li><i class="ri-arrow-right-s-line"></i> Serveur DHCP pour l'attribution automatique des adresses IP par sous-réseau</li>
+      <li><i class="ri-arrow-right-s-line"></i> Segmentation réseau via routeurs virtuels et pare-feu</li>
+      <li><i class="ri-arrow-right-s-line"></i> Serveur DHCP pour l'attribution automatique des adresses IP</li>
       <li><i class="ri-arrow-right-s-line"></i> Serveur DNS interne avec zones de résolution directe et inverse</li>
       <li><i class="ri-arrow-right-s-line"></i> Serveur Web sécurisé (HTTPS avec certificat autosigné)</li>
-      <li><i class="ri-arrow-right-s-line"></i> Base de données relationnelle (SGBD) accessible uniquement depuis le réseau interne</li>
       <li><i class="ri-arrow-right-s-line"></i> Annuaire LDAP pour la gestion centralisée des utilisateurs</li>
       <li><i class="ri-arrow-right-s-line"></i> Serveur CAS (Central Authentication Service) pour l'authentification unique (SSO)</li>
       <li><i class="ri-arrow-right-s-line"></i> Intégration PAM pour l'authentification locale sur les machines clientes</li>
     </ul>
-    <h6>Mon rôle</h6>
-    <p>J'ai été principalement en charge des services d'authentification : installation et configuration de l'annuaire OpenLDAP (schémas, unités organisationnelles, comptes utilisateurs), intégration de PAM sur les machines clientes Linux, et déploiement du serveur CAS pour centraliser l'authentification sur les services web. J'ai également contribué à la virtualisation du réseau (création de VMs sous Proxmox/KVM, configuration des interfaces réseau et des routeurs), à la rédaction de la documentation technique, et à l'écriture de scripts Bash de validation et de tests de sécurité.</p>
+      </div>
+      <div class="modal-col">
+      <h6>Mon rôle</h6>
+    <p>Principalement en charge des services d'authentification : OpenLDAP, PAM sur les machines clientes Linux, et déploiement du serveur CAS. Contribution à la virtualisation du réseau (Proxmox/KVM) et à la rédaction de la documentation technique.</p>
     <h6>Compétences développées</h6>
     <div class="modal-tags"><span>Linux</span><span>OpenLDAP</span><span>CAS / SSO</span><span>PAM</span><span>DNS</span><span>DHCP</span><span>HTTPS</span><span>Pare-feu</span><span>Proxmox</span><span>Bash</span></div>
-  </div>
+  
+      </div>
+    </div>
 </div>
 
-<div class="modal-box" id="modal-node_js">
+<div class="modal-box modal-wide" id="modal-node_js">
   <div class="modal-box-header"><h5>Application de Personnalisation de Visites Muséales</h5><button onclick="closeModal()" aria-label="Fermer"><i class="ri-close-line"></i></button></div>
-  <div class="modal-box-body">
+  <div class="modal-box-body modal-2col">
+      <div class="modal-col">
+      
     <div class="modal-meta">
       <span><i class="ri-calendar-line"></i> Oct 2024 — Jan 2025</span>
       <span><i class="ri-group-line"></i> Projet d'équipe</span>
       <span><i class="ri-time-line"></i> 4 mois</span>
     </div>
     <h6>Contexte &amp; objectif</h6>
-    <p>Dans le cadre d'une SAÉ (Situation d'Apprentissage et d'Évaluation) du BUT Informatique, notre équipe a développé une application web permettant de proposer des parcours de visite personnalisés dans un musée, en fonction du temps disponible ou des centres d'intérêt du visiteur. Le projet visait à valoriser le patrimoine culturel français en exploitant des données ouvertes issues de data.gouv.fr (collections, expositions, œuvres, artistes).</p>
+    <p>Application web de parcours de visite personnalisés dans un musée, en fonction du temps disponible ou des centres d'intérêt du visiteur. Données ouvertes issues de data.gouv.fr.</p>
     <h6>Architecture technique</h6>
     <ul class="modal-list">
       <li><i class="ri-arrow-right-s-line"></i> Backend Node.js / TypeScript avec architecture REST</li>
       <li><i class="ri-arrow-right-s-line"></i> Base de données PostgreSQL avec modélisation relationnelle avancée</li>
       <li><i class="ri-arrow-right-s-line"></i> Pipeline ETL complet avec Talend pour l'intégration des données culturelles</li>
       <li><i class="ri-arrow-right-s-line"></i> Web scraping pour la collecte de données complémentaires</li>
-      <li><i class="ri-arrow-right-s-line"></i> Interface web responsive côté client</li>
     </ul>
-    <h6>Mon rôle</h6>
-    <p>J'ai été responsable de l'administration et de la conception de la base de données : modélisation du schéma entité-relation, création des tables et contraintes, rédaction des requêtes SQL complexes, et gestion de la qualité des données. J'ai utilisé Talend pour concevoir et exécuter les flux d'intégration (ETL) permettant de transformer et charger les données culturelles issues de sources hétérogènes. Côté serveur, j'ai implémenté plusieurs routes Node.js liées à la logique de personnalisation des parcours (filtrage par thème, durée, accessibilité).</p>
+      </div>
+      <div class="modal-col">
+      <h6>Mon rôle</h6>
+    <p>Responsable de la conception de la base de données (modélisation, requêtes SQL complexes), des flux ETL Talend et de plusieurs routes Node.js liées à la logique de personnalisation.</p>
     <h6>Compétences développées</h6>
     <div class="modal-tags"><span>Node.js</span><span>TypeScript</span><span>PostgreSQL</span><span>Talend (ETL)</span><span>Web scraping</span><span>API REST</span><span>Modélisation BDD</span></div>
-  </div>
+  
+      </div>
+    </div>
 </div>
 
-<div class="modal-box" id="modal-algorithme">
+<div class="modal-box modal-wide" id="modal-algorithme">
   <div class="modal-box-header"><h5>Classification Automatique de Dépêches — Java</h5><button onclick="closeModal()" aria-label="Fermer"><i class="ri-close-line"></i></button></div>
-  <div class="modal-box-body">
+  <div class="modal-box-body modal-2col">
+      <div class="modal-col">
+      
     <div class="modal-meta">
       <span><i class="ri-calendar-line"></i> 2023 — 2024</span>
       <span><i class="ri-user-line"></i> Projet individuel</span>
       <span><i class="ri-time-line"></i> 1 semaine</span>
     </div>
     <h6>Contexte &amp; objectif</h6>
-    <p>Ce projet consistait à développer un système de classification automatique de dépêches journalistiques en Java. Chaque dépêche devait être associée à l'une des 5 catégories suivantes : ENVIRONNEMENT-SCIENCE, CULTURE, ÉCONOMIE, POLITIQUE et SPORTS. La classification repose sur des lexiques de mots-clés pondérés, construits automatiquement à partir d'un corpus de dépêches labellisées.</p>
-    <h6>Fonctionnement du système</h6>
+    <p>Système de classification automatique de dépêches journalistiques en Java. 5 catégories : ENVIRONNEMENT-SCIENCE, CULTURE, ÉCONOMIE, POLITIQUE, SPORTS. Classification par lexiques pondérés construits depuis un corpus labellisé.</p>
+      </div>
+      <div class="modal-col">
+      <h6>Fonctionnement</h6>
     <ul class="modal-list">
-      <li><i class="ri-arrow-right-s-line"></i> Génération automatique de lexiques par catégorie à partir du corpus d'entraînement</li>
-      <li><i class="ri-arrow-right-s-line"></i> Calcul de scores basé sur la fréquence et la spécificité de chaque mot</li>
-      <li><i class="ri-arrow-right-s-line"></i> Attribution de la catégorie avec le score maximal à chaque dépêche</li>
-      <li><i class="ri-arrow-right-s-line"></i> Comparaison de deux approches algorithmiques : recherche linéaire vs. vecteur trié avec recherche dichotomique</li>
-      <li><i class="ri-arrow-right-s-line"></i> Mesure et comparaison des performances (temps d'exécution, précision)</li>
+      <li><i class="ri-arrow-right-s-line"></i> Génération automatique de lexiques par catégorie</li>
+      <li><i class="ri-arrow-right-s-line"></i> Calcul de scores par fréquence et spécificité des mots</li>
+      <li><i class="ri-arrow-right-s-line"></i> Comparaison de deux approches : recherche linéaire vs. dichotomique</li>
     </ul>
-    <h6>Mon rôle</h6>
-    <p>J'ai développé la classe <code>PaireChaineEntier.java</code> qui est le cœur du système : méthode <code>initLexique</code> pour construire le lexique depuis le corpus, <code>entierPourChaine</code> pour retrouver le poids d'un mot, <code>chaineMax</code> pour identifier la catégorie dominante, <code>indicePourChaine</code> pour la recherche optimisée, et le calcul de moyenne pour normaliser les scores. J'ai également évalué et comparé les deux approches algorithmiques en termes de complexité et de temps d'exécution réel.</p>
     <h6>Compétences développées</h6>
     <div class="modal-tags"><span>Java</span><span>Algorithmique</span><span>Structures de données</span><span>NLP basique</span><span>Optimisation</span><span>Tests unitaires</span></div>
-  </div>
+  
+      </div>
+    </div>
 </div>
 
-<div class="modal-box" id="modal-data">
+<div class="modal-box modal-wide" id="modal-data">
   <div class="modal-box-header"><h5>Base de Données — Analyse du Titanic</h5><button onclick="closeModal()" aria-label="Fermer"><i class="ri-close-line"></i></button></div>
-  <div class="modal-box-body">
+  <div class="modal-box-body modal-2col">
+      <div class="modal-col">
+      
     <div class="modal-meta">
       <span><i class="ri-calendar-line"></i> 2023 — 2024</span>
       <span><i class="ri-group-line"></i> Projet d'équipe</span>
       <span><i class="ri-time-line"></i> 1 mois</span>
     </div>
     <h6>Contexte &amp; objectif</h6>
-    <p>Ce projet consistait à concevoir et exploiter une base de données relationnelle autour des données du naufrage du Titanic, à partir de fichiers CSV fournis. L'objectif final était d'analyser les facteurs ayant influencé la survie des passagers (classe sociale, âge, sexe) en utilisant des requêtes SQL avancées.</p>
-    <h6>Étapes du projet</h6>
+    <p>Conception et exploitation d'une base de données relationnelle autour des données du naufrage du Titanic, depuis des fichiers CSV. Analyse des facteurs de survie (classe sociale, âge, sexe).</p>
+      </div>
+      <div class="modal-col">
+      <h6>Étapes</h6>
     <ul class="modal-list">
-      <li><i class="ri-arrow-right-s-line"></i> Analyse et compréhension des données sources (passagers, cabines, canots de sauvetage)</li>
-      <li><i class="ri-arrow-right-s-line"></i> Conception du Schéma Entité-Association (SEA) avec justification des choix de modélisation</li>
-      <li><i class="ri-arrow-right-s-line"></i> Dérivation du Schéma Logique de Relations (SLR) avec contraintes d'intégrité</li>
-      <li><i class="ri-arrow-right-s-line"></i> Implémentation SQL : scripts de création, suppression, contraintes référentielles</li>
-      <li><i class="ri-arrow-right-s-line"></i> Peuplement automatisé depuis les fichiers CSV fournis</li>
-      <li><i class="ri-arrow-right-s-line"></i> Requêtes d'analyse : taux de survie par classe, par catégorie (enfant/femme/homme), par canot</li>
+      <li><i class="ri-arrow-right-s-line"></i> Conception du SEA et du SLR avec contraintes d'intégrité</li>
+      <li><i class="ri-arrow-right-s-line"></i> Implémentation SQL : création, suppression, contraintes référentielles</li>
+      <li><i class="ri-arrow-right-s-line"></i> Peuplement automatisé depuis CSV</li>
+      <li><i class="ri-arrow-right-s-line"></i> Requêtes d'analyse : taux de survie par classe, catégorie, canot</li>
     </ul>
-    <h6>Mon rôle</h6>
-    <p>J'ai rédigé les requêtes SQL d'analyse permettant de vérifier les informations des passagers (nom, âge, classe, cabine, canot de sauvetage) et d'analyser les taux de survie par classe et catégorie. J'ai notamment mis en évidence l'influence de la classe sociale et du sexe sur les chances de survie, et comparé ces résultats avec les données historiques réelles.</p>
     <h6>Compétences développées</h6>
     <div class="modal-tags"><span>PostgreSQL</span><span>Modélisation SEA/SLR</span><span>SQL avancé</span><span>Analyse de données</span><span>Import CSV</span></div>
-  </div>
+  
+      </div>
+    </div>
 </div>
 
-<div class="modal-box" id="modal-linux">
+<div class="modal-box modal-wide" id="modal-linux">
   <div class="modal-box-header"><h5>Installation d'un Poste Développeur sous Debian 12</h5><button onclick="closeModal()" aria-label="Fermer"><i class="ri-close-line"></i></button></div>
-  <div class="modal-box-body">
+  <div class="modal-box-body modal-2col">
+      <div class="modal-col">
+      
     <div class="modal-meta">
       <span><i class="ri-calendar-line"></i> 2023 — 2024</span>
       <span><i class="ri-user-line"></i> Projet individuel</span>
       <span><i class="ri-time-line"></i> 1 semaine</span>
     </div>
     <h6>Contexte &amp; objectif</h6>
-    <p>L'objectif de ce projet était de préparer un poste de développement complet sous Linux, en suivant une procédure rigoureuse et documentée. Il s'agissait d'installer et configurer Debian 12 sur une machine virtuelle, puis d'y déployer un environnement de développement Java fonctionnel.</p>
-    <h6>Étapes réalisées</h6>
+    <p>Préparer un poste de développement complet sous Linux, avec une procédure rigoureuse et documentée. Installation et configuration de Debian 12 sur VM, puis déploiement d'un environnement de développement Java.</p>
+      </div>
+      <div class="modal-col">
+      <h6>Étapes réalisées</h6>
     <ul class="modal-list">
-      <li><i class="ri-arrow-right-s-line"></i> Téléchargement de l'ISO Debian 12 et vérification de l'intégrité avec empreinte SHA-512</li>
-      <li><i class="ri-arrow-right-s-line"></i> Installation de Debian 12 sur machine virtuelle avec partitionnement adapté</li>
-      <li><i class="ri-arrow-right-s-line"></i> Création d'un utilisateur avec login UGA et configuration des droits sudo</li>
-      <li><i class="ri-arrow-right-s-line"></i> Installation de Git et du JDK via les paquets Debian officiels</li>
-      <li><i class="ri-arrow-right-s-line"></i> Installation d'IntelliJ IDEA Community selon 3 méthodes : archive tar.gz, paquet snap, paquet flatpak</li>
-      <li><i class="ri-arrow-right-s-line"></i> Comparaison des trois méthodes d'installation (espace disque, intégration système, mises à jour)</li>
-      <li><i class="ri-arrow-right-s-line"></i> Sauvegarde de l'image disque sur le serveur distant Erebus4</li>
-      <li><i class="ri-arrow-right-s-line"></i> Rédaction d'une carte mentale récapitulant le processus d'installation</li>
+      <li><i class="ri-arrow-right-s-line"></i> Téléchargement de l'ISO Debian 12 + vérification SHA-512</li>
+      <li><i class="ri-arrow-right-s-line"></i> Installation sur VM avec partitionnement adapté</li>
+      <li><i class="ri-arrow-right-s-line"></i> Installation Git, JDK via paquets Debian officiels</li>
+      <li><i class="ri-arrow-right-s-line"></i> Installation IntelliJ IDEA selon 3 méthodes : tar.gz, snap, flatpak</li>
+      <li><i class="ri-arrow-right-s-line"></i> Comparaison des trois méthodes et sauvegarde sur serveur distant</li>
     </ul>
     <h6>Compétences développées</h6>
-    <div class="modal-tags"><span>Linux / Debian</span><span>Administration système</span><span>Vérification intégrité SHA-512</span><span>Git</span><span>JDK</span><span>snap / flatpak</span><span>Documentation</span></div>
-  </div>
+    <div class="modal-tags"><span>Linux / Debian</span><span>Administration système</span><span>SHA-512</span><span>Git</span><span>JDK</span><span>snap / flatpak</span><span>Documentation</span></div>
+  
+      </div>
+    </div>
 </div>
 
 <!-- SCRIPTS -->
@@ -972,17 +1036,7 @@ vagrant ssh vm-interne <span class="ck">-c</span> <span class="cstr">"ping6 -c 1
   }
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
-  // ===== Missions repliables =====
-  function toggleMissions(btn) {
-    const list = btn.previousElementSibling;
-    const collapsed = list.dataset.collapsed === 'true';
-    list.dataset.collapsed = collapsed ? 'false' : 'true';
-    const txtEl = btn.querySelector('.btn-toggle-text');
-    btn.classList.toggle('open', collapsed);
-    txtEl.textContent = collapsed ? 'Voir moins' : 'Voir toutes les missions (3 de plus)';
-  }
-
-  // ===== Horloge en bas =====
+  // Horloge footer
   function tickClock() {
     const now = new Date();
     const h = String(now.getHours()).padStart(2, '0');
@@ -993,58 +1047,24 @@ vagrant ssh vm-interne <span class="ck">-c</span> <span class="cstr">"ping6 -c 1
   tickClock();
   setInterval(tickClock, 30000);
 
-  // ===== Diagramme architecture interactif =====
+  // Diagramme architecture interactif
   const archiData = {
-    internet: {
-      icon: 'ri-global-line',
-      title: 'Zone Internet (simulée)',
-      desc: 'Réseau externe non maîtrisé. Toute la défense est en aval. Seul ICMP echo et le trafic vers la DMZ publique sont autorisés à entrer.',
-      tech: ['IP 5.5.5.0/24', 'Anti-spoofing actif', 'Trafic filtré au pare-feu']
-    },
-    firewall: {
-      icon: 'ri-shield-flash-line',
-      title: 'Pare-feu nftables + IPS Suricata',
-      desc: 'Point de contrôle central. Politique default drop sur input/forward/output. Trafic forward passé en NFQUEUE 0 vers Suricata 7 pour inspection en temps réel.',
-      tech: ['Stateful filtering (ct state)', 'NFQUEUE → Suricata IPS', 'NAT IPv4 + IPv6 dual-stack', 'Anti-spoofing par interface']
-    },
-    dmz: {
-      icon: 'ri-cloud-line',
-      title: 'DMZ publique',
-      desc: 'Zone exposée à Internet. Sert le DNS (bind9) et le HTTP (apache2). Aucun accès direct au réseau interne, isolation par interfaces séparées.',
-      tech: ['IP 66.6.6.4/30', 'Services exposés : 80, 53', 'Isolée du LAN interne']
-    },
-    lan: {
-      icon: 'ri-team-line',
-      title: 'Réseau interne',
-      desc: 'Postes clients. Accès Internet via NAT (masquerade). Ne peut pas dialoguer avec la DMZ privée en IPv4, uniquement en SSH IPv6 (segmentation).',
-      tech: ['IP 10.0.0.0/24 + 2001::/64', 'NAT sortant vers DMZ pub', 'ICMP bloqué vers DMZ priv']
-    },
-    priv: {
-      icon: 'ri-database-2-line',
-      title: 'DMZ privée',
-      desc: 'Zone à accès restreint. SSH IPv6 uniquement depuis le LAN interne et le pare-feu. NAT sortant vers Internet possible (mises à jour, sauvegardes).',
-      tech: ['IP 10.0.1.0/24 + 2001:1::/64', 'SSH IPv6 inbound', 'NAT sortant via pare-feu']
-    }
+    internet: { icon:'ri-global-line', title:'Zone Internet (simulée)', desc:'Réseau externe non maîtrisé. Seul ICMP echo et le trafic vers la DMZ publique sont autorisés à entrer.', tech:['IP 5.5.5.0/24','Anti-spoofing actif','Trafic filtré au pare-feu'] },
+    firewall: { icon:'ri-shield-flash-line', title:'Pare-feu nftables + IPS Suricata', desc:'Point de contrôle central. Politique default drop sur input/forward/output. Trafic forward passé en NFQUEUE 0 vers Suricata pour inspection en temps réel.', tech:['Stateful filtering (ct state)','NFQUEUE → Suricata IPS','NAT IPv4 + IPv6 dual-stack','Anti-spoofing par interface'] },
+    dmz: { icon:'ri-cloud-line', title:'DMZ publique', desc:'Zone exposée à Internet. Sert le DNS (bind9) et le HTTP (apache2). Aucun accès direct au réseau interne.', tech:['IP 66.6.6.4/30','Services exposés : 80, 53','Isolée du LAN interne'] },
+    lan: { icon:'ri-team-line', title:'Réseau interne', desc:'Postes clients. Accès Internet via NAT (masquerade). Ne peut pas dialoguer avec la DMZ privée en IPv4, uniquement en SSH IPv6.', tech:['IP 10.0.0.0/24 + 2001::/64','NAT sortant vers DMZ pub','ICMP bloqué vers DMZ priv'] },
+    priv: { icon:'ri-database-2-line', title:'DMZ privée', desc:'Zone à accès restreint. SSH IPv6 uniquement depuis le LAN interne et le pare-feu. NAT sortant vers Internet possible.', tech:['IP 10.0.1.0/24 + 2001:1::/64','SSH IPv6 inbound','NAT sortant via pare-feu'] }
   };
   function showArchiInfo(key) {
     const data = archiData[key];
     if (!data) return;
     const box = document.getElementById('archi-info');
-    box.innerHTML = `
-      <div class="archi-info-card">
-        <h6><i class="${data.icon}"></i> ${data.title}</h6>
-        <p>${data.desc}</p>
-        <div class="archi-tech">
-          ${data.tech.map(t => `<span>${t}</span>`).join('')}
-        </div>
-      </div>
-    `;
-    // Highlight node
+    box.innerHTML = `<div class="archi-info-card"><h6><i class="${data.icon}"></i> ${data.title}</h6><p>${data.desc}</p><div class="archi-tech">${data.tech.map(t=>`<span>${t}</span>`).join('')}</div></div>`;
     document.querySelectorAll('.archi-node').forEach(n => n.classList.remove('active'));
     document.querySelector(`.archi-node[data-info="${key}"]`)?.classList.add('active');
   }
 
-  // ===== Code tabs =====
+  // Code tabs
   function switchCodeTab(btn, tabId) {
     btn.parentElement.querySelectorAll('.code-tab-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
@@ -1057,7 +1077,6 @@ vagrant ssh vm-interne <span class="ck">-c</span> <span class="cstr">"ping6 -c 1
   const saved = localStorage.getItem('theme') || 'dark';
   root.setAttribute('data-theme', saved);
   updateIcons(saved);
-
   function updateIcons(theme) {
     const dark = theme === 'dark';
     ['icon-sun','icon-sun-m'].forEach(id => { const el = document.getElementById(id); if(el) el.style.display = dark ? 'inline':'none'; });
@@ -1072,12 +1091,12 @@ vagrant ssh vm-interne <span class="ck">-c</span> <span class="cstr">"ping6 -c 1
   document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
   document.getElementById('theme-toggle-mobile').addEventListener('click', toggleTheme);
 
+  // Formulaire contact
   document.getElementById('contact-form').addEventListener('submit', async function(e) {
     e.preventDefault();
     const btn = this.querySelector('button[type="submit"]');
     btn.disabled = true;
     btn.innerHTML = '<i class="ri-loader-4-line"></i> Envoi en cours…';
-
     const data = new FormData(this);
     try {
       const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: data });
@@ -1100,7 +1119,7 @@ vagrant ssh vm-interne <span class="ck">-c</span> <span class="cstr">"ping6 -c 1
     }
   });
 
-  // ===== Barre de progression scroll =====
+  // Barre de progression scroll
   const scrollProgress = document.getElementById('scroll-progress');
   window.addEventListener('scroll', () => {
     const h = document.documentElement;
@@ -1108,7 +1127,7 @@ vagrant ssh vm-interne <span class="ck">-c</span> <span class="cstr">"ping6 -c 1
     scrollProgress.style.width = scrolled + '%';
   });
 
-  // ===== Compteurs animés =====
+  // Compteurs animés
   function animateCounter(el) {
     const target = parseInt(el.dataset.target, 10);
     const prefix = el.dataset.prefix || '';
@@ -1133,7 +1152,7 @@ vagrant ssh vm-interne <span class="ck">-c</span> <span class="cstr">"ping6 -c 1
   }, { threshold: 0.5 });
   document.querySelectorAll('.counter').forEach(c => counterObs.observe(c));
 
-  // ===== Copier l'email =====
+  // Copier email
   const copyBtn = document.getElementById('copy-email');
   if (copyBtn) {
     copyBtn.addEventListener('click', async () => {
@@ -1149,7 +1168,7 @@ vagrant ssh vm-interne <span class="ck">-c</span> <span class="cstr">"ping6 -c 1
     });
   }
 
-  // ===== Easter egg console =====
+  // Easter egg console
   const banner = `
 %c
   __  __  _   _   __  __                       _      _                    
@@ -1164,12 +1183,113 @@ LinkedIn : linkedin.com/in/manohisoa-mbelo-ndriamanampy-650455309
 GitHub   : github.com/mn-manohisoa
 Email    : mn.manohisoa@gmail.com
 `;
-  console.log(
-    banner,
-    'color:#00d4ff;font-weight:bold;',
-    'color:#7c3aed;font-size:14px;font-weight:bold;',
-    'color:#94a3b8;font-size:12px;'
-  );
+  console.log(banner,'color:#00d4ff;font-weight:bold;','color:#7c3aed;font-size:14px;font-weight:bold;','color:#94a3b8;font-size:12px;');
 </script>
+
+  <!-- ===== SKILL FILTER JS (multi-select) ===== -->
+  <script>
+  // Filtrage multi-sélection : cliquer ajoute/retire une compétence du filtre
+  // Mode OR : une card match si elle contient AU MOINS UNE des compétences sélectionnées
+  const activeSkills = new Set();
+  const skillLabels = {};
+
+  function filterBySkill(slug, label) {
+    skillLabels[slug] = label;
+
+    // Toggle : si déjà actif on retire, sinon on ajoute
+    if (activeSkills.has(slug)) {
+      activeSkills.delete(slug);
+    } else {
+      activeSkills.add(slug);
+    }
+    applyFilter();
+  }
+
+  function applyFilter() {
+    // Mise à jour des cards sources (lang-card)
+    document.querySelectorAll('.lang-card.clickable-skill').forEach(card => {
+      card.classList.toggle('active-skill', activeSkills.has(card.dataset.skill));
+    });
+
+    // Aucun filtre actif → reset complet
+    if (activeSkills.size === 0) {
+      document.body.classList.remove('skills-filter-active');
+      document.querySelectorAll('.project-card, .exp-card').forEach(c => c.classList.remove('skill-match'));
+      const bar = document.getElementById('skill-filter-bar');
+      if (bar) bar.style.display = 'none';
+      return;
+    }
+
+    // Sinon : on filtre + on compte
+    document.body.classList.add('skills-filter-active');
+    let firstMatch = null, expCount = 0, projCount = 0;
+
+    document.querySelectorAll('.exp-card').forEach(card => {
+      const cs = (card.dataset.skills || '').split(' ').filter(Boolean);
+      const m = cs.some(s => activeSkills.has(s));
+      card.classList.toggle('skill-match', m);
+      if (m) { expCount++; if (!firstMatch) firstMatch = card; }
+    });
+    document.querySelectorAll('.project-card').forEach(card => {
+      const cs = (card.dataset.skills || '').split(' ').filter(Boolean);
+      const m = cs.some(s => activeSkills.has(s));
+      card.classList.toggle('skill-match', m);
+      if (m && !firstMatch) firstMatch = card;
+      if (m) projCount++;
+    });
+
+    renderFilterBar(expCount, projCount);
+
+    // Scroll vers la première card qui match
+    if (firstMatch) {
+      setTimeout(() => { firstMatch.scrollIntoView({ behavior:'smooth', block:'center' }); }, 130);
+    }
+  }
+
+  function renderFilterBar(expCount, projCount) {
+    let bar = document.getElementById('skill-filter-bar');
+    if (!bar) {
+      bar = document.createElement('div');
+      bar.id = 'skill-filter-bar';
+      bar.className = 'filter-reset-bar';
+      document.body.appendChild(bar);
+    }
+    const chips = Array.from(activeSkills).map(s => {
+      return `<span class="filter-chip" data-skill="${s}" onclick="removeSkillFilter('${s}', event)">${skillLabels[s] || s} <i class="ri-close-line"></i></span>`;
+    }).join('');
+
+    // Compteur de résultats
+    const total = (expCount || 0) + (projCount || 0);
+    let countHtml = '';
+    if (total === 0) {
+      countHtml = '<span class="filter-count filter-count-empty"><i class="ri-error-warning-line"></i> Aucun résultat</span>';
+    } else {
+      const parts = [];
+      if (expCount > 0) parts.push(`<strong>${expCount}</strong> exp${expCount > 1 ? 's' : ''}`);
+      if (projCount > 0) parts.push(`<strong>${projCount}</strong> projet${projCount > 1 ? 's' : ''}`);
+      countHtml = `<span class="filter-count"><i class="ri-check-double-line"></i> ${parts.join(' · ')}</span>`;
+    }
+
+    bar.innerHTML = `
+      <i class="ri-filter-3-line bar-icon"></i>
+      <span class="bar-label">Filtres :</span>
+      <div class="filter-chips">${chips}</div>
+      ${countHtml}
+      <button class="bar-clear" onclick="resetSkillFilter()"><i class="ri-close-circle-line"></i> Tout effacer</button>
+    `;
+    bar.style.display = 'flex';
+  }
+
+  function removeSkillFilter(slug, ev) {
+    if (ev) ev.stopPropagation();
+    activeSkills.delete(slug);
+    applyFilter();
+  }
+
+  function resetSkillFilter() {
+    activeSkills.clear();
+    applyFilter();
+  }
+  </script>
 </body>
 </html>
